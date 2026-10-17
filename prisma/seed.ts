@@ -1,7 +1,13 @@
 import { PrismaClient } from "@prisma/client";
-import { createHash, randomBytes } from "node:crypto";
+import { createHash, randomBytes, scryptSync } from "node:crypto";
 
 const prisma = new PrismaClient();
+
+function hashPassword(password: string): string {
+  const salt = randomBytes(16).toString("hex");
+  const hash = scryptSync(password, salt, 64).toString("hex");
+  return `${salt}:${hash}`;
+}
 
 /**
  * Seeds the content the site needs to run:
@@ -18,13 +24,23 @@ async function main() {
     .split(",")[0]
     .trim()
     .toLowerCase();
+  const adminPassword = process.env.ADMIN_PASSWORD ?? "Admin2026!";
 
   await prisma.user.upsert({
     where: { email: adminEmail },
-    create: { email: adminEmail, name: "Ijtiba Rana", role: "ADMIN" },
-    update: { role: "ADMIN", disabled: false },
+    create: {
+      email: adminEmail,
+      name: "Ijtiba Rana",
+      role: "ADMIN",
+      passwordHash: hashPassword(adminPassword),
+    },
+    update: {
+      role: "ADMIN",
+      disabled: false,
+      passwordHash: hashPassword(adminPassword),
+    },
   });
-  console.log(`✓ admin account: ${adminEmail}`);
+  console.log(`✓ admin account: ${adminEmail} (password: ${adminPassword})`);
 
   // ── Services ────────────────────────────────────────────────
   const services = [

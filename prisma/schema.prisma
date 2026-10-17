@@ -26,6 +26,7 @@ model User {
   name          String?
   role          Role      @default(ADMIN)
   disabled      Boolean   @default(false)
+  passwordHash  String?
   lastLoginAt   DateTime?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt

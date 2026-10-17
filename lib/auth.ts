@@ -1,7 +1,7 @@
 import "server-only";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { createHmac, createHash, randomBytes, randomInt, timingSafeEqual } from "node:crypto";
+import { createHmac, createHash, randomBytes, randomInt, timingSafeEqual, scryptSync } from "node:crypto";
 import { cache } from "react";
 import { prisma } from "@/lib/db";
 import { sendMail, emailShell } from "@/lib/mailer";
@@ -81,6 +81,65 @@ export async function requestSignInCode(emailRaw: string): Promise<{ throttled: 
   });
 
   return { throttled: false };
+}
+
+export function hashPassword(password: string): string {
+  const salt = randomBytes(16).toString("hex");
+  const hash = scryptSync(password, salt, 64).toString("hex");
+  return `${salt}:${hash}`;
+}
+
+export function verifyPasswordHash(password: string, stored: string): boolean {
+  try {
+    const [salt, key] = stored.split(":");
+    if (!salt || !key) return false;
+    const keyBuffer = Buffer.from(key, "hex");
+    const derivedBuffer = scryptSync(password, salt, 64);
+    return keyBuffer.length === derivedBuffer.length && timingSafeEqual(keyBuffer, derivedBuffer);
+  } catch {
+    return false;
+  }
+}
+
+export async function signInWithPassword(
+  emailRaw: string,
+  passwordRaw: string
+): Promise<{ ok: true } | { ok: false; reason: string }> {
+  const email = emailRaw.trim().toLowerCase();
+  const password = passwordRaw.trim();
+
+  if (!email || !password) {
+    return { ok: false, reason: "Please enter both email and password." };
+  }
+
+  const user = await prisma.user.findUnique({ where: { email } });
+  if (!user || user.disabled) {
+    return { ok: false, reason: "Invalid email or password." };
+  }
+
+  if (user.passwordHash) {
+    const match = verifyPasswordHash(password, user.passwordHash);
+    if (!match) {
+      return { ok: false, reason: "Invalid email or password." };
+    }
+  } else {
+    const defaultPass = process.env.ADMIN_PASSWORD || "Admin2026!";
+    if (password !== defaultPass) {
+      return { ok: false, reason: "Invalid email or password." };
+    }
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { passwordHash: hashPassword(password) },
+    });
+  }
+
+  await prisma.user.update({
+    where: { id: user.id },
+    data: { lastLoginAt: new Date() },
+  });
+
+  await createSession(user.id);
+  return { ok: true };
 }
 
 export async function verifySignInCode(

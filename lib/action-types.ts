@@ -10,7 +10,7 @@ export type SyncState = {
   lines?: { platform: string; ok: boolean; message: string }[];
 };
 export type AuthState = {
-  step: "email" | "code";
+  step?: "email" | "code" | "password";
   email: string;
   error?: string;
   info?: string;

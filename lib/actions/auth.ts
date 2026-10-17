@@ -2,12 +2,42 @@
 
 import { redirect } from "next/navigation";
 import { headers } from "next/headers";
-import { requestSignInCode, verifySignInCode, signOut, assertSameOrigin } from "@/lib/auth";
+import {
+  requestSignInCode,
+  verifySignInCode,
+  signInWithPassword,
+  signOut,
+  assertSameOrigin,
+} from "@/lib/auth";
 import type { AuthState } from "@/lib/action-types";
 
 async function originGuard() {
   const h = await headers();
   assertSameOrigin(h.get("origin"), h.get("host"));
+}
+
+export async function loginWithPassword(
+  _prev: AuthState,
+  formData: FormData
+): Promise<AuthState> {
+  await originGuard();
+  const email = String(formData.get("email") ?? "").trim();
+  const password = String(formData.get("password") ?? "");
+
+  if (!email || !email.includes("@")) {
+    return { email, error: "Please enter a valid email address." };
+  }
+
+  if (!password) {
+    return { email, error: "Please enter your password." };
+  }
+
+  const result = await signInWithPassword(email, password);
+  if (!result.ok) {
+    return { email, error: result.reason };
+  }
+
+  redirect("/admin");
 }
 
 export async function startSignIn(_prev: AuthState, formData: FormData): Promise<AuthState> {
