@@ -101,71 +101,85 @@ export default function MobileMenu({ nav }: { nav: NavItem[] }) {
           .mobile-menu-root { display: block; }
 
           .menu-toggle {
-            width: 44px;
-            height: 44px;
+            width: 42px;
+            height: 42px;
             display: grid;
             place-content: center;
             gap: 5px;
             border: 1px solid var(--rule-strong);
             border-radius: var(--radius);
-            background: var(--paper-raised);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
           }
           .bar {
             display: block;
-            width: 18px;
-            height: 1.5px;
+            width: 20px;
+            height: 2px;
+            border-radius: 2px;
             background: var(--ink);
             transition: transform var(--dur) var(--ease), opacity var(--dur) var(--ease);
           }
-          .bar-x1 { transform: translateY(3.25px) rotate(45deg); }
-          .bar-x2 { transform: translateY(-3.25px) rotate(-45deg); }
+          .bar-x1 { transform: translateY(3.5px) rotate(45deg); }
+          .bar-x2 { transform: translateY(-3.5px) rotate(-45deg); }
 
           .mobile-panel {
             position: fixed;
             inset: var(--header-h) 0 0 0;
-            background: var(--paper);
+            background: rgba(11, 15, 25, 0.96);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
             overflow-y: auto;
             overscroll-behavior: contain;
             z-index: 49;
-            animation: panel-in .22s var(--ease);
+            animation: panel-in .25s var(--ease);
+            border-top: 1px solid var(--rule);
           }
           @keyframes panel-in {
-            from { opacity: 0; transform: translateY(-6px); }
+            from { opacity: 0; transform: translateY(-8px); }
             to { opacity: 1; transform: none; }
           }
           .mobile-panel-inner {
-            padding: var(--s-5) var(--gutter) var(--s-9);
+            padding: var(--s-5) var(--gutter) var(--s-8);
             display: grid;
-            gap: var(--s-4);
+            gap: var(--s-5);
             align-content: start;
           }
-          .mobile-list { display: grid; }
-          .mobile-list > li { border-bottom: 1px solid var(--rule); }
+          .mobile-list { display: grid; gap: .25rem; }
+          .mobile-list > li { border-bottom: 1px solid var(--rule); padding-bottom: .6rem; }
           .mobile-link {
             display: block;
-            padding: .95rem 0 .8rem;
+            padding: .75rem 0 .4rem;
             font-family: var(--font-display);
-            font-size: 1.65rem;
-            letter-spacing: -.025em;
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: -.02em;
             text-decoration: none;
+            color: var(--ink);
           }
           .mobile-sub {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .4rem .5rem;
-            padding-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: .4rem;
+            padding: .4rem 0 .6rem;
           }
           .mobile-sublink {
-            display: inline-block;
-            padding: .45rem .7rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .6rem .85rem;
             border: 1px solid var(--rule);
-            border-radius: var(--radius-pill);
+            border-radius: var(--radius);
             font-size: var(--step--1);
             color: var(--ink-soft);
             text-decoration: none;
-            background: var(--paper-raised);
+            background: rgba(255, 255, 255, 0.03);
+            transition: background var(--dur) var(--ease);
           }
-          .mobile-cta { width: 100%; justify-content: center; margin-top: var(--s-3); }
+          .mobile-sublink:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+          }
+          .mobile-cta { width: 100%; justify-content: center; margin-top: var(--s-2); }
           .mobile-foot { text-align: center; }
         }
       `}</style>

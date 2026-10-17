@@ -1,61 +1,65 @@
-/* =============================================================
-   GrowinTek — design tokens
-   Warm editorial: paper stock, printing ink, one electric accent.
-   The paper is green-tinged (not the usual cream+terracotta), the
-   accent is cobalt (not vermilion), and the serif is condensed.
-   ============================================================= */
-
 :root {
-  /* Colour — Modern Cyber Midnight & Electric Shimmer (growintek.com scheme) */
-  --paper: #030712;             /* Deepest cyber midnight canvas */
-  --paper-raised: #0b1329;      /* Elevated surface / glass card */
-  --paper-sunk: #020617;        /* Inset well / dark abyss */
+  /* =============================================================
+     GrowinTek — Modern Refined Digital Palette
+     Deep slate-navy canvas, crisp typography, emerald & sapphire accents.
+     No loud gradients. Elegant, glassy, high-end agency aesthetic.
+     ============================================================= */
+
+  --paper: #0b0f19;             /* Elegant deep midnight slate */
+  --paper-raised: #111827;      /* Clean elevated surface */
+  --paper-sunk: #070a12;        /* Subtle recessed container */
+  --paper-glass: rgba(17, 24, 39, 0.72); /* Glassmorphic backdrop */
+
   --ink: #f8fafc;               /* Ultra-crisp primary text */
-  --ink-soft: #cbd5e1;          /* Secondary body text */
-  --ink-mute: #94a3b8;          /* Muted metadata */
-  --ink-faint: #64748b;         /* Faint captions */
-  --rule: rgba(255, 255, 255, 0.08); /* Frosted borders */
+  --ink-soft: #cbd5e1;          /* High-legibility body text */
+  --ink-mute: #94a3b8;          /* Clean metadata & subtitles */
+  --ink-faint: #64748b;         /* Subtle borders & hints */
+
+  --rule: rgba(255, 255, 255, 0.08); /* Frosted glass hairline border */
   --rule-strong: rgba(255, 255, 255, 0.16);
 
-  /* Electric Accents */
-  --cobalt: #2563eb;            /* Electric Cobalt */
-  --cobalt-deep: #1d4ed8;       /* Deep royal blue */
-  --cobalt-wash: rgba(37, 99, 235, 0.12); /* Subtle blue glow */
-  --cyan: #00f5d4;              /* Hyper Cyan */
-  --cyan-glow: rgba(0, 245, 212, 0.25);
-  --purple: #8b5cf6;            /* Neon Violet */
-  --purple-glow: rgba(139, 92, 246, 0.25);
+  /* Primary Accent: Royal Sapphire & Electric Cyan */
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-wash: rgba(37, 99, 235, 0.12);
+  --accent-glow: rgba(37, 99, 235, 0.25);
 
-  --sage: #10b981;              /* Emerald neon */
-  --sage-wash: rgba(16, 185, 129, 0.12);
-  --clay: #f97316;              /* Amber flame */
-  --clay-wash: rgba(249, 115, 22, 0.12);
+  /* Secondary Accent: Fresh Growth Emerald */
+  --emerald: #10b981;
+  --emerald-hover: #059669;
+  --emerald-wash: rgba(16, 185, 129, 0.12);
+
+  /* Classic Semantic Colors */
+  --cobalt: var(--accent);
+  --cobalt-deep: var(--accent-hover);
+  --cobalt-wash: var(--accent-wash);
+  --cyan: #38bdf8;
+  --purple: #818cf8;
+  --sage: #10b981;
+  --sage-wash: var(--emerald-wash);
+  --clay: #f97316;
+  --clay-wash: rgba(249, 115, 22, 0.1);
   --amber: #eab308;
-  --amber-wash: rgba(234, 179, 8, 0.12);
+  --amber-wash: rgba(234, 179, 8, 0.1);
   --rust: #ef4444;
-  --rust-wash: rgba(239, 68, 68, 0.15);
+  --rust-wash: rgba(239, 68, 68, 0.12);
 
-  /* Shiny Gradients */
-  --gradient-brand: linear-gradient(135deg, #00f5d4 0%, #3b82f6 50%, #8b5cf6 100%);
-  --gradient-card: linear-gradient(145deg, rgba(15, 23, 42, 0.75), rgba(11, 19, 41, 0.45));
-  --gradient-shine: linear-gradient(110deg, transparent 20%, rgba(255, 255, 255, 0.25) 50%, transparent 80%);
-
-  /* Type */
+  /* Typography */
   --font-display: var(--font-fraunces), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --font-body: var(--font-inter-tight), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --step--2: clamp(0.69rem, 0.67rem + 0.1vw, 0.75rem);
-  --step--1: clamp(0.8rem, 0.77rem + 0.14vw, 0.88rem);
-  --step-0: clamp(0.94rem, 0.9rem + 0.2vw, 1.06rem);
-  --step-1: clamp(1.13rem, 1.06rem + 0.32vw, 1.31rem);
-  --step-2: clamp(1.35rem, 1.24rem + 0.53vw, 1.69rem);
-  --step-3: clamp(1.62rem, 1.42rem + 0.95vw, 2.25rem);
-  --step-4: clamp(2rem, 1.6rem + 1.9vw, 3.25rem);
-  --step-5: clamp(2.4rem, 1.7rem + 3.4vw, 4.5rem);
-  --step-6: clamp(2.9rem, 1.8rem + 5vw, 6rem);
+  --step--2: clamp(0.7rem, 0.68rem + 0.1vw, 0.78rem);
+  --step--1: clamp(0.82rem, 0.79rem + 0.15vw, 0.9rem);
+  --step-0: clamp(0.95rem, 0.91rem + 0.2vw, 1.06rem);
+  --step-1: clamp(1.15rem, 1.08rem + 0.35vw, 1.35rem);
+  --step-2: clamp(1.38rem, 1.26rem + 0.6vw, 1.75rem);
+  --step-3: clamp(1.68rem, 1.48rem + 1vw, 2.35rem);
+  --step-4: clamp(2.1rem, 1.75rem + 2vw, 3.35rem);
+  --step-5: clamp(2.6rem, 1.95rem + 3.5vw, 4.6rem);
+  --step-6: clamp(3rem, 2.1rem + 5vw, 5.8rem);
 
-  /* Space */
+  /* Spacing */
   --s-1: 0.25rem;
   --s-2: 0.5rem;
   --s-3: 0.75rem;
@@ -67,21 +71,21 @@
   --s-9: 6rem;
   --s-10: 8rem;
 
-  --gutter: clamp(1.15rem, 4vw, 3rem);
-  --measure: 34rem;
-  --max: 78rem;
+  --gutter: clamp(1.2rem, 4.5vw, 3rem);
+  --measure: 36rem;
+  --max: 76rem;
   --radius: 8px;
   --radius-lg: 16px;
   --radius-pill: 999px;
 
-  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--rule);
-  --shadow-lift: 0 12px 36px -4px rgba(0, 0, 0, 0.8), 0 0 24px -4px rgba(59, 130, 246, 0.25);
-  --shadow-glow: 0 0 35px -5px rgba(0, 245, 212, 0.35);
+  --shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--rule);
+  --shadow-lift: 0 12px 32px -4px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--rule-strong);
+  --shadow-glow: 0 0 30px -4px rgba(37, 99, 235, 0.25);
 
-  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
-  --dur: 220ms;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 200ms;
 
-  --header-h: 72px;
+  --header-h: 70px;
   color-scheme: dark;
 }
 
@@ -311,7 +315,7 @@ hr {
   display: inline-flex;
   align-items: center;
   gap: 0.55em;
-  padding: 0.82em 1.35em;
+  padding: 0.8em 1.4em;
   min-height: 44px;
   background: var(--btn-bg);
   color: var(--btn-fg);
@@ -322,7 +326,6 @@ hr {
   border: 1px solid var(--rule-strong);
   text-decoration: none;
   position: relative;
-  overflow: hidden;
   transition:
     background var(--dur) var(--ease),
     color var(--dur) var(--ease),
@@ -333,55 +336,75 @@ hr {
 
 .btn:hover {
   --btn-bg: #334155;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px -8px rgba(0, 0, 0, 0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.5);
 }
 
 .btn:active {
   transform: translateY(0);
 }
 
-.btn--cobalt {
-  --btn-bg: linear-gradient(135deg, #2563eb, #1d4ed8);
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.5);
+.btn--cobalt,
+.btn--primary {
+  --btn-bg: #2563eb;
+  --btn-fg: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
-.btn--cobalt:hover {
-  --btn-bg: linear-gradient(135deg, #3b82f6, #2563eb);
-  box-shadow: 0 12px 28px -6px rgba(37, 99, 235, 0.75), 0 0 18px rgba(0, 245, 212, 0.35);
-  border-color: rgba(0, 245, 212, 0.6);
+.btn--cobalt:hover,
+.btn--primary:hover {
+  --btn-bg: #1d4ed8;
+  border-color: #60a5fa;
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn--emerald {
+  --btn-bg: #10b981;
+  --btn-fg: #022c22;
+  border-color: #34d399;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.btn--emerald:hover {
+  --btn-bg: #059669;
+  color: #ffffff;
+  box-shadow: 0 8px 22px rgba(16, 185, 129, 0.45);
+  transform: translateY(-2px);
 }
 
 .btn--shine {
-  background: linear-gradient(135deg, #00f5d4 0%, #2563eb 50%, #7c3aed 100%);
-  color: #030712;
-  font-weight: 700;
-  border: none;
-  box-shadow: 0 8px 24px -4px rgba(0, 245, 212, 0.45);
+  --btn-bg: #2563eb;
+  --btn-fg: #ffffff;
+  border-color: #60a5fa;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
 }
 
 .btn--shine:hover {
+  --btn-bg: #1d4ed8;
+  border-color: #93c5fd;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.6);
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px -4px rgba(0, 245, 212, 0.65), 0 0 25px rgba(124, 58, 237, 0.4);
 }
 
 .btn--ghost {
-  --btn-bg: rgba(255, 255, 255, 0.04);
+  --btn-bg: rgba(255, 255, 255, 0.05);
   --btn-fg: var(--ink);
   border-color: var(--rule-strong);
   backdrop-filter: blur(8px);
 }
 
 .btn--ghost:hover {
-  --btn-bg: rgba(255, 255, 255, 0.08);
-  --btn-fg: #fff;
+  --btn-bg: rgba(255, 255, 255, 0.1);
+  --btn-fg: #ffffff;
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+  transform: translateY(-1px);
 }
 
 .btn--sm {
-  padding: 0.55em 0.95em;
+  padding: 0.55em 1rem;
   min-height: 38px;
   font-size: var(--step--2);
 }
@@ -669,7 +692,7 @@ hr {
 }
 
 .section {
-  padding-block: clamp(3.5rem, 8vw, 7rem);
+  padding-block: clamp(4rem, 8vw, 7.5rem);
 }
 
 .section--tight {
@@ -681,18 +704,16 @@ hr {
 }
 
 .section--ink {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--paper-sunk);
+  color: var(--ink);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
 }
 
 .section--ink .eyebrow,
 .section--ink .lede,
 .section--ink .muted {
-  color: #b8b3a2;
-}
-
-.section--ink .muted {
-  color: #8f8a79;
+  color: var(--ink-mute);
 }
 
 .section--raised {
@@ -711,7 +732,62 @@ hr {
 .section-head h2 {
   font-family: var(--font-display);
   font-size: var(--step-4);
-  max-width: 22ch;
+  max-width: 26ch;
+  color: var(--ink);
+}
+
+/* =============================================================
+   Zigzag Row Layouts
+   Alternating image/graphic and text for high-end readability
+   ============================================================= */
+
+.zigzag-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3.5rem, 7vw, 6rem);
+}
+
+.zigzag-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.zigzag-row--reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+}
+
+.zigzag-row--reverse .zigzag-visual {
+  order: 1;
+}
+
+.zigzag-row--reverse .zigzag-content {
+  order: 2;
+}
+
+.zigzag-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.zigzag-visual {
+  border-radius: var(--radius-lg);
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: var(--shadow-card);
+}
+
+@media (max-width: 900px) {
+  .zigzag-row,
+  .zigzag-row--reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .zigzag-row--reverse .zigzag-visual { order: 2; }
+  .zigzag-row--reverse .zigzag-content { order: 1; }
 }
 
 .ruled-list {

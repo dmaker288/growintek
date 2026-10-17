@@ -115,35 +115,32 @@ export default async function HomePage() {
     <>
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="hero">
-        <div className="hero-glow-orb hero-glow-orb--cyan" aria-hidden="true" />
-        <div className="hero-glow-orb hero-glow-orb--cobalt" aria-hidden="true" />
-
         <div className="wrap hero-grid">
           <div className="hero-copy">
             <div className="hero-badge-wrap">
               <span className="hero-badge">
                 <span className="dot dot--pulse" aria-hidden="true" />
-                Next-Gen Web, Autonomous AI & Growth Systems
+                Engineering High-Growth Web & Autonomous AI
               </span>
             </div>
 
             <h1 className="display hero-title">
-              Engineering web apps &
+              Web applications &
               <br />
-              <span className="text-gradient">AI agents</span> that
+              <span className="text-highlight">AI agents</span> built to
               <br />
-              <em>scale enterprise revenue.</em>
+              <em>scale your revenue.</em>
             </h1>
 
             <p className="lede hero-lede">
-              Most businesses lose leads between the first visit and the sales reply.
-              GrowinTek builds lightning-fast Next.js platforms, autonomous AI qualifying agents,
-              and automated revenue pipelines so no opportunity slips away.
+              Most businesses lose high-value enquiries between the contact form and the first reply.
+              GrowinTek engineers sub-second Next.js web applications, autonomous 24/7 qualifying AI agents,
+              and automated revenue pipelines so no lead goes cold.
             </p>
 
             <div className="hero-actions">
-              <Link href="/contact" className="btn btn--shine shine-sweep" data-cta="hero-book">
-                Book a 20-minute intro
+              <Link href="/contact" className="btn btn--primary" data-cta="hero-book">
+                Book a 20-minute intro call
                 <svg width="13" height="13" viewBox="0 0 12 12" className="arrow" aria-hidden="true">
                   <path d="M2 6h8M6.5 2.5 10 6l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" fill="none" />
                 </svg>
@@ -164,7 +161,7 @@ export default async function HomePage() {
                 </span>
               ) : (
                 <span className="hero-proof-item">
-                  <span className="dot" style={{ background: "#00f5d4" }} />
+                  <span className="dot" style={{ background: "var(--emerald)" }} />
                   Taking on select enterprise clients this quarter
                 </span>
               )}
@@ -216,44 +213,19 @@ export default async function HomePage() {
         <style>{`
           .hero {
             position: relative;
-            overflow: hidden;
-            padding-top: clamp(3rem, 7vw, 6.5rem);
-            padding-bottom: clamp(2.5rem, 5vw, 4.5rem);
+            padding-top: clamp(3.5rem, 7vw, 6rem);
+            padding-bottom: clamp(2.5rem, 5vw, 4rem);
             border-bottom: 1px solid var(--rule);
             background:
-              radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37, 99, 235, 0.25), transparent 70%),
-              radial-gradient(circle at 10% 20%, rgba(0, 245, 212, 0.12), transparent 45%),
-              linear-gradient(180deg, #030712 0%, #080e22 100%);
-          }
-          .hero-glow-orb {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            pointer-events: none;
-            z-index: 0;
-            animation: pulseGlow 8s infinite alternate ease-in-out;
-          }
-          .hero-glow-orb--cyan {
-            top: 5%;
-            left: 5%;
-            width: 320px;
-            height: 320px;
-            background: rgba(0, 245, 212, 0.15);
-          }
-          .hero-glow-orb--cobalt {
-            top: 15%;
-            right: 10%;
-            width: 440px;
-            height: 440px;
-            background: rgba(37, 99, 235, 0.2);
-            animation-delay: -4s;
+              radial-gradient(ellipse 70% 45% at 50% 0%, rgba(37, 99, 235, 0.14), transparent 70%),
+              var(--paper);
           }
           .hero-grid {
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.95fr);
-            gap: clamp(2.5rem, 6vw, 5rem);
+            grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.95fr);
+            gap: clamp(2.5rem, 5vw, 4.5rem);
             align-items: center;
           }
           .hero-copy { display: grid; gap: var(--s-5); align-content: center; }
@@ -262,31 +234,33 @@ export default async function HomePage() {
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            padding: 0.4rem 0.9rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(0, 245, 212, 0.3);
+            padding: 0.35rem 0.85rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--rule-strong);
             border-radius: 999px;
             font-size: var(--step--2);
             font-family: var(--font-mono);
-            color: var(--cyan);
-            letter-spacing: 0.04em;
+            color: var(--ink-soft);
+            letter-spacing: 0.03em;
             text-transform: uppercase;
-            box-shadow: 0 0 15px -3px rgba(0, 245, 212, 0.2);
           }
           .dot--pulse {
-            background: var(--cyan);
-            box-shadow: 0 0 8px var(--cyan);
-            animation: pulseGlow 2s infinite ease-in-out;
+            background: var(--emerald);
+            box-shadow: 0 0 8px var(--emerald);
           }
           .hero-title {
-            font-size: clamp(2.4rem, 4.2vw, 4.4rem);
-            line-height: 1.02;
-            letter-spacing: -.035em;
+            font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+            line-height: 1.05;
+            letter-spacing: -.03em;
             font-weight: 600;
+            color: var(--ink);
+          }
+          .text-highlight {
+            color: #60a5fa;
           }
           .hero-title em {
             font-style: italic;
-            color: var(--cyan);
+            color: var(--emerald);
             font-family: var(--font-display);
           }
           .hero-lede { max-width: 36rem; color: var(--ink-soft); font-size: var(--step-0); line-height: 1.65; }
@@ -305,34 +279,33 @@ export default async function HomePage() {
           .hero-art { min-width: 0; }
           .hero-art-frame {
             border-radius: var(--radius-lg);
-            background: rgba(11, 19, 41, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.8), 0 0 30px -5px rgba(37, 99, 235, 0.2);
+            background: var(--paper-raised);
+            border: 1px solid var(--rule);
+            box-shadow: var(--shadow-lift);
             padding: 1.25rem;
-            backdrop-filter: blur(12px);
           }
           .hero-ticker {
             position: relative;
             z-index: 1;
-            margin-top: clamp(2.5rem, 5vw, 4.5rem);
+            margin-top: clamp(2.5rem, 5vw, 4rem);
             overflow: hidden;
             padding: 0.85rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            background: rgba(0, 0, 0, 0.4);
+            border-top: 1px solid var(--rule);
+            border-bottom: 1px solid var(--rule);
+            background: var(--paper-sunk);
             white-space: nowrap;
           }
           .hero-ticker-track {
             display: inline-flex;
             gap: 2rem;
-            animation: tickerMarquee 35s linear infinite;
+            animation: tickerMarquee 40s linear infinite;
             font-family: var(--font-mono);
             font-size: var(--step--2);
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             color: var(--ink-mute);
           }
-          .ticker-sep { color: var(--cyan); }
+          .ticker-sep { color: var(--accent); }
 
           @media (max-width: 980px) {
             .hero-grid { grid-template-columns: 1fr; gap: var(--s-6); }
@@ -345,78 +318,160 @@ export default async function HomePage() {
         `}</style>
       </section>
 
-      {/* ── The sequence ─────────────────────────────────────── */}
-      <section className="section section--raised" id="how">
+      {/* ── Zigzag Strategic Blueprint ───────────────────────── */}
+      <section className="section" id="how">
         <div className="wrap">
           <div className="section-head">
             <div>
-              <p className="eyebrow" style={{ color: "var(--cyan)" }}>Operational Blueprint</p>
+              <p className="eyebrow" style={{ color: "var(--accent)" }}>Strategic Framework</p>
               <h2 style={{ marginTop: ".6rem" }}>
-                Four steps. Zero enquiry drop-off.
+                How GrowinTek scales your operational throughput.
               </h2>
             </div>
-            <p className="muted small" style={{ maxWidth: "30ch" }}>
-              The autonomous sequence we deploy for clients. It works around the clock,
-              captures revenue, and keeps an audit trail in your database.
+            <p className="muted small" style={{ maxWidth: "34ch" }}>
+              Our proven sequence combines ultra-fast frontend infrastructure with autonomous AI intelligence.
             </p>
           </div>
 
-          <ol className="steps">
-            {steps.map((s) => (
-              <li key={s.n} className="step">
-                <span className="mono step-n">{s.n}</span>
-                <h3 className="step-title">{s.title}</h3>
-                <p className="step-body">{s.body}</p>
-                <span className="step-source mono">{s.source}</span>
-              </li>
-            ))}
-          </ol>
+          <div className="zigzag-list">
+            {/* Row 1: Fast Conversion Engine */}
+            <div className="zigzag-row">
+              <div className="zigzag-content">
+                <span className="mono tiny" style={{ color: "var(--accent)" }}>01 · CONVERSION SPEED</span>
+                <h3 style={{ fontSize: "var(--step-3)", color: "var(--ink)", lineHeight: 1.15 }}>
+                  Sub-second web architecture that eliminates bounce rates.
+                </h3>
+                <p className="muted" style={{ lineHeight: 1.65 }}>
+                  Standard agency websites suffer from 3-5 second load times, bloated WordPress plugins, and leaky forms. We engineer on Next.js 15, React 19, and edge Vercel networks to deliver instant sub-300ms interactions that maximize user trust and paid traffic ROI.
+                </p>
+                <div style={{ display: "flex", gap: "1.5rem", marginTop: ".5rem" }}>
+                  <div>
+                    <span className="mono" style={{ fontSize: "var(--step-2)", color: "var(--emerald)", fontWeight: 700 }}>99+</span>
+                    <p className="tiny muted">Core Web Vitals</p>
+                  </div>
+                  <div>
+                    <span className="mono" style={{ fontSize: "var(--step-2)", color: "var(--accent)", fontWeight: 700 }}>&lt;300ms</span>
+                    <p className="tiny muted">Edge TTFB</p>
+                  </div>
+                </div>
+              </div>
+              <div className="zigzag-visual">
+                <div style={{ padding: "1.5rem", background: "var(--paper-sunk)", borderRadius: "var(--radius)", border: "1px solid var(--rule)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem" }}>
+                    <span className="mono tiny muted">PERFORMANCE BENCHMARK</span>
+                    <span className="mono tiny" style={{ color: "var(--emerald)" }}>PASSED</span>
+                  </div>
+                  <div style={{ display: "grid", gap: ".75rem" }}>
+                    <div style={{ background: "rgba(255,255,255,0.04)", padding: ".75rem", borderRadius: "6px" }}>
+                      <p className="tiny muted">First Contentful Paint</p>
+                      <p className="mono" style={{ fontWeight: 600 }}>0.4s · Instantaneous</p>
+                    </div>
+                    <div style={{ background: "rgba(255,255,255,0.04)", padding: ".75rem", borderRadius: "6px" }}>
+                      <p className="tiny muted">Cumulative Layout Shift</p>
+                      <p className="mono" style={{ fontWeight: 600 }}>0.000 · Zero Jitter</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 2: 24/7 AI Reception (Reversed) */}
+            <div className="zigzag-row zigzag-row--reverse">
+              <div className="zigzag-content">
+                <span className="mono tiny" style={{ color: "var(--emerald)" }}>02 · AUTONOMOUS ENGAGEMENT</span>
+                <h3 style={{ fontSize: "var(--step-3)", color: "var(--ink)", lineHeight: 1.15 }}>
+                  AI Agents that qualify leads while your team sleeps.
+                </h3>
+                <p className="muted" style={{ lineHeight: 1.65 }}>
+                  The moment an enquiry lands, our autonomous AI agent engages in under 30 seconds. It clarifies requirements, asks crucial budget and timeline qualification questions, and schedules calendar appointments directly with your closers.
+                </p>
+                <div style={{ display: "flex", gap: "1.5rem", marginTop: ".5rem" }}>
+                  <div>
+                    <span className="mono" style={{ fontSize: "var(--step-2)", color: "var(--accent)", fontWeight: 700 }}>24/7</span>
+                    <p className="tiny muted">Active Coverage</p>
+                  </div>
+                  <div>
+                    <span className="mono" style={{ fontSize: "var(--step-2)", color: "var(--emerald)", fontWeight: 700 }}>30 sec</span>
+                    <p className="tiny muted">Average First Reply</p>
+                  </div>
+                </div>
+              </div>
+              <div className="zigzag-visual">
+                <div style={{ padding: "1.5rem", background: "var(--paper-sunk)", borderRadius: "var(--radius)", border: "1px solid var(--rule)" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: ".5rem", marginBottom: "1rem" }}>
+                    <span className="dot" style={{ background: "var(--emerald)" }} />
+                    <span className="mono tiny">Autonomous Qualifier · Live Transcript</span>
+                  </div>
+                  <div style={{ display: "grid", gap: ".6rem", fontSize: "var(--step--2)" }}>
+                    <div style={{ background: "rgba(37,99,235,0.12)", border: "1px solid rgba(37,99,235,0.25)", padding: ".6rem .8rem", borderRadius: "6px", color: "var(--ink)" }}>
+                      <strong>AI Agent:</strong> "Hi Sarah! Thanks for reaching out. What timeframe are you targeting for your platform re-architecture?"
+                    </div>
+                    <div style={{ background: "rgba(255,255,255,0.04)", padding: ".6rem .8rem", borderRadius: "6px", color: "var(--ink-soft)" }}>
+                      <strong>Lead:</strong> "We need to launch by Q2, budget allocated is $35k."
+                    </div>
+                    <div style={{ background: "rgba(16,185,129,0.12)", border: "1px solid rgba(16,185,129,0.25)", padding: ".6rem .8rem", borderRadius: "6px", color: "var(--emerald)" }}>
+                      ✓ Qualified → Calendar invite dispatched to Sales Director.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 3: Automated Revenue Pipelines */}
+            <div className="zigzag-row">
+              <div className="zigzag-content">
+                <span className="mono tiny" style={{ color: "var(--accent)" }}>03 · DATA & REVENUE SYNC</span>
+                <h3 style={{ fontSize: "var(--step-3)", color: "var(--ink)", lineHeight: 1.15 }}>
+                  Zero-touch database syncing with your existing CRM.
+                </h3>
+                <p className="muted" style={{ lineHeight: 1.65 }}>
+                  Every conversation, quote, and interaction writes automatically to your PostgreSQL database, HubSpot, or Slack. No duplicate manual entry, no forgotten leads, and total visibility across your pipeline.
+                </p>
+                <div style={{ display: "flex", gap: "1.5rem", marginTop: ".5rem" }}>
+                  <div>
+                    <span className="mono" style={{ fontSize: "var(--step-2)", color: "var(--emerald)", fontWeight: 700 }}>100%</span>
+                    <p className="tiny muted">Audit Compliance</p>
+                  </div>
+                  <div>
+                    <span className="mono" style={{ fontSize: "var(--step-2)", color: "var(--accent)", fontWeight: 700 }}>0 hrs</span>
+                    <p className="tiny muted">Manual Data Entry</p>
+                  </div>
+                </div>
+              </div>
+              <div className="zigzag-visual">
+                <div style={{ padding: "1.5rem", background: "var(--paper-sunk)", borderRadius: "var(--radius)", border: "1px solid var(--rule)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem" }}>
+                    <span className="mono tiny muted">INTEGRATION TELEMETRY</span>
+                    <span className="mono tiny" style={{ color: "var(--accent)" }}>REALTIME</span>
+                  </div>
+                  <div style={{ display: "grid", gap: ".5rem", fontFamily: "var(--font-mono)", fontSize: "var(--step--2)" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: ".5rem 0", borderBottom: "1px solid var(--rule)" }}>
+                      <span>PostgreSQL Database</span>
+                      <span style={{ color: "var(--emerald)" }}>Synced</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: ".5rem 0", borderBottom: "1px solid var(--rule)" }}>
+                      <span>Stripe Billing Engine</span>
+                      <span style={{ color: "var(--emerald)" }}>Connected</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: ".5rem 0" }}>
+                      <span>Slack Alert Webhook</span>
+                      <span style={{ color: "var(--emerald)" }}>Active</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <style>{`
-          .steps {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            border-top: 1px solid var(--rule-strong);
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-          }
-          .step {
-            padding: var(--s-5);
-            border-right: 1px solid var(--rule);
-            display: grid;
-            gap: .65rem;
-            align-content: start;
-            transition: background var(--dur) var(--ease);
-          }
-          .step:hover { background: rgba(37, 99, 235, 0.06); }
-          .step:last-child { border-right: 0; }
-          .step-n { color: var(--cyan); font-size: var(--step--1); font-weight: 700; }
-          .step-title { font-family: var(--font-display); font-size: var(--step-2); color: var(--ink); }
-          .step-body { font-size: var(--step--1); color: var(--ink-soft); line-height: 1.6; }
-          .step-source { font-size: var(--step--2); color: var(--ink-faint); text-transform: uppercase; letter-spacing: .08em; padding-top: .4rem; }
-
-          @media (max-width: 900px) {
-            .steps { grid-template-columns: 1fr 1fr; }
-            .step:nth-child(2) { border-right: 0; }
-            .step:nth-child(1), .step:nth-child(2) { border-bottom: 1px solid var(--rule); }
-          }
-          @media (max-width: 560px) {
-            .steps { grid-template-columns: 1fr; }
-            .step { border-right: 0 !important; border-bottom: 1px solid var(--rule); }
-            .step:last-child { border-bottom: 0; }
-          }
-        `}</style>
       </section>
 
       {/* ── Services ─────────────────────────────────────────── */}
-      <section className="section" id="services">
+      <section className="section section--raised" id="services">
         <div className="wrap">
           <div className="section-head">
             <div>
-              <p className="eyebrow" style={{ color: "var(--cyan)" }}>Enterprise Offerings</p>
-              <h2 style={{ marginTop: ".6rem" }}>Six high-impact services built for explosive scale.</h2>
+              <p className="eyebrow" style={{ color: "var(--accent)" }}>Enterprise Capabilities</p>
+              <h2 style={{ marginTop: ".6rem" }}>Six specialized practices engineered for market leaders.</h2>
             </div>
             <Link href="/services" className="text-link small" data-cta="home-all-services">
               Compare all services <span aria-hidden="true">→</span>
@@ -426,7 +481,7 @@ export default async function HomePage() {
           <div className="svc-grid">
             {services.map((s) => (
               <Reveal key={s.href}>
-                <Link href={s.href} className="svc shine-sweep" data-cta={`home-service-${s.href}`}>
+                <Link href={s.href} className="svc" data-cta={`home-service-${s.href}`}>
                   <div className="svc-header">
                     <span className="svc-badge">{s.badge}</span>
                     <span className="svc-note mono">{s.note}</span>
@@ -435,7 +490,7 @@ export default async function HomePage() {
                   <p className="svc-tagline">{s.tagline}</p>
                   <p className="svc-body">{s.body}</p>
                   <div className="svc-footer">
-                    <span className="svc-learn">Explore architecture</span>
+                    <span className="svc-learn">View specifications</span>
                     <span className="svc-arrow" aria-hidden="true">→</span>
                   </div>
                 </Link>
@@ -455,35 +510,35 @@ export default async function HomePage() {
             display: flex;
             flex-direction: column;
             gap: .8rem;
-            padding: clamp(1.5rem, 3vw, 2.25rem);
-            background: linear-gradient(145deg, rgba(15, 23, 42, 0.8), rgba(11, 19, 41, 0.5));
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: clamp(1.5rem, 3vw, 2rem);
+            background: var(--paper);
+            border: 1px solid var(--rule);
             border-radius: var(--radius-lg);
             text-decoration: none;
-            min-height: 20rem;
+            min-height: 19rem;
             transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
           }
           .svc:hover {
-            transform: translateY(-4px);
-            border-color: rgba(0, 245, 212, 0.4);
-            box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.8), 0 0 25px -4px rgba(0, 245, 212, 0.25);
+            transform: translateY(-3px);
+            border-color: var(--rule-strong);
+            box-shadow: var(--shadow-lift);
           }
           .svc-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: .4rem;
+            margin-bottom: .25rem;
           }
           .svc-badge {
             font-family: var(--font-mono);
             font-size: var(--step--2);
             text-transform: uppercase;
-            letter-spacing: .08em;
+            letter-spacing: .06em;
             padding: 0.25rem 0.6rem;
             border-radius: 999px;
-            background: rgba(0, 245, 212, 0.1);
-            color: var(--cyan);
-            border: 1px solid rgba(0, 245, 212, 0.2);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--ink-soft);
+            border: 1px solid var(--rule);
           }
           .svc-note {
             color: var(--ink-mute);
@@ -494,10 +549,10 @@ export default async function HomePage() {
             font-family: var(--font-display);
             font-size: var(--step-2);
             color: var(--ink);
-            line-height: 1.15;
+            line-height: 1.2;
           }
           .svc-tagline {
-            color: var(--cyan);
+            color: var(--accent);
             font-size: var(--step--1);
             font-weight: 500;
             line-height: 1.4;
@@ -513,7 +568,7 @@ export default async function HomePage() {
             justify-content: space-between;
             margin-top: auto;
             padding-top: 1.25rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            border-top: 1px solid var(--rule);
           }
           .svc-learn {
             font-size: var(--step--2);
@@ -525,8 +580,8 @@ export default async function HomePage() {
           }
           .svc:hover .svc-learn { color: var(--ink); }
           .svc-arrow {
-            color: var(--cyan);
-            transform: translateX(-4px);
+            color: var(--accent);
+            transform: translateX(-3px);
             transition: transform var(--dur) var(--ease);
           }
           .svc:hover .svc-arrow {
@@ -847,8 +902,8 @@ export default async function HomePage() {
           }
           .faq-item {
             padding: 1.75rem;
-            background: linear-gradient(145deg, rgba(15, 23, 42, 0.6), rgba(11, 19, 41, 0.3));
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: var(--paper-raised);
+            border: 1px solid var(--rule);
             border-radius: var(--radius-lg);
             display: grid;
             gap: 0.75rem;
@@ -875,18 +930,18 @@ export default async function HomePage() {
       <section className="section section--ink close">
         <div className="wrap close-grid">
           <div>
-            <p className="eyebrow" style={{ color: "var(--cyan)" }}>Ready to Accelerate</p>
+            <p className="eyebrow" style={{ color: "var(--accent)" }}>Ready to Accelerate</p>
             <h2 className="display close-title">
               Let's build your
               <br />
-              <span className="text-gradient">growth engine.</span>
+              <span className="text-highlight">growth engine.</span>
             </h2>
             <p className="lede close-lede">
-              Twenty minutes, no pitch decks. We analyze where your leads currently leak,
+              Twenty minutes, no pitch decks. We analyze where your enquiries currently leak,
               audit your conversion latency, and outline an exact engineering blueprint to 3x your inbound pipeline.
             </p>
             <div className="close-actions">
-              <Link href="/contact" className="btn btn--shine shine-sweep" data-cta="home-close-book">
+              <Link href="/contact" className="btn btn--primary" data-cta="home-close-book">
                 Book a 20-minute intro call
               </Link>
               <a href={mailto()} className="btn btn--ghost close-mail" data-cta="home-close-email">
@@ -921,8 +976,8 @@ export default async function HomePage() {
           .close-lede { color: var(--ink-soft); margin-top: var(--s-4); }
           .close-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: var(--s-5); }
           .close-facts { display: grid; gap: var(--s-5); padding-top: var(--s-4); }
-          .close-facts > div { display: grid; grid-template-columns: 3rem 1fr; gap: var(--s-3); border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: var(--s-4); }
-          .close-facts .mono { color: var(--cyan); font-size: var(--step--1); font-weight: 700; }
+          .close-facts > div { display: grid; grid-template-columns: 3rem 1fr; gap: var(--s-3); border-top: 1px solid var(--rule); padding-top: var(--s-4); }
+          .close-facts .mono { color: var(--emerald); font-size: var(--step--1); font-weight: 700; }
           .close-facts p { font-size: var(--step--1); color: var(--ink-soft); line-height: 1.6; }
           @media (max-width: 860px) { .close-grid { grid-template-columns: 1fr; gap: var(--s-6); } }
         `}</style>

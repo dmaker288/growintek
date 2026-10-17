@@ -11,12 +11,12 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer-top">
           <div className="footer-brand">
-            <Link href="/" className="footer-wordmark">
+            <Link href="/" className="footer-wordmark" aria-label="GrowinTek home">
               <Image
                 src="/images/logo-wide.webp"
                 alt="GrowinTek"
-                width={160}
-                height={44}
+                width={154}
+                height={40}
                 className="footer-logo-img"
               />
             </Link>
@@ -84,12 +84,15 @@ export default function Footer() {
         }
         .footer-brand { max-width: 24rem; display: grid; gap: var(--s-4); align-content: start; }
         .footer-wordmark {
-          font-family: var(--font-display);
-          font-size: 1.7rem;
-          letter-spacing: -.04em;
+          display: inline-flex;
           text-decoration: none;
         }
-        .footer-wordmark span { color: var(--cobalt); }
+        .footer-logo-img {
+          width: auto;
+          height: 38px;
+          object-fit: contain;
+          border-radius: 4px;
+        }
         .footer-tagline {
           font-size: var(--step--1);
           color: var(--ink-mute);

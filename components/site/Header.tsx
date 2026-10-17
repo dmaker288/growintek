@@ -77,9 +77,9 @@ export default function Header() {
           top: 0;
           z-index: 50;
           height: var(--header-h);
-          background: color-mix(in srgb, var(--paper) 88%, transparent);
-          backdrop-filter: saturate(140%) blur(10px);
-          -webkit-backdrop-filter: saturate(140%) blur(10px);
+          background: rgba(11, 15, 25, 0.78);
+          backdrop-filter: blur(16px) saturate(180%);
+          -webkit-backdrop-filter: blur(16px) saturate(180%);
           border-bottom: 1px solid var(--rule);
         }
         .header-inner {
@@ -91,31 +91,29 @@ export default function Header() {
         .wordmark {
           display: inline-flex;
           align-items: center;
-          gap: .55rem;
           text-decoration: none;
           flex: none;
+          padding: 4px 0;
         }
-        .wordmark-mark { color: var(--cobalt); display: grid; place-items: center; }
-        .wordmark-text {
-          font-family: var(--font-display);
-          font-size: 1.32rem;
-          letter-spacing: -.035em;
-          font-weight: 500;
+        .header-logo-img {
+          width: auto;
+          height: 38px;
+          object-fit: contain;
+          border-radius: 4px;
         }
-        .wordmark-tek { color: var(--cobalt); }
 
         .desk-nav {
           display: flex;
           align-items: center;
-          gap: .15rem;
+          gap: .25rem;
           margin-left: auto;
         }
         .nav-group { position: relative; }
         .nav-link {
           display: inline-flex;
           align-items: center;
-          gap: .3rem;
-          padding: .5rem .7rem;
+          gap: .35rem;
+          padding: .5rem .8rem;
           font-size: var(--step--1);
           font-weight: 500;
           color: var(--ink-soft);
@@ -123,23 +121,25 @@ export default function Header() {
           border-radius: var(--radius);
           transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
         }
-        .nav-link:hover { color: var(--ink); background: var(--paper-sunk); }
+        .nav-link:hover { color: #ffffff; background: rgba(255, 255, 255, 0.06); }
         .nav-caret { opacity: .6; transition: transform var(--dur) var(--ease); }
         .nav-group:hover .nav-caret { transform: rotate(180deg); }
 
         .nav-menu {
           position: absolute;
-          top: calc(100% + .45rem);
-          left: -.4rem;
-          min-width: 19rem;
-          padding: .45rem;
-          background: var(--paper-raised);
-          border: 1px solid var(--rule);
+          top: calc(100% + .5rem);
+          left: 0;
+          min-width: 20rem;
+          padding: .5rem;
+          background: rgba(17, 24, 39, 0.95);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid var(--rule-strong);
           border-radius: var(--radius-lg);
-          box-shadow: var(--shadow-lift);
+          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7);
           opacity: 0;
           visibility: hidden;
-          transform: translateY(-4px);
+          transform: translateY(-6px);
           transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
         }
         .nav-group:hover .nav-menu,
@@ -150,20 +150,20 @@ export default function Header() {
         }
         .nav-menu-item {
           display: grid;
-          gap: .12rem;
-          padding: .6rem .7rem;
-          border-radius: 6px;
+          gap: .15rem;
+          padding: .65rem .8rem;
+          border-radius: 8px;
           text-decoration: none;
           transition: background var(--dur) var(--ease);
         }
-        .nav-menu-item:hover { background: var(--paper); }
-        .nav-menu-label { font-size: var(--step--1); font-weight: 600; }
+        .nav-menu-item:hover { background: rgba(255, 255, 255, 0.06); }
+        .nav-menu-label { font-size: var(--step--1); font-weight: 600; color: #ffffff; }
         .nav-menu-desc { font-size: var(--step--2); color: var(--ink-mute); line-height: 1.35; }
 
         .header-actions {
           display: flex;
           align-items: center;
-          gap: .9rem;
+          gap: 1rem;
           margin-left: auto;
         }
         .header-mail {
@@ -172,7 +172,7 @@ export default function Header() {
           color: var(--ink-mute);
           text-decoration: none;
         }
-        .header-mail:hover { color: var(--cobalt); }
+        .header-mail:hover { color: var(--accent); }
         .header-cta { white-space: nowrap; }
 
         @media (max-width: 1080px) {
