@@ -1,0 +1,533 @@
+// GrowinTek — data model
+// Postgres (Prisma Postgres). All money is stored as integer minor units
+// (pence/cents) with an explicit currency — never floats.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────────────────────────────────────────
+// Identity
+// ─────────────────────────────────────────────────────────────
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  role          Role      @default(ADMIN)
+  disabled      Boolean   @default(false)
+  lastLoginAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  sessions      Session[]
+  otpCodes      OtpCode[]
+
+  @@index([email])
+}
+
+model Session {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // SHA-256 of the cookie value. The raw token never touches the database.
+  tokenHash  String   @unique
+  expiresAt  DateTime
+  userAgent  String?
+  createdAt  DateTime @default(now())
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model OtpCode {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  codeHash   String
+  expiresAt  DateTime
+  usedAt     DateTime?
+  attempts   Int      @default(0)
+  createdAt  DateTime @default(now())
+
+  @@index([userId, expiresAt])
+}
+
+// ─────────────────────────────────────────────────────────────
+// Site settings — one row per key, JSON value, edited in /admin/settings
+// ─────────────────────────────────────────────────────────────
+
+model Setting {
+  key       String   @id
+  value     Json
+  updatedAt DateTime @updatedAt
+}
+
+// ─────────────────────────────────────────────────────────────
+// Content
+// ─────────────────────────────────────────────────────────────
+
+enum PublishState {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+model MediaAsset {
+  id         String   @id @default(cuid())
+  filename   String
+  mimeType   String
+  size       Int
+  width      Int?
+  height     Int?
+  // Either /api/media/{id}/file for local uploads, or an absolute CDN URL.
+  url        String
+  alt        String?
+  createdAt  DateTime @default(now())
+
+  projectCovers Project[] @relation("ProjectCover")
+  postCovers    Post[]    @relation("PostCover")
+
+  @@index([createdAt])
+}
+
+model Page {
+  id           String       @id @default(cuid())
+  slug         String       @unique
+  title        String
+  seoTitle     String?
+  seoDesc      String?
+  state        PublishState @default(DRAFT)
+  // Array of section objects: [{ id, type, props }]. The renderer maps type → component.
+  sections     Json         @default("[]")
+  publishedAt  DateTime?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+}
+
+model Service {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  name        String
+  tagline     String
+  summary     String       @db.Text
+  icon        String       @default("layers")
+  outcomes    String[]     @default([])
+  deliverables String[]    @default([])
+  // Indicative starting price in minor units, shown as "from £X"
+  fromPrice   Int?
+  currency    String       @default("GBP")
+  state       PublishState @default(PUBLISHED)
+  order       Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  projects    Project[]
+
+  @@index([state, order])
+}
+
+enum ProjectType {
+  CLIENT
+  CASE_STUDY
+}
+
+model Project {
+  id           String       @id @default(cuid())
+  slug         String       @unique
+  name         String
+  client       String
+  sector       String
+  type         ProjectType  @default(CASE_STUDY)
+  location     String?
+  summary      String       @db.Text
+  challenge    String?      @db.Text
+  approach     String?      @db.Text
+  outcome      String?      @db.Text
+  metrics      Json         @default("[]") // [{ label, value }]
+  coverMediaId String?
+  cover        MediaAsset?  @relation("ProjectCover", fields: [coverMediaId], references: [id], onDelete: SetNull)
+  galleryIds   String[]     @default([])
+  serviceId    String?
+  service      Service?     @relation(fields: [serviceId], references: [id], onDelete: SetNull)
+  state        PublishState @default(DRAFT)
+  featured     Boolean      @default(false)
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  clientRecord Client?      @relation("ClientCaseStudies", fields: [clientRecordId], references: [id], onDelete: SetNull)
+  clientRecordId String?
+
+  invoices     Invoice[]
+
+  @@index([state, featured])
+}
+
+model Post {
+  id           String       @id @default(cuid())
+  slug         String       @unique
+  title        String
+  excerpt      String       @db.Text
+  body         String       @db.Text
+  coverMediaId String?
+  cover        MediaAsset?  @relation("PostCover", fields: [coverMediaId], references: [id], onDelete: SetNull)
+  author       String       @default("GrowinTek")
+  tags         String[]     @default([])
+  readingMins  Int          @default(4)
+  seoTitle     String?
+  seoDesc      String?
+  state        PublishState @default(DRAFT)
+  publishedAt  DateTime?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  @@index([state, publishedAt])
+}
+
+enum TestimonialSource {
+  DIRECT
+  GOOGLE
+  TRUSTPILOT
+  FACEBOOK
+}
+
+model Testimonial {
+  id          String            @id @default(cuid())
+  name        String
+  role        String?
+  company     String?
+  quote       String            @db.Text
+  rating      Int               @default(5)
+  source      TestimonialSource @default(DIRECT)
+  sourceUrl   String?
+  avatarUrl   String?
+  featured    Boolean           @default(false)
+  approved    Boolean           @default(true)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  @@index([approved, featured])
+}
+
+// Cached live reviews pulled from each platform by the sync job.
+model Review {
+  id          String            @id @default(cuid())
+  platform    TestimonialSource
+  externalId  String
+  authorName  String
+  authorUrl   String?
+  avatarUrl   String?
+  rating      Int
+  text        String            @db.Text
+  reviewedAt  DateTime
+  // Cached platform-level aggregate, repeated per row for cheap reads
+  platformScore    Float?
+  platformTotal    Int?
+  profileUrl  String?
+  syncedAt    DateTime          @default(now())
+
+  @@unique([platform, externalId])
+  @@index([platform, reviewedAt])
+}
+
+model SocialPost {
+  id          String   @id @default(cuid())
+  platform    String   // instagram | youtube | facebook
+  externalId  String
+  kind        String   // image | video | short | reel | post
+  caption     String?  @db.Text
+  thumbnailUrl String?
+  mediaUrl    String?
+  permalink   String?
+  postedAt    DateTime
+  metrics     Json     @default("{}")
+  syncedAt    DateTime @default(now())
+
+  @@unique([platform, externalId])
+  @@index([platform, postedAt])
+}
+
+// ─────────────────────────────────────────────────────────────
+// CRM
+// ─────────────────────────────────────────────────────────────
+
+model Client {
+  id          String   @id @default(cuid())
+  name        String
+  company     String?
+  email       String?
+  phone       String?
+  country     String?
+  currency    String   @default("GBP")
+  vatNumber   String?
+  addressLine1 String?
+  addressLine2 String?
+  city        String?
+  postcode    String?
+  notes       String?  @db.Text
+  archived    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  clientProjects ClientProject[]
+  caseStudies Project[]  @relation("ClientCaseStudies")
+  invoices    Invoice[]
+  timeEntries TimeEntry[]
+
+  @@index([archived, name])
+}
+
+enum LeadStatus {
+  NEW
+  QUALIFIED
+  PROPOSAL
+  WON
+  LOST
+}
+
+enum LeadSource {
+  WEBSITE
+  REFERRAL
+  COLD_EMAIL
+  LINKEDIN
+  DIRECTORY
+  SOCIAL
+  OTHER
+}
+
+model Lead {
+  id            String     @id @default(cuid())
+  name          String
+  email         String?
+  company       String?
+  phone         String?
+  country       String?
+  budget        String?
+  service       String?
+  message       String     @db.Text
+  status        LeadStatus @default(NEW)
+  source        LeadSource @default(WEBSITE)
+  sourceDetail  String?
+  // Consent is recorded explicitly, not assumed. UK GDPR / PECR friendly.
+  consent       Boolean    @default(false)
+  ipHash        String?
+  userAgentHash String?
+  convertedClientId String?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  @@index([status, createdAt])
+}
+
+model Task {
+  id          String    @id @default(cuid())
+  title       String
+  notes       String?   @db.Text
+  done        Boolean   @default(false)
+  dueAt       DateTime?
+  priority    Int       @default(2) // 1 high, 2 normal, 3 low
+  clientProjectId   String?
+  clientProject     ClientProject? @relation(fields: [clientProjectId], references: [id], onDelete: Cascade)
+  createdAt   DateTime  @default(now())
+  completedAt DateTime?
+
+  @@index([done, dueAt])
+  @@index([clientProjectId])
+}
+
+enum ProjectStatus {
+  PLANNING
+  IN_PROGRESS
+  REVIEW
+  LAUNCHED
+  PAUSED
+  CLOSED
+}
+
+model ClientProject {
+  id           String        @id @default(cuid())
+  name         String
+  clientId     String
+  client       Client        @relation(fields: [clientId], references: [id], onDelete: Cascade)
+  status       ProjectStatus @default(PLANNING)
+  budgetMinor  Int?
+  currency     String        @default("GBP")
+  startsAt     DateTime?
+  dueAt        DateTime?
+  launchedAt   DateTime?
+  notes        String?       @db.Text
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  tasks        Task[]
+  timeEntries  TimeEntry[]
+
+  @@index([clientId, status])
+}
+
+// ─────────────────────────────────────────────────────────────
+// Money
+// ─────────────────────────────────────────────────────────────
+
+model InvoiceSequence {
+  year     Int    @id
+  nextNumber Int  @default(1)
+}
+
+enum InvoiceStatus {
+  DRAFT
+  SENT
+  PAID
+  OVERDUE
+  VOID
+}
+
+enum DiscountType {
+  NONE
+  PERCENT
+  FIXED
+}
+
+model Invoice {
+  id            String        @id @default(cuid())
+  // Sequential, gap-free: GT-2026-0001. Assigned at issue, not at draft.
+  number        String?       @unique
+  clientId      String
+  client        Client        @relation(fields: [clientId], references: [id], onDelete: Restrict)
+  projectId     String?
+  project       Project?      @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  status        InvoiceStatus @default(DRAFT)
+  currency      String        @default("GBP")
+  // Snapshot of client details at issue time so old invoices never change
+  billTo        Json          @default("{}")
+  items         Json          @default("[]") // [{ description, qty, unitMinor }]
+  notes         String?       @db.Text
+  terms         String?       @db.Text
+  discountType  DiscountType  @default(NONE)
+  discountValue Int           @default(0)
+  taxRateBps    Int           @default(0) // basis points, e.g. 2000 = 20%
+  taxLabel      String        @default("VAT")
+  subtotalMinor Int           @default(0)
+  discountMinor Int           @default(0)
+  taxMinor      Int           @default(0)
+  totalMinor    Int           @default(0)
+  amountPaidMinor Int         @default(0)
+  issuedAt      DateTime?
+  dueAt         DateTime?
+  paidAt        DateTime?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  payments      Payment[]
+
+  @@index([status, dueAt])
+  @@index([clientId])
+}
+
+enum PaymentMethod {
+  BANK_TRANSFER
+  CARD
+  WISE
+  PAYPAL
+  CASH
+  OTHER
+}
+
+model Payment {
+  id          String        @id @default(cuid())
+  invoiceId   String
+  invoice     Invoice       @relation(fields: [invoiceId], references: [id], onDelete: Cascade)
+  amountMinor Int
+  currency    String        @default("GBP")
+  method      PaymentMethod @default(BANK_TRANSFER)
+  reference   String?
+  paidAt      DateTime      @default(now())
+  createdAt   DateTime      @default(now())
+
+  @@index([invoiceId, paidAt])
+}
+
+model Expense {
+  id          String   @id @default(cuid())
+  label       String
+  amountMinor Int
+  currency    String   @default("GBP")
+  category    String   @default("Software")
+  spentAt     DateTime @default(now())
+  notes       String?  @db.Text
+  createdAt   DateTime @default(now())
+
+  @@index([spentAt])
+}
+
+model TimeEntry {
+  id          String   @id @default(cuid())
+  clientId    String?
+  client      Client?  @relation(fields: [clientId], references: [id], onDelete: SetNull)
+  projectId   String?
+  project     ClientProject? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  minutes     Int
+  note        String?
+  billable    Boolean  @default(true)
+  startedAt   DateTime @default(now())
+  createdAt   DateTime @default(now())
+
+  @@index([startedAt])
+}
+
+// ─────────────────────────────────────────────────────────────
+// Analytics — first-party, cookie-less, no PII
+// ─────────────────────────────────────────────────────────────
+
+model AnalyticsEvent {
+  id         BigInt   @id @default(autoincrement())
+  // Hash of IP + salt + day. Rotates daily, cannot be reversed.
+  visitorHash String
+  sessionId  String
+  type       String   @default("pageview") // pageview | cta | form | outbound
+  path       String
+  referrer   String?
+  device     String   @default("desktop") // desktop | mobile | tablet
+  browser    String?
+  country    String?
+  label      String?
+  createdAt  DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([path, createdAt])
+  @@index([type, createdAt])
+}
+
+model ActivityLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  entity    String?
+  entityId  String?
+  meta      Json     @default("{}")
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+// ─────────────────────────────────────────────────────────────
+// Inbox
+// ─────────────────────────────────────────────────────────────
+
+model Subscriber {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  consent   Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
