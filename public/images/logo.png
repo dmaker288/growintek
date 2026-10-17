@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<meta name="description" content="Growintek Solutions is an AI-Powered Digital Growth Agency specializing in Web Engineering, Technical SEO, AEO, GEO, Meta &amp; Google Ads, and custom AI lead automation for global enterprises.">
+	
+	<!-- Performance Preloads & Hints -->
+	<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+	<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@800;900&family=Syne:wght@700;800&display=swap"></noscript>
+	
+	<!-- CRITICAL: Instant background paint & inline CSS for 100/100 PageSpeed & 0.000 CLS -->
+	<style>
+		/* FOUC, Layout Shift & Blue Link Flash Prevention */
+		html {
+			scroll-behavior: smooth;
+			background-color: #000066;
+		}
+		body {
+			background-color: #000066;
+			color: #ffffff;
+			font-family: 'Inter', system-ui, -apple-system, sans-serif;
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		}
+		header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 50;
+			height: 80px;
+			min-height: 80px;
+		}
+		main {
+			display: block;
+			min-height: 80vh;
+		}
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+		#mobile-menu-drawer.hidden {
+			display: none !important;
+		}
+		.mega-panel {
+			display: none;
+		}
+		@media screen and (min-width: 1024px) {
+			header {
+				height: 80px !important;
+				min-height: 80px !important;
+			}
+			header nav,
+			header nav div.hidden.lg\:flex,
+			header nav .lg\:flex,
+			header .hidden.lg\:flex {
+				display: flex !important;
+				flex-direction: row !important;
+				align-items: center !important;
+				gap: 1.75rem !important;
+			}
+			header nav a, header nav span {
+				white-space: nowrap !important;
+			}
+			header .lg\:hidden,
+			header button.lg\:hidden {
+				display: none !important;
+			}
+			.group:hover > .mega-panel,
+			.group:hover .mega-panel {
+				display: block !important;
+				visibility: visible !important;
+				opacity: 1 !important;
+				pointer-events: auto !important;
+			}
+		}
+		/* Global safety net — no element may be wider than viewport */
+		* { box-sizing: border-box !important; min-width: 0; }
+		section, main, article, aside, header, footer, div {
+			max-width: 100%;
+		}
+		/* Marquee must not contribute to layout width */
+		.animate-marquee {
+			min-width: max-content;
+		}
+		/* Marquee parent must clip it */
+		.animate-marquee,
+		[class*="marquee"] {
+			will-change: transform;
+		}
+		/* Headings — always Syne font, always wrap */
+		h1, h2, h3, h4, h5, h6 {
+			font-family: 'Syne', sans-serif !important;
+			overflow-wrap: break-word !important;
+			word-break: break-word !important;
+			hyphens: auto;
+		}
+		/* ===== Blog Carousel item widths — critical: no Tailwind class used ===== */
+		.blog-carousel-item {
+			width: 100%;
+			flex-shrink: 0;
+			min-width: 0;
+		}
+		@media screen and (min-width: 640px) {
+			.blog-carousel-item { width: calc(50% - 12px); }
+		}
+		@media screen and (min-width: 1024px) {
+			.blog-carousel-item { width: calc(33.333% - 16px); }
+		}
+		/* ===== CLS Prevention: Reserve exact heights & paddings before Tailwind loads ===== */
+		.pt-32 { padding-top: 8rem !important; }
+		.pb-20 { padding-bottom: 5rem !important; }
+		.pt-28 { padding-top: 7rem !important; }
+		section[aria-label="Hero Section"] {
+			min-height: 100vh;
+			min-height: 100dvh;
+		}
+		main {
+			display: block !important;
+			min-height: 70vh !important;
+		}
+		/* ===== Touch Targets: All interactive nav elements min 44x44px ===== */
+		header nav a, header nav button {
+			min-height: 44px;
+			min-width: 44px;
+			display: inline-flex !important;
+			align-items: center;
+		}
+		/* ===== Page Preloader — hides raw FOUC until Tailwind CDN applies styles ===== */
+		#gtk-preloader {
+			position: fixed;
+			inset: 0;
+			z-index: 2147483647;
+			background: #000066;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 1;
+			visibility: visible;
+			transition: opacity 0.35s ease, visibility 0.35s ease;
+		}
+		#gtk-preloader.gtk-done {
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+		}
+		.gtk-pre-inner {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 18px;
+		}
+		.gtk-pre-name {
+			color: #BBF340;
+			font-size: 1.6rem;
+			font-weight: 900;
+			letter-spacing: -0.5px;
+			font-family: Arial, sans-serif;
+		}
+		.gtk-pre-ring {
+			width: 40px;
+			height: 40px;
+			border: 3px solid rgba(187,243,64,0.2);
+			border-top-color: #BBF340;
+			border-radius: 50%;
+			animation: gtk-spin 0.7s linear infinite;
+		}
+		@keyframes gtk-spin { to { transform: rotate(360deg); } }
+	</style>
+		<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		if (typeof tailwind !== 'undefined') {
+			tailwind.config = {
+				theme: {
+					extend: {
+						colors: {
+							'deep-navy': '#000066',
+							'electric-green': '#BBF340',
+							'medium-blue': '#0055FF',
+						},
+						fontFamily: {
+							'orbitron': ['Orbitron', 'Syne', 'sans-serif'],
+							'syne': ['Syne', 'sans-serif'],
+							'inter': ['Inter', 'sans-serif'],
+							'mono': ['Space Mono', 'monospace'],
+						}
+					}
+				}
+			};
+		}
+	</script>
+	
+<!-- Search Engine Optimization by Rank Math PRO - https://rankmath.com/ -->
+<title>Page Not Found - Growintek Solutions | AI-Powered Digital Marketing &amp; Web Development Agency</title>
+<meta name="robots" content="follow, noindex"/>
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Page Not Found - Growintek Solutions | AI-Powered Digital Marketing &amp; Web Development Agency" />
+<meta property="og:site_name" content="Growintek Solutions | AI-Powered Digital Marketing &amp; Web Development Agency" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Page Not Found - Growintek Solutions | AI-Powered Digital Marketing &amp; Web Development Agency" />
+<script type="application/ld+json" class="rank-math-schema-pro">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://growintek.com/#website","url":"https://growintek.com","name":"Growintek Solutions | AI-Powered Digital Marketing &amp; Web Development Agency","publisher":{"@id":"https://growintek.com/#person"},"inLanguage":"en-US"},{"@type":"WebPage","@id":"#webpage","url":"","name":"Page Not Found - Growintek Solutions | AI-Powered Digital Marketing &amp; Web Development Agency","isPartOf":{"@id":"https://growintek.com/#website"},"inLanguage":"en-US"}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//unpkg.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Growintek Solutions | AI-Powered Digital Marketing &amp; Web Development Agency &raquo; Feed" href="https://growintek.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Growintek Solutions | AI-Powered Digital Marketing &amp; Web Development Agency &raquo; Comments Feed" href="https://growintek.com/comments/feed/" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="rank-math-related-posts-style-inline-css">
+.wp-block-rank-math-related-posts{--rm-related-gap: 1rem;--rm-related-border-radius: 6px;--rm-related-card-padding: 16px;--rm-related-hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);--rm-related-transition: 0.2s ease}.wp-block-rank-math-related-posts.rank-math-related-posts{display:block}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-wrap{display:grid;gap:var(--rm-related-gap)}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-vertical .rank-math-related-wrap,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-vertical .rank-math-related-wrap{grid-template-columns:repeat(auto-fill, minmax(220px, 1fr))}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-wrap,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-wrap{grid-template-columns:repeat(auto-fill, minmax(400px, 1fr))}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-item,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-item{display:flex;gap:16px;align-items:flex-start}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-thumb,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-thumb{flex:0 0 140px;overflow:hidden}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-thumb img,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-thumb img{width:140px;height:140px;-o-object-fit:cover;object-fit:cover}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-content,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-content{flex:1;min-width:0;display:flex;flex-direction:column}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-title,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-title{margin-top:0}@media (max-width: 640px){.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-wrap,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-wrap{grid-template-columns:1fr}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-thumb,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-thumb{flex:0 0 100px}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-grid-horizontal .rank-math-related-thumb img,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-grid-horizontal .rank-math-related-thumb img{width:100px;height:100px}}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-vertical .rank-math-related-wrap,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-vertical .rank-math-related-wrap{grid-template-columns:1fr}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-wrap,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-wrap{grid-template-columns:1fr}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-item,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-item{display:flex;gap:20px;align-items:flex-start}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-thumb,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-thumb{flex:0 0 180px;overflow:hidden}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-thumb img,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-thumb img{width:180px;height:180px;-o-object-fit:cover;object-fit:cover}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-content,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-content{flex:1;min-width:0;display:flex;flex-direction:column}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-title,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-title{margin-top:0}@media (max-width: 640px){.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-item,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-item{gap:16px}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-thumb,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-thumb{flex:0 0 120px}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-thumb img,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-thumb img{width:120px;height:120px}}@media (max-width: 480px){.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-item,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-item{flex-direction:column}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-thumb,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-thumb{flex:0 0 auto;width:100%}.wp-block-rank-math-related-posts.rank-math-related-posts.is-style-list-horizontal .rank-math-related-thumb img,.wp-block-rank-math-related-posts.rank-math-related-posts.rank-math-related-list-horizontal .rank-math-related-thumb img{width:100%;height:auto;max-height:200px}}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-item{border-radius:var(--rm-related-border-radius);padding:var(--rm-related-card-padding);background:inherit;transition:transform var(--rm-related-transition),box-shadow var(--rm-related-transition)}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-item:hover{transform:translateY(-2px);box-shadow:var(--rm-related-hover-shadow)}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-title{margin:0.5rem 0;font-size:inherit;line-height:inherit}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-title a{color:inherit;text-decoration:none;transition:color 0.2s ease}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-title a:hover{color:#2563eb;text-decoration:underline}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-title:not(:has(a)){cursor:default}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-thumb{position:relative;overflow:hidden;border-radius:4px;display:block}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-thumb img{display:block;width:100%;height:auto;border-radius:4px;transition:transform 0.3s ease}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-thumb:hover img{transform:scale(1.05)}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-thumb:not(a){cursor:default}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-thumb:not(a):hover img{transform:none}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-date{margin-top:0.25rem;font-size:0.85em;opacity:0.7}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-terms{margin-top:0.5rem}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-chip{display:inline-block;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:999px;padding:0.15rem 0.5rem;margin-right:0.35rem;font-size:0.8em}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-excerpt{margin-top:0.5rem;color:inherit;opacity:0.8;font-size:0.9em;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-more{margin-top:1rem}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-button{display:inline-block;background:#111827;color:#fff;border-radius:6px;padding:0.625rem 1.25rem;text-decoration:none;font-weight:500;transition:background 0.2s ease, transform 0.2s ease}.wp-block-rank-math-related-posts.rank-math-related-posts .rank-math-related-button:hover{background:#1f2937;transform:translateY(-1px)}.wp-block-rank-math-related-posts.has-border-color .rank-math-related-item{border-color:inherit}.wp-block-rank-math-related-posts.has-border-width .rank-math-related-item{border-width:inherit}.wp-block-rank-math-related-posts.has-border-style .rank-math-related-item{border-style:inherit}.wp-block-rank-math-related-posts.has-border-radius .rank-math-related-item{border-radius:inherit}.wp-block-rank-math-related-posts:not(.has-border-color):not(.has-border-width):not(.has-border-style) .rank-math-related-item{border:1px solid #e5e7eb}
+
+/*# sourceURL=https://growintek.com/wp-content/plugins/seo-by-rank-math-pro/includes/modules/link-genius/blocks/related/assets/css/styles.css */
+</style>
+<link rel='stylesheet' id='growintek-tailwind-compiled-css' href='https://growintek.com/wp-content/themes/growintek/assets/css/tailwind.min.css?ver=3.4.17' media='all' />
+<link rel="https://api.w.org/" href="https://growintek.com/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://growintek.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.3" />
+<meta name="generator" content="Site Kit by Google 1.186.0" /><meta name="generator" content="Elementor 4.2.3; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://growintek.com/wp-content/uploads/2026/07/cropped-image3-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://growintek.com/wp-content/uploads/2026/07/cropped-image3-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://growintek.com/wp-content/uploads/2026/07/cropped-image3-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://growintek.com/wp-content/uploads/2026/07/cropped-image3-1-270x270.png" />
+</head>
+<body class="error404 wp-theme-growintek min-h-screen bg-white font-inter text-foreground elementor-default elementor-kit-9">
+<div id="gtk-preloader" aria-hidden="true" role="presentation">
+	<div class="gtk-pre-inner">
+		<div class="gtk-pre-name">Growintek</div>
+		<div class="gtk-pre-ring"></div>
+	</div>
+</div>
+<script>
+(function(){
+	var el=document.getElementById('gtk-preloader');
+	function hide(){ if(el){ el.classList.add('gtk-done'); setTimeout(function(){ el.style.display='none'; },400); } }
+	// Hide after DOMContentLoaded — Tailwind async fires before/around this event
+	document.addEventListener('DOMContentLoaded',function(){ setTimeout(hide,250); });
+	// Hard fallback: always hide within 3 seconds
+	setTimeout(hide,3000);
+})();
+</script>
+
+
+<style>
+/* Center and stylize mega panels on viewport with a 3D feel */
+.mega-panel {
+	position: fixed;
+	top: 64px; /* matches header height */
+	left: 50%;
+	transform: translateX(-50%) translateY(12px) scale(0.96);
+	z-index: 9999;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* custom 3D bounce/elastic feel */
+}
+@media (min-width: 1024px) {
+	.mega-panel { top: 76px; }
+}
+
+/* Hover Bridge pseudo-element to prevent losing focus/hover */
+.mega-panel::before {
+	content: '';
+	position: absolute;
+	top: -30px;
+	left: 0;
+	right: 0;
+	height: 32px;
+	background: transparent;
+}
+
+.mega-trigger:hover .mega-panel,
+.mega-panel:hover {
+	opacity: 1;
+	transform: translateX(-50%) translateY(0) scale(1);
+	pointer-events: auto;
+}
+
+/* 3D Glassmorphic Container */
+.mega-container {
+	background: rgba(0, 3, 40, 0.97); /* Premium deep dark slate */
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border: 1px solid rgba(187, 243, 64, 0.25); /* Subtle lime accent border */
+	border-radius: 20px;
+	box-shadow: 
+		0 30px 60px -15px rgba(0, 0, 0, 0.6), 
+		0 0 50px rgba(187, 243, 64, 0.1), /* Lime glow */
+		inset 0 1px 1px rgba(255, 255, 255, 0.15);
+	padding: 24px;
+	margin-top: 8px;
+}
+
+/* 3D Glassmorphic Chips */
+.mega-chip {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 7px 12px;
+	border-radius: 12px;
+	font-size: 0.76rem;
+	font-weight: 600;
+	color: #e5e7eb;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.07);
+	box-shadow: 
+		inset 0 1px 0px rgba(255, 255, 255, 0.1),
+		0 2px 4px rgba(0, 0, 0, 0.15);
+	transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+	white-space: normal;
+	word-break: break-word;
+	text-decoration: none;
+	line-height: 1.35;
+	min-height: 38px;
+}
+.mega-chip:hover {
+	background: linear-gradient(135deg, #BBF340 0%, #a2d633 100%);
+	color: #000033; /* Pure dark contrast */
+	border-color: #BBF340;
+	transform: translateY(-2.5px); /* Lift */
+	box-shadow: 
+		0 10px 24px rgba(187, 243, 64, 0.4), 
+		inset 0 1px 0px rgba(255, 255, 255, 0.25);
+}
+</style>
+
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-md text-[#000066] border-b border-gray-100" style="width:100%;max-width:100vw;overflow:visible;">
+	<div class="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8" style="max-width:min(1340px,100vw);overflow:visible;">
+		<div class="flex items-center justify-between h-16 lg:h-20" style="width:100%;">
+			<!-- Logo -->
+			<a href="https://growintek.com/" class="flex items-center gap-2 shrink-0" aria-label="Growintek Solutions Home">
+				<img
+					src="https://growintek.com/wp-content/themes/growintek/assets/logo-wide.webp"
+					alt="Growintek Solutions Logo"
+					class="h-10 lg:h-12 w-auto object-contain"
+					width="180"
+					height="90"
+					style="aspect-ratio: 2 / 1; width: auto; max-height: 48px;"
+					fetchpriority="high"
+				/>
+			</a>
+
+			<!-- Desktop Nav -->
+			<nav class="hidden lg:flex items-center gap-1" role="navigation" aria-label="Main Navigation">
+
+				<!-- Home -->
+				<a href="https://growintek.com/" class="px-3 py-2 text-sm font-medium rounded-md transition-all hover:text-[#BBF340] hover:bg-[#000066]">Home</a>
+
+				<!-- Services Mega Trigger -->
+				<div class="relative mega-trigger" id="mega-services-wrapper">
+					<a
+						href="https://growintek.com/services/"
+						class="px-3 py-2 text-sm font-medium rounded-md transition-all flex items-center gap-1 hover:text-[#BBF340] hover:bg-[#000066]"
+						aria-haspopup="true"
+					>
+						Services <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+					</a>
+					<!-- Mega Panel: Services -->
+					<div class="mega-panel" style="width:920px; max-width:94vw;">
+						<div class="mega-container">
+							<div class="flex items-center justify-between mb-4">
+								<h3 class="text-[#BBF340] font-syne font-bold text-base uppercase tracking-wider">Our Services</h3>
+								<a href="https://growintek.com/services/" class="text-xs text-gray-300 hover:text-[#BBF340] font-semibold transition-colors flex items-center gap-1">
+									View All <i data-lucide="arrow-right" class="w-3 h-3"></i>
+								</a>
+							</div>
+							<div class="grid grid-cols-4 gap-2">
+																	<a href="https://growintek.com/services/website-design-development/" class="mega-chip">
+										Website Design &amp; Development									</a>
+																	<a href="https://growintek.com/services/wordpress-development/" class="mega-chip">
+										WordPress Development									</a>
+																	<a href="https://growintek.com/services/woocommerce-development/" class="mega-chip">
+										WooCommerce Development									</a>
+																	<a href="https://growintek.com/services/shopify-development/" class="mega-chip">
+										Shopify Development									</a>
+																	<a href="https://growintek.com/services/seo/" class="mega-chip">
+										SEO Services									</a>
+																	<a href="https://growintek.com/services/aeo/" class="mega-chip">
+										AEO Optimization									</a>
+																	<a href="https://growintek.com/services/geo/" class="mega-chip">
+										GEO Optimization									</a>
+																	<a href="https://growintek.com/services/digital-marketing/" class="mega-chip">
+										Digital Marketing									</a>
+																	<a href="https://growintek.com/services/google-ads-management/" class="mega-chip">
+										Google Ads Management									</a>
+																	<a href="https://growintek.com/services/meta-ads-management/" class="mega-chip">
+										Meta Ads Management									</a>
+																	<a href="https://growintek.com/services/social-media-marketing/" class="mega-chip">
+										Social Media Marketing									</a>
+																	<a href="https://growintek.com/services/social-media-management/" class="mega-chip">
+										Social Media Management									</a>
+																	<a href="https://growintek.com/services/ai-solutions/" class="mega-chip">
+										AI Solutions &amp; Automation									</a>
+																	<a href="https://growintek.com/services/lead-generation/" class="mega-chip">
+										Lead Generation									</a>
+																	<a href="https://growintek.com/services/graphic-design/" class="mega-chip">
+										Graphic Design									</a>
+																	<a href="https://growintek.com/services/video-production/" class="mega-chip">
+										Video Production									</a>
+																	<a href="https://growintek.com/services/motion-graphics/" class="mega-chip">
+										Motion Graphics									</a>
+																	<a href="https://growintek.com/services/cgi-advertising/" class="mega-chip">
+										CGI Advertising									</a>
+																	<a href="https://growintek.com/services/ugc-advertisement-production/" class="mega-chip">
+										UGC Advertisement Production									</a>
+																	<a href="https://growintek.com/services/ai-content-creation/" class="mega-chip">
+										AI Content Creation									</a>
+																	<a href="https://growintek.com/services/3d-services/" class="mega-chip">
+										3D Services									</a>
+																	<a href="https://growintek.com/services/branding/" class="mega-chip">
+										Branding &amp; Identity									</a>
+																	<a href="https://growintek.com/services/content-writing/" class="mega-chip">
+										Content Writing									</a>
+																	<a href="https://growintek.com/services/business-consulting/" class="mega-chip">
+										Business Consulting									</a>
+																	<a href="https://growintek.com/services/maintenance-support/" class="mega-chip">
+										Maintenance &amp; Support									</a>
+															</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Industries Mega Trigger -->
+				<div class="relative mega-trigger" id="mega-industries-wrapper">
+					<a
+						href="https://growintek.com/industries/"
+						class="px-3 py-2 text-sm font-medium rounded-md transition-all flex items-center gap-1 hover:text-[#BBF340] hover:bg-[#000066]"
+						aria-haspopup="true"
+					>
+						Industries <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+					</a>
+					<!-- Mega Panel: Industries -->
+					<div class="mega-panel" style="width:760px; max-width:94vw;">
+						<div class="mega-container">
+							<div class="flex items-center justify-between mb-4">
+								<h3 class="text-[#BBF340] font-syne font-bold text-base uppercase tracking-wider">Industries We Serve</h3>
+								<a href="https://growintek.com/industries/" class="text-xs text-gray-300 hover:text-[#BBF340] font-semibold transition-colors flex items-center gap-1">
+									View All <i data-lucide="arrow-right" class="w-3 h-3"></i>
+								</a>
+							</div>
+							<div class="grid grid-cols-4 gap-2">
+																	<a href="https://growintek.com/industries/dental-clinics/" class="mega-chip">
+										Dental Clinics									</a>
+																	<a href="https://growintek.com/industries/medical-clinics/" class="mega-chip">
+										Medical Clinics									</a>
+																	<a href="https://growintek.com/industries/plastic-surgeons/" class="mega-chip">
+										Plastic Surgeons									</a>
+																	<a href="https://growintek.com/industries/law-firms/" class="mega-chip">
+										Law Firms									</a>
+																	<a href="https://growintek.com/industries/real-estate-agencies/" class="mega-chip">
+										Real Estate Agencies									</a>
+																	<a href="https://growintek.com/industries/construction-companies/" class="mega-chip">
+										Construction Companies									</a>
+																	<a href="https://growintek.com/industries/roofing-companies/" class="mega-chip">
+										Roofing Companies									</a>
+																	<a href="https://growintek.com/industries/hvac-companies/" class="mega-chip">
+										HVAC Companies									</a>
+																	<a href="https://growintek.com/industries/solar-energy-companies/" class="mega-chip">
+										Solar Energy Companies									</a>
+																	<a href="https://growintek.com/industries/plumbing-services/" class="mega-chip">
+										Plumbing Services									</a>
+																	<a href="https://growintek.com/industries/ecommerce-brands/" class="mega-chip">
+										Ecommerce Brands									</a>
+																	<a href="https://growintek.com/industries/saas-companies/" class="mega-chip">
+										SaaS Companies									</a>
+																	<a href="https://growintek.com/industries/hotels-resorts/" class="mega-chip">
+										Hotels &amp; Resorts									</a>
+																	<a href="https://growintek.com/industries/restaurants/" class="mega-chip">
+										Restaurants									</a>
+																	<a href="https://growintek.com/industries/insurance-agencies/" class="mega-chip">
+										Insurance Agencies									</a>
+																	<a href="https://growintek.com/industries/mortgage-brokers/" class="mega-chip">
+										Mortgage Brokers									</a>
+																	<a href="https://growintek.com/industries/accounting-firms/" class="mega-chip">
+										Accounting Firms									</a>
+																	<a href="https://growintek.com/industries/logistics-companies/" class="mega-chip">
+										Logistics Companies									</a>
+																	<a href="https://growintek.com/industries/manufacturing-companies/" class="mega-chip">
+										Manufacturing Companies									</a>
+																	<a href="https://growintek.com/industries/educational-institutions/" class="mega-chip">
+										Educational Institutions									</a>
+															</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Simple links -->
+									<a
+						href="https://growintek.com/portfolio/"
+						class="px-3 py-3 text-sm font-medium rounded-md transition-all hover:text-[#BBF340] hover:bg-[#000066]"
+					>
+						Portfolio					</a>
+									<a
+						href="https://growintek.com/pricing/"
+						class="px-3 py-3 text-sm font-medium rounded-md transition-all hover:text-[#BBF340] hover:bg-[#000066]"
+					>
+						Pricing					</a>
+									<a
+						href="https://growintek.com/blog/"
+						class="px-3 py-3 text-sm font-medium rounded-md transition-all hover:text-[#BBF340] hover:bg-[#000066]"
+					>
+						Blog					</a>
+									<a
+						href="https://growintek.com/contact/"
+						class="px-3 py-3 text-sm font-medium rounded-md transition-all hover:text-[#BBF340] hover:bg-[#000066]"
+					>
+						Contact					</a>
+							</nav>
+
+			<!-- Action CTA -->
+			<div class="hidden lg:block">
+				<a
+					href="https://growintek.com/contact/"
+					class="inline-flex items-center px-5 py-3 bg-[#000066] text-white text-sm font-semibold rounded-full hover:bg-[#BBF340] hover:text-[#000066] transition-all duration-300 border border-transparent hover:border-[#000066]"
+				>
+					Get Started
+				</a>
+			</div>
+
+			<!-- Mobile Hamburger -->
+			<button
+				id="mobile-menu-toggle"
+				class="lg:hidden p-2 text-current focus:outline-none"
+				aria-label="Toggle mobile menu"
+				onclick="toggleMobileMenu()"
+			>
+				<i data-lucide="menu" id="hamburger-icon" class="w-6 h-6"></i>
+			</button>
+		</div>
+	</div>
+
+	<!-- Mobile Menu Drawer (Floating panel with rounded corners) -->
+	<div id="mobile-menu-drawer" class="lg:hidden bg-white border border-gray-150 shadow-2xl rounded-2xl mx-4 mt-2 max-h-[80vh] overflow-y-auto hidden absolute left-0 right-0 z-50">
+		
+		<!-- Main Mobile Panel -->
+		<div id="mobile-panel-main" class="px-4 py-4 space-y-1">
+			<a href="https://growintek.com/" class="block py-2.5 px-3 text-base font-semibold text-[#000066] hover:text-[#BBF340] rounded-xl hover:bg-gray-50 transition-all border-b border-gray-50">Home</a>
+			
+			<!-- Clicking Services opens nested menu panel instead of basic dropdown -->
+			<button onclick="openMobileSubpanel('services')" class="w-full flex items-center justify-between py-2.5 px-3 text-base font-semibold text-[#000066] hover:text-[#BBF340] rounded-xl hover:bg-gray-50 transition-all border-b border-gray-50 text-left">
+				<span>Services</span>
+				<i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
+			</button>
+
+			<!-- Clicking Industries opens nested menu panel instead of basic dropdown -->
+			<button onclick="openMobileSubpanel('industries')" class="w-full flex items-center justify-between py-2.5 px-3 text-base font-semibold text-[#000066] hover:text-[#BBF340] rounded-xl hover:bg-gray-50 transition-all border-b border-gray-50 text-left">
+				<span>Industries</span>
+				<i data-lucide="chevron-right" class="w-4 h-4 text-gray-400"></i>
+			</button>
+
+							<a href="https://growintek.com/portfolio/" class="block py-2.5 px-3 text-base font-semibold text-[#000066] hover:text-[#BBF340] rounded-xl hover:bg-gray-50 transition-all border-b border-gray-50">Portfolio</a>
+							<a href="https://growintek.com/pricing/" class="block py-2.5 px-3 text-base font-semibold text-[#000066] hover:text-[#BBF340] rounded-xl hover:bg-gray-50 transition-all border-b border-gray-50">Pricing</a>
+							<a href="https://growintek.com/blog/" class="block py-2.5 px-3 text-base font-semibold text-[#000066] hover:text-[#BBF340] rounded-xl hover:bg-gray-50 transition-all border-b border-gray-50">Blog</a>
+							<a href="https://growintek.com/contact/" class="block py-2.5 px-3 text-base font-semibold text-[#000066] hover:text-[#BBF340] rounded-xl hover:bg-gray-50 transition-all border-b border-gray-50">Contact</a>
+			
+			<a
+				href="https://growintek.com/contact/"
+				class="block mt-6 text-center px-5 py-3 bg-[#000066] text-white font-semibold rounded-full hover:bg-[#BBF340] hover:text-[#000066] transition-colors"
+			>
+				Get Started
+			</a>
+		</div>
+
+		<!-- Services Subpanel (Nest Menu) -->
+		<div id="mobile-panel-services" class="px-4 py-4 space-y-1 hidden">
+			<button onclick="closeMobileSubpanel('services')" class="w-full flex items-center gap-2 py-2 px-3 text-sm font-bold text-[#0055FF] mb-4 hover:bg-gray-50 rounded-xl transition-all border-b border-gray-50">
+				<i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Menu
+			</button>
+			<div class="px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Our Services</div>
+							<a href="https://growintek.com/services/website-design-development/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Website Design &amp; Development</a>
+							<a href="https://growintek.com/services/wordpress-development/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">WordPress Development</a>
+							<a href="https://growintek.com/services/woocommerce-development/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">WooCommerce Development</a>
+							<a href="https://growintek.com/services/shopify-development/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Shopify Development</a>
+							<a href="https://growintek.com/services/seo/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">SEO Services</a>
+							<a href="https://growintek.com/services/aeo/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">AEO Optimization</a>
+							<a href="https://growintek.com/services/geo/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">GEO Optimization</a>
+							<a href="https://growintek.com/services/digital-marketing/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Digital Marketing</a>
+							<a href="https://growintek.com/services/google-ads-management/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Google Ads Management</a>
+							<a href="https://growintek.com/services/meta-ads-management/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Meta Ads Management</a>
+							<a href="https://growintek.com/services/social-media-marketing/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Social Media Marketing</a>
+							<a href="https://growintek.com/services/social-media-management/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Social Media Management</a>
+							<a href="https://growintek.com/services/ai-solutions/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">AI Solutions &amp; Automation</a>
+							<a href="https://growintek.com/services/lead-generation/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Lead Generation</a>
+							<a href="https://growintek.com/services/graphic-design/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Graphic Design</a>
+							<a href="https://growintek.com/services/video-production/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Video Production</a>
+							<a href="https://growintek.com/services/motion-graphics/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Motion Graphics</a>
+							<a href="https://growintek.com/services/cgi-advertising/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">CGI Advertising</a>
+							<a href="https://growintek.com/services/ugc-advertisement-production/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">UGC Advertisement Production</a>
+							<a href="https://growintek.com/services/ai-content-creation/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">AI Content Creation</a>
+							<a href="https://growintek.com/services/3d-services/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">3D Services</a>
+							<a href="https://growintek.com/services/branding/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Branding &amp; Identity</a>
+							<a href="https://growintek.com/services/content-writing/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Content Writing</a>
+							<a href="https://growintek.com/services/business-consulting/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Business Consulting</a>
+							<a href="https://growintek.com/services/maintenance-support/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Maintenance &amp; Support</a>
+					</div>
+
+		<!-- Industries Subpanel (Nest Menu) -->
+		<div id="mobile-panel-industries" class="px-4 py-4 space-y-1 hidden">
+			<button onclick="closeMobileSubpanel('industries')" class="w-full flex items-center gap-2 py-2 px-3 text-sm font-bold text-[#0055FF] mb-4 hover:bg-gray-50 rounded-xl transition-all border-b border-gray-50">
+				<i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Menu
+			</button>
+			<div class="px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Industries We Serve</div>
+							<a href="https://growintek.com/industries/dental-clinics/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Dental Clinics</a>
+							<a href="https://growintek.com/industries/medical-clinics/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Medical Clinics</a>
+							<a href="https://growintek.com/industries/plastic-surgeons/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Plastic Surgeons</a>
+							<a href="https://growintek.com/industries/law-firms/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Law Firms</a>
+							<a href="https://growintek.com/industries/real-estate-agencies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Real Estate Agencies</a>
+							<a href="https://growintek.com/industries/construction-companies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Construction Companies</a>
+							<a href="https://growintek.com/industries/roofing-companies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Roofing Companies</a>
+							<a href="https://growintek.com/industries/hvac-companies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">HVAC Companies</a>
+							<a href="https://growintek.com/industries/solar-energy-companies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Solar Energy Companies</a>
+							<a href="https://growintek.com/industries/plumbing-services/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Plumbing Services</a>
+							<a href="https://growintek.com/industries/ecommerce-brands/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Ecommerce Brands</a>
+							<a href="https://growintek.com/industries/saas-companies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">SaaS Companies</a>
+							<a href="https://growintek.com/industries/hotels-resorts/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Hotels &amp; Resorts</a>
+							<a href="https://growintek.com/industries/restaurants/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Restaurants</a>
+							<a href="https://growintek.com/industries/insurance-agencies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Insurance Agencies</a>
+							<a href="https://growintek.com/industries/mortgage-brokers/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Mortgage Brokers</a>
+							<a href="https://growintek.com/industries/accounting-firms/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Accounting Firms</a>
+							<a href="https://growintek.com/industries/logistics-companies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Logistics Companies</a>
+							<a href="https://growintek.com/industries/manufacturing-companies/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Manufacturing Companies</a>
+							<a href="https://growintek.com/industries/educational-institutions/" class="block py-2 px-3 text-sm font-semibold text-[#000066] hover:text-[#0055FF] hover:bg-gray-50 rounded-xl transition-all">Educational Institutions</a>
+					</div>
+	</div>
+</header>
+
+<script>
+	const isHome = false;
+	window.addEventListener('scroll', function() {
+		const header = document.getElementById('site-header');
+		if (window.scrollY > 50 || !isHome) {
+			header.classList.remove('bg-transparent', 'text-white');
+			header.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-md', 'text-[#000066]', 'border-b', 'border-gray-100');
+		} else {
+			header.classList.add('bg-transparent', 'text-white');
+			header.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-md', 'text-[#000066]', 'border-b', 'border-gray-100');
+		}
+	});
+
+	function toggleMobileMenu() {
+		const drawer = document.getElementById('mobile-menu-drawer');
+		const icon = document.getElementById('hamburger-icon');
+		if (!drawer) return;
+		
+		const isHidden = drawer.classList.contains('hidden') || drawer.style.display === 'none' || getComputedStyle(drawer).display === 'none';
+		if (!isHidden) {
+			drawer.classList.add('hidden');
+			drawer.style.display = 'none';
+			if (icon) icon.setAttribute('data-lucide', 'menu');
+		} else {
+			drawer.classList.remove('hidden');
+			drawer.style.display = 'block';
+			if (icon) icon.setAttribute('data-lucide', 'x');
+			const mainP = document.getElementById('mobile-panel-main');
+			const servP = document.getElementById('mobile-panel-services');
+			const indP  = document.getElementById('mobile-panel-industries');
+			if (mainP) mainP.classList.remove('hidden');
+			if (servP) servP.classList.add('hidden');
+			if (indP)  indP.classList.add('hidden');
+		}
+		if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+	}
+
+	function openMobileSubpanel(name) {
+		document.getElementById('mobile-panel-main').classList.add('hidden');
+		document.getElementById('mobile-panel-' + name).classList.remove('hidden');
+		if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+	}
+
+	function closeMobileSubpanel(name) {
+		document.getElementById('mobile-panel-' + name).classList.add('hidden');
+		document.getElementById('mobile-panel-main').classList.remove('hidden');
+		if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+	}
+
+	// Fix mega-menu positioning — keep panel visible on hover of panel itself
+	document.querySelectorAll('.mega-trigger').forEach(function(wrapper) {
+		var panel = wrapper.querySelector('.mega-panel');
+		if (!panel) return;
+		var hideTimer;
+		wrapper.addEventListener('mouseenter', function() {
+			clearTimeout(hideTimer);
+			panel.style.display = 'block';
+		});
+		wrapper.addEventListener('mouseleave', function() {
+			hideTimer = setTimeout(function() { panel.style.display = ''; }, 150);
+		});
+		panel.addEventListener('mouseenter', function() { clearTimeout(hideTimer); });
+		panel.addEventListener('mouseleave', function() {
+			hideTimer = setTimeout(function() { panel.style.display = ''; }, 150);
+		});
+	});
+</script>
+
+<main class="min-h-[70vh]" style="min-height: 70vh; display: block;">
+
+<div class="py-24 bg-white">
+	<div class="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8">
+					<p>No content found.</p>
+			</div>
+</div>
+
+
+</main> <!-- end #main -->
+
+<footer class="bg-[#000066] text-white" role="contentinfo">
+	<div class="max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
+			<!-- Info / Contact Block -->
+			<div class="lg:col-span-4">
+				<a href="https://growintek.com/" aria-label="Growintek Solutions Home">
+					<img
+					src="https://growintek.com/wp-content/themes/growintek/assets/logo-wide.webp"
+					alt="Growintek Solutions Logo"
+					class="h-14 w-auto mb-6"
+					width="140"
+					height="70"
+					style="aspect-ratio: 2 / 1;"
+				/>
+				</a>
+				<p class="text-gray-200 mb-6 text-sm leading-relaxed">
+					An AI-powered Digital Marketing, Web Development, and Business Automation Agency helping businesses worldwide increase leads, sales, and online visibility. <strong class="text-[#BBF340]">We Grow Together in Technology.</strong>
+				</p>
+				<div class="space-y-3 text-sm">
+					<a href="/cdn-cgi/l/email-protection#7b131e1717143b1c09140c12150f1e1055181416" class="flex items-center gap-2 text-gray-200 hover:text-[#BBF340] transition-colors">
+						<i data-lucide="mail" class="w-4 h-4 text-[#BBF340]"></i> <span class="__cf_email__" data-cfemail="b2dad7dededdf2d5c0ddc5dbdcc6d7d99cd1dddf">[email&#160;protected]</span>
+					</a>
+					<button onclick="gtkOpenBookingModal()" class="flex items-center gap-2 text-gray-200 hover:text-[#BBF340] transition-colors text-left cursor-pointer">
+						<i data-lucide="calendar" class="w-4 h-4 text-[#BBF340]"></i> Schedule Strategy Call (US / Global)
+					</button>
+					<span class="flex items-center gap-2 text-gray-200">
+						<i data-lucide="shield-check" class="w-4 h-4 text-[#BBF340]"></i> Enterprise SLA &amp; Priority Support
+					</span>
+					<span class="flex items-center gap-2 text-gray-200">
+						<i data-lucide="map-pin" class="w-4 h-4 text-[#BBF340]"></i> Serving 12+ Countries Worldwide
+					</span>
+				</div>
+				<!-- Social Media Icons -->
+				<div class="flex gap-3 mt-6">
+											<a
+							href="https://www.facebook.com/growintek/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#BBF340] hover:text-[#000066] transition-all text-white hover:scale-105"
+							aria-label="Follow us on Facebook"
+						>
+							<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>						</a>
+											<a
+							href="https://pk.linkedin.com/company/growintek-solutions"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#BBF340] hover:text-[#000066] transition-all text-white hover:scale-105"
+							aria-label="Follow us on LinkedIn"
+						>
+							<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>						</a>
+											<a
+							href="https://www.instagram.com/growintek_sol/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#BBF340] hover:text-[#000066] transition-all text-white hover:scale-105"
+							aria-label="Follow us on Instagram"
+						>
+							<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>						</a>
+											<a
+							href="https://www.tiktok.com/@growintek.solutio"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#BBF340] hover:text-[#000066] transition-all text-white hover:scale-105"
+							aria-label="Follow us on TikTok"
+						>
+							<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.02 1.73 4.05 1.26 1.09 2.93 1.63 4.59 1.68V9.7c-1.89-.03-3.75-.58-5.3-1.66-.08-.05-.13-.08-.22-.15V15c0 2.21-1.12 4.3-3.05 5.37-2.18 1.2-4.96 1.06-7.01-.35-2.07-1.42-3.02-4.08-2.33-6.52.68-2.4 2.91-4.07 5.4-3.98v4.03c-1.1-.11-2.19.46-2.68 1.45-.49.99-.27 2.22.52 2.98.79.76 2.02.83 2.9.17.65-.49 1.01-1.29.98-2.11V.02z"/></svg>						</a>
+											<a
+							href="https://www.pinterest.com/growintek/"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#BBF340] hover:text-[#000066] transition-all text-white hover:scale-105"
+							aria-label="Follow us on Pinterest"
+						>
+							<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.4 7.63 11.16-.1-.95-.2-2.4.04-3.43.22-.93 1.4-5.93 1.4-5.93s-.36-.72-.36-1.77c0-1.66.96-2.9 2.12-2.9 1 0 1.48.75 1.48 1.65 0 1-.64 2.5-.97 3.9-.28 1.17.58 2.13 1.73 2.13 2.08 0 3.68-2.2 3.68-5.37 0-2.8-2-4.77-4.9-4.77-3.33 0-5.28 2.5-5.28 5.08 0 1 .39 2.08.88 2.68.1.12.1.22.08.33-.1.4-.3.12-.34.3-.12-.08-.53-.22-.72-1-.7-1-1.3-3.1-1.3-4.66 0-3.8 2.76-7.3 8-7.3 4.2 0 7.45 3 7.45 7 0 4.18-2.63 7.54-6.28 7.54-1.23 0-2.38-.64-2.77-1.4l-.76 2.87c-.28 1.07-1 2.4-1.5 3.2 1.1.34 2.27.53 3.5.53 6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>						</a>
+									</div>
+			</div>
+
+			<!-- Services -->
+			<div class="lg:col-span-2">
+				<h3 class="font-syne font-bold text-lg mb-4 text-[#BBF340]">Services</h3>
+				<ul class="space-y-2">
+											<li>
+							<a href="https://growintek.com/services/website-design-development/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Web Development							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/services/seo/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								SEO Services							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/services/ai-solutions/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								AI Solutions							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/services/google-ads-management/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Google Ads							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/services/social-media-marketing/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Social Media Marketing							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/services/branding/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Branding &amp; Identity							</a>
+						</li>
+									</ul>
+			</div>
+
+			<!-- Company -->
+			<div class="lg:col-span-2">
+				<h3 class="font-syne font-bold text-lg mb-4 text-[#BBF340]">Company</h3>
+				<ul class="space-y-2">
+											<li>
+							<a href="https://growintek.com/about/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								About Us							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/portfolio/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Portfolio							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/pricing/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Pricing							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/blog/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Blog							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/careers/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Careers							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/contact/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Contact							</a>
+						</li>
+									</ul>
+			</div>
+
+			<!-- Resources -->
+			<div class="lg:col-span-2">
+				<h3 class="font-syne font-bold text-lg mb-4 text-[#BBF340]">Resources</h3>
+				<ul class="space-y-2">
+											<li>
+							<a href="https://growintek.com/tools/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Free Tools							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/resources/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Resources							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/faq/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								FAQ							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/support/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Support							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/sitemap/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Sitemap							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/search/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Search							</a>
+						</li>
+									</ul>
+			</div>
+
+			<!-- Legal -->
+			<div class="lg:col-span-2">
+				<h3 class="font-syne font-bold text-lg mb-4 text-[#BBF340]">Legal</h3>
+				<ul class="space-y-2">
+											<li>
+							<a href="https://growintek.com/privacy/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Privacy Policy							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/terms/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Terms of Service							</a>
+						</li>
+											<li>
+							<a href="https://growintek.com/refund/" class="text-sm text-gray-200 hover:text-[#BBF340] transition-colors">
+								Refund Policy							</a>
+						</li>
+									</ul>
+			</div>
+		</div>
+
+		<!-- Locations Footer Column Section -->
+		<div class="border-t border-white/10 mt-12 pt-8">
+			<h3 class="font-syne font-bold text-base mb-6 text-[#BBF340] text-center">Our Global Locations</h3>
+			<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+									<a href="https://growintek.com/locations/digital-marketing-usa/" class="text-xs text-gray-200 hover:text-[#BBF340] transition-colors bg-white/5 py-2.5 px-3 rounded-xl border border-white/5 hover:border-[#BBF340]/30">
+						Digital Marketing USA					</a>
+									<a href="https://growintek.com/locations/digital-marketing-uk/" class="text-xs text-gray-200 hover:text-[#BBF340] transition-colors bg-white/5 py-2.5 px-3 rounded-xl border border-white/5 hover:border-[#BBF340]/30">
+						Digital Marketing UK					</a>
+									<a href="https://growintek.com/locations/digital-marketing-canada/" class="text-xs text-gray-200 hover:text-[#BBF340] transition-colors bg-white/5 py-2.5 px-3 rounded-xl border border-white/5 hover:border-[#BBF340]/30">
+						Digital Marketing Canada					</a>
+									<a href="https://growintek.com/locations/seo-new-york/" class="text-xs text-gray-200 hover:text-[#BBF340] transition-colors bg-white/5 py-2.5 px-3 rounded-xl border border-white/5 hover:border-[#BBF340]/30">
+						SEO New York					</a>
+									<a href="https://growintek.com/locations/seo-london/" class="text-xs text-gray-200 hover:text-[#BBF340] transition-colors bg-white/5 py-2.5 px-3 rounded-xl border border-white/5 hover:border-[#BBF340]/30">
+						SEO London					</a>
+									<a href="https://growintek.com/locations/seo-toronto/" class="text-xs text-gray-200 hover:text-[#BBF340] transition-colors bg-white/5 py-2.5 px-3 rounded-xl border border-white/5 hover:border-[#BBF340]/30">
+						SEO Toronto					</a>
+							</div>
+		</div>
+
+		<!-- Copyright -->
+		<div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+			<div>
+				&copy; 2026 Growintek Solutions. All rights reserved.
+			</div>
+			<div>
+				Designed &amp; Developed by Growintek Solutions
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="gtk-floating-elements z-50">
+	<!-- Book Strategy Call (Desktop & Mobile Floating) -->
+	<button
+		onclick="gtkOpenBookingModal()"
+		class="fixed bottom-6 right-6 z-50 bg-[#BBF340] text-[#000066] px-6 py-3.5 rounded-full font-bold text-sm shadow-2xl hover:shadow-xl hover:scale-105 transition-all hidden md:flex items-center gap-2 cursor-pointer border border-[#000066]/10"
+		aria-label="Book a Strategy Call with Growintek"
+	>
+		<i data-lucide="calendar" class="w-4 h-4"></i>
+		Book Strategy Call
+	</button>
+
+	<!-- Global Quick Strategy Launcher (Left Floating) -->
+	<div class="fixed bottom-6 left-6 z-50">
+		<button
+			onclick="gtkOpenBookingModal()"
+			class="w-14 h-14 bg-[#000066] text-[#BBF340] border-2 border-[#BBF340] rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all focus:outline-none cursor-pointer"
+			aria-label="Book a strategy consultation with Growintek"
+		>
+			<i data-lucide="calendar" class="w-6 h-6"></i>
+		</button>
+	</div>
+</div>
+
+<!-- ============================================================
+     GLOBAL STRATEGY BOOKING MODAL (Calendly / Direct Audit)
+     ============================================================ -->
+<div id="gtk-booking-modal" class="fixed inset-0 bg-[#000033]/80 backdrop-blur-md z-[99999] hidden items-center justify-center p-4">
+	<div class="bg-white rounded-3xl max-w-xl w-full p-8 relative shadow-2xl border border-gray-100 animate-fade-in-up">
+		<button onclick="gtkCloseBookingModal()" class="absolute top-5 right-5 text-gray-400 hover:text-[#000066] text-2xl font-bold p-2 transition-colors" aria-label="Close booking modal">&times;</button>
+		<div class="inline-block px-3 py-1 bg-[#BBF340] text-[#000066] font-bold text-xs rounded-full uppercase tracking-wider mb-3">
+			📅 Enterprise Strategy Discovery
+		</div>
+		<h3 class="font-syne font-extrabold text-2xl md:text-3xl text-[#000066] mb-3">
+			Schedule a 1-on-1 Strategy Session
+		</h3>
+		<p class="text-gray-600 text-sm mb-6 leading-relaxed">
+			Book a confidential 30-minute audit call with our growth engineering team. We&rsquo;ll analyze your pipeline, competitive positioning, and ROI targets.
+		</p>
+		
+		<div class="space-y-4 mb-6">
+			<a href="https://growintek.com/contact/" class="flex items-center justify-between p-4 bg-[#000066] text-white rounded-2xl hover:bg-[#0055FF] transition-all group shadow-md">
+				<div class="flex items-center gap-3">
+					<div class="w-10 h-10 rounded-xl bg-[#BBF340] flex items-center justify-center text-[#000066] font-bold">
+						<i data-lucide="calendar" class="w-5 h-5"></i>
+					</div>
+					<div>
+						<div class="font-bold text-base">Select Strategy Time Slot</div>
+						<div class="text-xs text-gray-300">Book directly on our executive calendar</div>
+					</div>
+				</div>
+				<i data-lucide="arrow-right" class="w-5 h-5 text-[#BBF340] group-hover:translate-x-1 transition-transform"></i>
+			</a>
+			
+			<a href="https://growintek.com/contact/" class="flex items-center justify-between p-4 bg-[#F6F7F8] border border-gray-200 text-[#000066] rounded-2xl hover:border-[#BBF340] hover:bg-white transition-all group">
+				<div class="flex items-center gap-3">
+					<div class="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center text-[#0055FF] font-bold">
+						<i data-lucide="file-text" class="w-5 h-5"></i>
+					</div>
+					<div>
+						<div class="font-bold text-base">Request Custom Proposal</div>
+						<div class="text-xs text-gray-500">Receive a detailed strategy breakdown in 24 hrs</div>
+					</div>
+				</div>
+				<i data-lucide="arrow-right" class="w-5 h-5 text-[#000066] group-hover:translate-x-1 transition-transform"></i>
+			</a>
+		</div>
+		
+		<div class="text-center text-xs text-gray-400">
+			🔒 Confidential &bull; No long-term commitments &bull; High-ROI focus
+		</div>
+	</div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function gtkOpenBookingModal() {
+	var modal = document.getElementById('gtk-booking-modal');
+	if (modal) {
+		modal.classList.remove('hidden');
+		modal.classList.add('flex');
+		if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+	}
+}
+function gtkCloseBookingModal() {
+	var modal = document.getElementById('gtk-booking-modal');
+	if (modal) {
+		modal.classList.remove('flex');
+		modal.classList.add('hidden');
+	}
+}
+document.addEventListener('keydown', function(e) {
+	if (e.key === 'Escape') gtkCloseBookingModal();
+});
+</script>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/growintek/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+			<script>
+				( () => {
+					const lazyloadRunObserver = () => {
+						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+							entries.forEach( ( entry ) => {
+								if ( entry.isIntersecting ) {
+									let lazyloadBackground = entry.target;
+									if( lazyloadBackground ) {
+										lazyloadBackground.classList.add( 'e-lazyloaded' );
+									}
+									lazyloadBackgroundObserver.unobserve( entry.target );
+								}
+							});
+						}, { rootMargin: '200px 0px 200px 0px' } );
+						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+							lazyloadBackgroundObserver.observe( lazyloadBackground );
+						} );
+					};
+					const events = [
+						'DOMContentLoaded',
+						'elementor/lazyload/observe',
+					];
+					events.forEach( ( event ) => {
+						document.addEventListener( event, lazyloadRunObserver );
+					} );
+				} )();
+			</script>
+			<script id="growintek-lucide-js" defer src="https://unpkg.com/lucide@latest"></script>
+<script id="googlesitekit-events-provider-content-events-js-before">
+window._googlesitekit = window._googlesitekit || {};
+window._googlesitekit.contentEvents = {"postID":0,"isSinglePost":false};
+//# sourceURL=googlesitekit-events-provider-content-events-js-before
+</script>
+<script id="googlesitekit-events-provider-content-events-js" defer src="https://growintek.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-content-events-33078016c5e1e9f07c35.js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://growintek.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.3"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://growintek.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+	<script>
+		(function() {
+			function initLucide() {
+				if (typeof lucide !== 'undefined') {
+					lucide.createIcons();
+				} else {
+					setTimeout(initLucide, 50);
+				}
+			}
+			if (document.readyState === 'complete' || document.readyState === 'interactive') {
+				initLucide();
+			} else {
+				document.addEventListener("DOMContentLoaded", initLucide);
+			}
+		})();
+	</script>
+	</body>
+</html>

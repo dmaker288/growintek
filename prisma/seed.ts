@@ -148,6 +148,52 @@ async function main() {
         "Priority response within one working day",
       ],
     },
+    {
+      slug: "ai-seo",
+      name: "AEO & Technical SEO",
+      tagline: "Rank #1 in Google & AI Answer Engines.",
+      summary:
+        "Modern search is no longer just ten blue links. We optimize your brand for ChatGPT, Perplexity, Claude, Google Gemini, and AI Overviews with deep entity schemas, knowledge graph authority, and semantic topical clusters.",
+      icon: "search",
+      fromPrice: 120000,
+      order: 5,
+      outcomes: [
+        "Brand recommended as the direct answer in AI search",
+        "Organic inbound pipeline that compounds over time",
+        "Technical schema audit scoring 100% on validation",
+      ],
+      deliverables: [
+        "Comprehensive AEO (Answer Engine) and GEO search audit",
+        "Entity Schema graph linking your organisation, founder, and offers",
+        "Semantic content strategy targeting high-intent buyer prompts",
+        "Technical core web vitals optimization (LCP, INP, CLS)",
+        "Search Console and Bing Webmaster indexing automation",
+        "Knowledge base citations and digital PR authority signals",
+      ],
+    },
+    {
+      slug: "growth-ads",
+      name: "Paid Ads (Google & Meta)",
+      tagline: "Predictable customer acquisition at profitable ROI.",
+      summary:
+        "Precision PPC and social ad campaigns engineered for immediate revenue. We build custom high-converting landing pages, test winning creative hooks, and implement privacy-first multi-touch conversion tracking.",
+      icon: "trending-up",
+      fromPrice: 150000,
+      order: 6,
+      outcomes: [
+        "Predictable cost per acquisition (CPA)",
+        "Custom landing pages engineered for 15%+ conversion rate",
+        "Daily automated budget protection and ROI tracking",
+      ],
+      deliverables: [
+        "Full competitor intelligence and high-intent keyword mapping",
+        "High-converting landing page built and split-tested",
+        "Meta Ads (Facebook & Instagram) creative hooks and retargeting",
+        "Google Ads search and Performance Max campaign architecture",
+        "Server-side CAPI tracking (Meta & Google Enhanced Conversions)",
+        "Bi-weekly performance sprint reviews and budget reallocation",
+      ],
+    },
   ];
 
   for (const s of services) {

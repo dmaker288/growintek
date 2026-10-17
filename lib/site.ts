@@ -5,12 +5,12 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://growintek.com",
   email: "hello@growintek.com",
   bookingEmail: "hello@growintek.com",
-  tagline: "Websites, AI agents and automation for businesses that answer the phone.",
+  tagline: "AI-Powered Web Engineering, Autonomous Agents & Growth Automation.",
   description:
-    "GrowinTek designs high-converting websites and builds AI agents that answer enquiries, qualify leads and write to your CRM — shipped in weeks, not quarters.",
-  location: "Remote · UK, Australia and Europe",
-  hours: "Mon–Fri, 09:00–18:00 UK",
-  whatsapp: "",
+    "GrowinTek builds high-converting Next.js websites, autonomous AI agents, technical AEO/GEO SEO, and revenue automation pipelines that drive explosive growth for global enterprises.",
+  location: "United States · United Kingdom · Global Remote",
+  hours: "24/7 Autonomous Operations · Mon–Fri Dedicated Engineering",
+  whatsapp: "+1-800-476-9468",
   calendly: "",
   social: {
     linkedin: "https://www.linkedin.com/company/growintek",
@@ -34,23 +34,33 @@ export const nav: NavItem[] = [
     children: [
       {
         href: "/services/websites",
-        label: "Websites",
-        description: "Fast, search-ready sites built to convert.",
+        label: "Web Engineering",
+        description: "Sub-second Next.js web applications built to convert.",
       },
       {
         href: "/services/ai-agents",
-        label: "AI agents",
-        description: "Answer enquiries and qualify leads in minutes.",
+        label: "AI Agents",
+        description: "24/7 conversational agents that qualify and close.",
+      },
+      {
+        href: "/services/ai-seo",
+        label: "AEO & Technical SEO",
+        description: "Rank #1 in Google, ChatGPT & Perplexity AI search.",
       },
       {
         href: "/services/automation",
-        label: "Automation",
-        description: "Connect the tools you already pay for.",
+        label: "Revenue Automation",
+        description: "Zero-touch pipelines connecting your CRM and tools.",
+      },
+      {
+        href: "/services/growth-ads",
+        label: "Paid Ads (Google & Meta)",
+        description: "Hyper-targeted campaigns with high conversion ROI.",
       },
       {
         href: "/services/it-support",
-        label: "IT & support",
-        description: "Domain, email, hosting and the unglamorous bits.",
+        label: "Cloud & IT Infrastructure",
+        description: "Domain, cloud edge, security audits and uptime SLA.",
       },
     ],
   },
@@ -65,10 +75,12 @@ export const footerNav = [
   {
     heading: "Services",
     links: [
-      { href: "/services/websites", label: "Website development" },
-      { href: "/services/ai-agents", label: "AI agents" },
-      { href: "/services/automation", label: "Business automation" },
-      { href: "/services/it-support", label: "IT & support" },
+      { href: "/services/websites", label: "Web Engineering" },
+      { href: "/services/ai-agents", label: "AI Autonomous Agents" },
+      { href: "/services/ai-seo", label: "AEO & Technical SEO" },
+      { href: "/services/automation", label: "Revenue Automation" },
+      { href: "/services/growth-ads", label: "Google & Meta Ads" },
+      { href: "/services/it-support", label: "Cloud & IT Care" },
     ],
   },
   {

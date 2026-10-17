@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site, footerNav } from "@/lib/site";
 import Newsletter from "./Newsletter";
 
@@ -11,7 +12,13 @@ export default function Footer() {
         <div className="footer-top">
           <div className="footer-brand">
             <Link href="/" className="footer-wordmark">
-              Growin<span>Tek</span>
+              <Image
+                src="/images/logo-wide.webp"
+                alt="GrowinTek"
+                width={160}
+                height={44}
+                className="footer-logo-img"
+              />
             </Link>
             <p className="footer-tagline">
               Websites that sell, agents that answer, systems that keep working

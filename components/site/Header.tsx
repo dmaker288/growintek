@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { nav, site, mailto } from "@/lib/site";
 import MobileMenu from "./MobileMenu";
 
@@ -7,16 +8,14 @@ export default function Header() {
     <header className="site-header">
       <div className="wrap header-inner">
         <Link href="/" className="wordmark" aria-label={`${site.name} home`}>
-          <span className="wordmark-mark" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <path d="M11 1.5 20.5 7v8L11 20.5 1.5 15V7L11 1.5Z" stroke="currentColor" strokeWidth="1.4" />
-              <path d="M6.6 12.4 11 7.3l4.4 5.1" stroke="currentColor" strokeWidth="1.4" />
-              <path d="M11 7.3v9.2" stroke="currentColor" strokeWidth="1.4" />
-            </svg>
-          </span>
-          <span className="wordmark-text">
-            Growin<span className="wordmark-tek">Tek</span>
-          </span>
+          <Image
+            src="/images/logo-wide.webp"
+            alt="GrowinTek"
+            width={154}
+            height={42}
+            priority
+            className="header-logo-img"
+          />
         </Link>
 
         <nav className="desk-nav" aria-label="Primary">
