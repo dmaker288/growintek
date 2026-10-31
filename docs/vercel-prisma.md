@@ -113,3 +113,9 @@ Use Prisma provider backups/PITR and separate S3 backups. `npm run backup` appli
 **CMS → Blog comments** shows pending, approved and rejected submissions. Visitors open the configured Instagram, YouTube, Facebook, TikTok and X links individually in new tabs, then confirm that they follow. This is a self-declaration, not platform verification. Submission always starts as Pending. Links, markup, obvious encoded addresses and promotional addresses are rejected; an hourly limit and hidden spam field reduce abuse. Review the comment and change Moderation to Approved to show it publicly, or Rejected to hide it. Only name, plain-text comment and creation date are public; email remains in the authenticated CMS. Edit community profile URLs under Site settings.
 
 The supplied blog covers use sharp WebP editorial artwork. Future AI covers select a search, website or workflow illustration using the title/category; all uploads still follow the same WebP storage pipeline.
+
+## Social World layout
+
+The homepage social section follows the supplied artwork: two separate glass panels for posts and videos/reels, independent platform filters, card browsing and a YouTube subscription link. The icons painted into the background are mapped to the editable Facebook, Instagram and YouTube URLs. Mobile stacks the panels and supports touch scrolling. No engagement counts or verification badges are invented.
+
+Media previews remain opt-in. YouTube opens an embedded player after consent and an explicit Play click; Facebook/Instagram video buttons open their original posts. Closing the player removes its iframe. Cached posts refresh every minute while the page is visible. A later YouTube API request on 31 October returned quotaExceeded; the previous seven videos remain available and the CMS reports quota failures distinctly.

@@ -31,6 +31,15 @@ export async function executeComposio(name, slug, args) {
       `Composio ${name} returned HTTP ${response.status}. Check the connection and quota.`,
     );
   const result = await response.json();
+  if (
+    !result.successful &&
+    /quotaExceeded|exceeded your.*quota/i.test(
+      JSON.stringify(result.error || result.data || ""),
+    )
+  )
+    throw new Error(
+      `Composio ${name} has reached its API quota. Saved content remains visible; refreshes will retry after quota is available.`,
+    );
   if (!result.successful)
     throw new Error(
       `Composio could not read ${name}. Check the connected account and permissions.`,

@@ -17,11 +17,13 @@
 - Social tests cover owner filtering, later events from the same trigger, partial-failure retries and completed-webhook deduplication. The browser verifies the visible feed refreshes after sixty seconds.
 - Search metadata tests cover absolute uploaded images, full detail-page breadcrumbs and AboutPage/Person data. All existing blog covers were replaced with optimized editorial WebP artwork.
 
+- The supplied social artwork is implemented as WebP with mapped Facebook/Instagram/YouTube links. Targeted Chromium checks verify separate posts/videos, independent filters, carousel arrows, all artwork links at six widths, consent-gated video playback, Escape/focus return and automatic sixty-second updates. The live preview rendered 20 posts and 11 videos/reels with no broken social images.
+
 Local evidence lives under `evidence/upgrade` and private verification files under `data/`; neither directory is committed.
 
 ## Remaining external setup
 
-- Three Composio accounts are ACTIVE. The local SDK subscription succeeds, and an enabled YouTube activity trigger is registered. Hosted webhook delivery still needs deployment and its signing secret; no real new YouTube event has been observed end-to-end.
+- Three Composio accounts are ACTIVE. A later YouTube read returned quotaExceeded; its seven saved videos remain visible while the provider quota recovers. The local SDK subscription succeeds, and an enabled YouTube activity trigger is registered. Hosted webhook delivery still needs deployment and its signing secret; no real new YouTube event has been observed end-to-end.
 - Google Business Profile needs owner OAuth and approved project access/quota. YouTube Data API must be enabled for the direct YouTube key.
 - Pak Exporters was captured at the corrected `https://www.pak-exporters.com/` URL. Its portfolio entry links there; Growintek’s own entry is unpublished.
 - GitHub publication does not activate Vercel hosting. Vercel environment values, domain routing and hosted cron/webhook delivery must be verified after deployment.
@@ -51,6 +53,8 @@ python3 tests/browser.py
 python3 tests/tracking.py
 # Reset the disposable fixture before the independent community workflow.
 python3 tests/community-browser.py
+# Targeted social-layout checks against the local preview:
+python3 tests/social-world-browser.py
 ```
 
 The setup creates random test-only credentials in `/tmp/grow-browser-tests/credentials.json`. Reset the fixture before repeating tests that create records. The tracking check intercepts Google's script request and tests consent/origin gating without sending traffic to Google.

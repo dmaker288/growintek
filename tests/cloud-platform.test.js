@@ -253,6 +253,8 @@ test("Composio adapter filters private and visitor content and distinguishes ree
     const posts = await composioFeed("instagram");
     assert.equal(posts[0].kind, "reel");
     assert.equal(posts[0].text, "Verified reel");
+    globalThis.fetch = async () => Response.json({successful:false,error:"YouTube quotaExceeded: request cannot be completed."});
+    await assert.rejects(composioFeed("instagram"), /reached its API quota.*Saved content remains visible/);
   } finally {
     globalThis.fetch = fetchOriginal;
     for (const key of Object.keys(process.env))

@@ -73,8 +73,8 @@ with sync_playwright() as p:
  def feed(route):
   count[0]+=1
   route.fulfill(json={'instagram':{'status':'connected','posts':[{'id':str(count[0]),'text':'Feed update '+str(count[0]),'kind':'post','url':'https://www.instagram.com/example/'}]}})
- page.route('**/api/social',feed);page.goto(BASE);page.wait_for_load_state('networkidle');expect(page.locator('.social-card p').filter(has_text='Feed update 1')).to_be_visible()
- page.clock.fast_forward(61000);expect(page.locator('.social-card p').filter(has_text='Feed update 2')).to_be_visible()
+ page.route('**/api/social',feed);page.goto(BASE);page.wait_for_load_state('networkidle');expect(page.locator('.sw-post-card p').filter(has_text='Feed update 1')).to_be_visible()
+ page.clock.fast_forward(61000);expect(page.locator('.sw-post-card p').filter(has_text='Feed update 2')).to_be_visible()
  print('PASS: foreground homepage refreshes social posts after sixty seconds',flush=True)
  assert not errors,errors
  print('PASS: no browser JavaScript errors',flush=True);b.close()
