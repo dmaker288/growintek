@@ -15,7 +15,7 @@ Local evidence lives under `evidence/upgrade` and private verification files und
 
 ## Remaining external setup
 
-- The supplied Composio key returns HTTP 401, code 801, `APIKey_InvalidAPIKey`. Connected-account IDs and the webhook signing secret are not set. The site shows its saved public social snapshot.
+- The replacement Composio key is valid (HTTP 200), but its project has zero connected accounts. Facebook, Instagram and YouTube must be connected in that same project. Connected-account IDs and the webhook signing secret remain unset. The site shows its saved public social snapshot.
 - Google Business Profile needs owner OAuth and approved project access/quota. YouTube Data API must be enabled for the direct YouTube key.
 - Pak Exporters did not resolve during capture and retains a labeled concept image. Other new portfolio images are real live-site captures.
 - GitHub publication does not activate Vercel hosting. Vercel environment values, domain routing and hosted cron/webhook delivery must be verified after deployment.

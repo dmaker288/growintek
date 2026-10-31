@@ -69,9 +69,9 @@ Content-Type: application/json
 
 The JSON body contains `connected_account_id`, `version` and the tool's `arguments`. Set `COMPOSIO_FACEBOOK_ACCOUNT_ID`, `COMPOSIO_INSTAGRAM_ACCOUNT_ID` and `COMPOSIO_YOUTUBE_ACCOUNT_ID` from that **same project**. The adapters read public Page posts, professional Instagram media and public YouTube videos. They never publish social posts.
 
-The supplied key currently returns **HTTP 401, code 801, `APIKey_InvalidAPIKey`**, at the connection-list endpoint. This happens before any connected-account permissions are evaluated. A webhook does not repair that key: this implementation uses authenticated API reads after a verified trigger arrives. The website retains the last saved public social snapshot while refresh is unavailable.
+The replacement project key was verified on 31 October 2026: the connection-list endpoint returns **HTTP 200**, with **zero connected accounts**. Connect Facebook, Instagram and YouTube in the same Composio project, then set their connected-account IDs. The previous key returned 401 and has been replaced in the private environment files. This webhook implementation performs authenticated API reads after a verified trigger arrives. The website retains the last saved public social snapshot while account connections are unavailable.
 
-After the key and connections work:
+After connecting the social accounts:
 
 1. Deploy the app and confirm its HTTPS URL.
 2. In Composio, subscribe supported triggers for the relevant accounts to `https://growintek.com/api/webhooks/composio`.
