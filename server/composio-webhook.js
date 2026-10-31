@@ -35,7 +35,7 @@ export function verifyComposioWebhook(
     );
   });
 }
-export function composioWebhook(db) {
+export function composioWebhook(db, options = {}) {
   return async (req, res) => {
     if (!process.env.COMPOSIO_WEBHOOK_SECRET)
       return res
@@ -75,7 +75,7 @@ export function composioWebhook(db) {
         .prepare("SELECT status,lease_until FROM jobs WHERE id=?")
         .get(id);
       if (
-        row.status === "done" ||
+        ["complete", "done"].includes(row.status) ||
         (row.status === "running" && Number(row.lease_until) > Date.now())
       )
         return false;
@@ -88,14 +88,14 @@ export function composioWebhook(db) {
     })();
     if (!claimed) return res.status(200).json({ duplicate: true });
     try {
-      const cache = await refreshSocial(db);
+      const cache = await (options.refreshSocial || refreshSocial)(db);
       if (Object.values(cache).some((c) => c.status === "error"))
         throw new Error(
           "A social connection needs attention. The previous feed has been preserved.",
         );
       await db
         .prepare(
-          "UPDATE jobs SET status='done',lease_until=NULL,updated_at=? WHERE id=?",
+          "UPDATE jobs SET status='complete',error=NULL,lease_until=NULL,updated_at=? WHERE id=?",
         )
         .run(now(), id);
       return res.json({ ok: true });
@@ -110,12 +110,9 @@ export function composioWebhook(db) {
           now(),
           id,
         );
-      return res
-        .status(503)
-        .json({
-          error:
-            "Refresh will be retried. Check social connection permissions.",
-        });
+      return res.status(503).json({
+        error: "Refresh will be retried. Check social connection permissions.",
+      });
     }
   };
 }

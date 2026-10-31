@@ -120,6 +120,9 @@ export async function publicData(db) {
         sources: (p.sources || []).map(({ title, url }) => ({ title, url })),
       })),
     pages: (await list(db, "pages")).filter(isPublic),
+    team: (await list(db, "team"))
+      .filter(isPublic)
+      .sort((a, b) => a.order - b.order),
     sections: (await list(db, "sections"))
       .filter(isPublic)
       .sort((a, b) => a.order - b.order),
@@ -149,6 +152,7 @@ export async function seed(db) {
         "posts",
         "pages",
         "keywords",
+        "team",
       ])
         for (const item of data[kind] || []) await insert(db, kind, item);
     }
@@ -269,6 +273,7 @@ export function dataForPage(data, path = "/") {
   const currentPage = path === "/" ? "home" : section;
   return {
     ...data,
+    team: section === "about" ? data.team || [] : [],
     services: data.services.map((d) => ({
       ...d,
       content: section === "services" && slug === d.slug ? d.content : "",

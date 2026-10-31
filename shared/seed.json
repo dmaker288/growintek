@@ -8,7 +8,9 @@
     "social": {
       "facebook": "https://www.facebook.com/105529598487551",
       "instagram": "https://www.instagram.com/growintek_sol/",
-      "youtube": "https://www.youtube.com/channel/UCEMgRH5lMO107i2e5KoO8ug"
+      "youtube": "https://www.youtube.com/channel/UCEMgRH5lMO107i2e5KoO8ug",
+      "tiktok": "https://www.tiktok.com/@growintek.solutio",
+      "x": "https://x.com/growintek"
     },
     "aiEnabled": false,
     "aiApproval": false,
@@ -40,7 +42,49 @@
         "Connected workflows across your existing tools"
       ],
       "timeline": "Discovery, pilot, integration and handover",
-      "order": 0
+      "order": 0,
+      "bestFor": [
+        "Teams repeating the same data and admin tasks",
+        "Businesses needing a scoped customer assistant",
+        "Operations that need tools to exchange information"
+      ],
+      "preparation": [
+        "Your current workflow and failure cases",
+        "Tools, permissions and data boundaries",
+        "A clear owner for review and exceptions"
+      ],
+      "process": [
+        {
+          "title": "Map",
+          "description": "Document the task, inputs, exceptions and required human decisions."
+        },
+        {
+          "title": "Prototype",
+          "description": "Test a narrow workflow using representative examples."
+        },
+        {
+          "title": "Connect",
+          "description": "Add approved integrations, logging and failure handling."
+        },
+        {
+          "title": "Handover",
+          "description": "Validate outcomes and explain how to monitor and change the workflow."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Will an AI assistant always be correct?",
+          "description": "No. We design for uncertainty, clear boundaries and human escalation where a mistake would matter."
+        },
+        {
+          "title": "Can you connect our existing tools?",
+          "description": "We review their supported APIs, permissions and usage limits before committing to an integration."
+        },
+        {
+          "title": "What are the ongoing costs?",
+          "description": "Model usage, hosting and third-party subscriptions are identified separately from the build."
+        }
+      ]
     },
     {
       "title": "Web Development",
@@ -63,7 +107,49 @@
         "Performance, accessibility, and search foundations"
       ],
       "timeline": "Discovery, design, development and launch",
-      "order": 1
+      "order": 1,
+      "bestFor": [
+        "Service businesses needing a clear new website",
+        "Teams building a custom customer or staff portal",
+        "Businesses replacing a slow or difficult-to-edit site"
+      ],
+      "preparation": [
+        "Your offer, audience and essential pages",
+        "Brand assets and available content",
+        "Integrations and editing needs"
+      ],
+      "process": [
+        {
+          "title": "Discover",
+          "description": "Map your audience, pages, functions and constraints."
+        },
+        {
+          "title": "Design",
+          "description": "Review responsive layouts and the key customer journeys."
+        },
+        {
+          "title": "Develop",
+          "description": "Build the agreed pages, CMS and integrations."
+        },
+        {
+          "title": "Launch",
+          "description": "Check forms, content, performance and handover before release."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Can our team edit the website?",
+          "description": "Yes. Editing needs are agreed during discovery so the CMS matches the content your team manages."
+        },
+        {
+          "title": "Will it work on phones?",
+          "description": "Responsive layouts and key mobile journeys are part of our web delivery checks."
+        },
+        {
+          "title": "Is hosting included?",
+          "description": "Hosting, domain ownership and third-party subscriptions are stated separately in the proposal."
+        }
+      ]
     },
     {
       "title": "WordPress & WooCommerce",
@@ -86,7 +172,49 @@
         "Content migration, maintenance, and ongoing support"
       ],
       "timeline": "Discovery, design, development and launch",
-      "order": 2
+      "order": 2,
+      "bestFor": [
+        "Teams that prefer the WordPress ecosystem",
+        "Stores with an established WooCommerce catalogue",
+        "Businesses refreshing an existing WordPress site"
+      ],
+      "preparation": [
+        "Hosting, plugin and theme details",
+        "Content and product data",
+        "Payment, shipping and editing requirements"
+      ],
+      "process": [
+        {
+          "title": "Audit",
+          "description": "Review the current installation and requirements."
+        },
+        {
+          "title": "Design",
+          "description": "Plan reusable pages and store journeys."
+        },
+        {
+          "title": "Configure",
+          "description": "Build the theme, content and agreed extensions."
+        },
+        {
+          "title": "Test",
+          "description": "Check editing, updates, purchases and handover."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Do you use a page builder?",
+          "description": "The approach depends on your editing needs, budget and performance requirements. We agree it before development."
+        },
+        {
+          "title": "Who pays for premium plugins?",
+          "description": "Paid theme and plugin licences are identified in the scope and should be owned by your business."
+        },
+        {
+          "title": "Can you improve an existing store?",
+          "description": "Yes. We first review compatibility, data quality and the current checkout flow."
+        }
+      ]
     },
     {
       "title": "SEO & Digital Strategy",
@@ -109,7 +237,49 @@
         "Clear reporting and practical growth recommendations"
       ],
       "timeline": "Discovery, design, development and launch",
-      "order": 3
+      "order": 3,
+      "bestFor": [
+        "Businesses that need a prioritised search plan",
+        "Sites with content that misses customer questions",
+        "Teams connecting search traffic to enquiries"
+      ],
+      "preparation": [
+        "Search Console and analytics access",
+        "Priority services and markets",
+        "Existing content and subject-matter input"
+      ],
+      "process": [
+        {
+          "title": "Understand",
+          "description": "Review your audience, search demand and current pages."
+        },
+        {
+          "title": "Prioritise",
+          "description": "Select page improvements based on intent and business value."
+        },
+        {
+          "title": "Improve",
+          "description": "Develop content, links and technical changes in scope."
+        },
+        {
+          "title": "Measure",
+          "description": "Review search and conversion signals and adjust priorities."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "How quickly will results appear?",
+          "description": "Timing varies with the site, competition, crawl cycles and the work involved. We report observed changes instead of promising a deadline for rankings."
+        },
+        {
+          "title": "Do you guarantee number one rankings?",
+          "description": "No. Search engines control their results. Our commitment is useful work, technical validation and transparent reporting."
+        },
+        {
+          "title": "Can we use AI-assisted articles?",
+          "description": "Yes, with factual review, useful source material and clear editorial ownership. Publishing more pages alone is not a strategy."
+        }
+      ]
     },
     {
       "title": "Social Media & Ads",
@@ -132,7 +302,49 @@
         "Campaign tracking, testing, and optimization"
       ],
       "timeline": "Discovery, design, development and launch",
-      "order": 4
+      "order": 4,
+      "bestFor": [
+        "Brands coordinating organic and paid activity",
+        "Teams that want creative and campaign planning together",
+        "Businesses defining their first channel strategy"
+      ],
+      "preparation": [
+        "Channel and advertising account access",
+        "Audience, offer and spending boundaries",
+        "Brand assets and approval contact"
+      ],
+      "process": [
+        {
+          "title": "Review",
+          "description": "Understand the offer and current channel activity."
+        },
+        {
+          "title": "Plan",
+          "description": "Separate content goals, campaign objectives and budgets."
+        },
+        {
+          "title": "Deliver",
+          "description": "Create and launch approved organic and paid work."
+        },
+        {
+          "title": "Learn",
+          "description": "Use audience response and conversion quality to improve the plan."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Can we choose only organic or paid work?",
+          "description": "Yes. Separate social management and paid advertising services are available with their own scope."
+        },
+        {
+          "title": "Can you promise viral reach?",
+          "description": "No. We focus on relevant content and measurable business actions; reach depends on the audience and platform."
+        },
+        {
+          "title": "Will we approve the creative?",
+          "description": "The proposal defines an approval process before posts or campaigns go live."
+        }
+      ]
     },
     {
       "title": "UI/UX Design",
@@ -155,31 +367,588 @@
         "Distinctive interface design and design systems"
       ],
       "timeline": "Discovery, design, development and launch",
-      "order": 5
+      "order": 5,
+      "bestFor": [
+        "Products with confusing customer journeys",
+        "Teams validating a new interface before development",
+        "Businesses improving a website or application"
+      ],
+      "preparation": [
+        "User goals and known pain points",
+        "Existing screens and product constraints",
+        "Available customer feedback"
+      ],
+      "process": [
+        {
+          "title": "Explore",
+          "description": "Understand users, tasks and product constraints."
+        },
+        {
+          "title": "Structure",
+          "description": "Map journeys and information before visual detail."
+        },
+        {
+          "title": "Prototype",
+          "description": "Build and review key screens and interactions."
+        },
+        {
+          "title": "Specify",
+          "description": "Deliver layouts, states and implementation guidance."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Does design include development?",
+          "description": "Design and development are separate deliverables unless the proposal includes both."
+        },
+        {
+          "title": "Do you test with users?",
+          "description": "User testing can be included when participant access, time and budget are agreed."
+        },
+        {
+          "title": "What files do we receive?",
+          "description": "The scope specifies editable design files, prototypes and developer handover material."
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Branding & Graphic Design",
+      "slug": "branding-graphic-design",
+      "description": "Bring consistency to the way your business looks and communicates, from a distinctive visual identity to the everyday creative your team needs.",
+      "status": "published",
+      "seoTitle": "Branding & Graphic Design Services",
+      "seoDescription": "Bring consistency to the way your business looks and communicates, from a distinctive visual identity to the everyday creative your team needs.",
+      "content": "## Branding & Graphic Design, with a clear purpose\n\nA logo is one part of a brand. The useful work is connecting your positioning, message and visual language so a customer recognises you across a website, a presentation and a social post. We start with the audience and the role the identity needs to play, then build an agreed set of assets around it.\n\n## What we can help with\n\nWe can develop a focused logo system, colour and typography guidance, reusable social templates, presentation graphics and campaign artwork. Each proposal identifies the formats, concepts, revision rounds and final source files. Existing brand assets can be refined instead of replaced when they already serve your business.\n\n## How we check the work\n\nYou review creative directions in realistic uses, not just isolated mockups. Before handover, we check legibility, consistency, export sizes and how the system works at small sizes. Print production, licensed fonts and third-party imagery are agreed separately when needed.",
+      "publishedAt": "",
+      "short": "A visual identity with a clear point of view.",
+      "icon": "pen",
+      "points": [
+        "Agreed identity concepts and design direction",
+        "Logo variants, colour and typography guidance",
+        "Reusable layouts and platform-ready exports"
+      ],
+      "deliverables": [
+        "Agreed identity concepts and design direction",
+        "Logo variants, colour and typography guidance",
+        "Reusable layouts and platform-ready exports",
+        "Source files and a concise usage guide"
+      ],
+      "timeline": "Scope and milestones agreed after discovery",
+      "bestFor": [
+        "A new business that needs a coherent identity",
+        "An established brand with inconsistent materials",
+        "Teams producing regular social and campaign content"
+      ],
+      "preparation": [
+        "Your audience, offer and brand priorities",
+        "Existing logos and examples you like or want to avoid",
+        "The places the designs will be used"
+      ],
+      "process": [
+        {
+          "title": "Discover",
+          "description": "Clarify positioning, audience and the applications the identity must support."
+        },
+        {
+          "title": "Explore",
+          "description": "Review a focused set of visual directions and agree the strongest route."
+        },
+        {
+          "title": "Refine",
+          "description": "Develop the selected route through the agreed review rounds."
+        },
+        {
+          "title": "Equip",
+          "description": "Deliver source files, export formats and practical usage guidance."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Can you work with our existing logo?",
+          "description": "Yes. We can retain the logo and improve the wider visual system, or scope a refresh after reviewing what is working."
+        },
+        {
+          "title": "Do we receive editable files?",
+          "description": "The proposal lists the source files and final exports included. Any font or stock-asset licences are identified separately."
+        },
+        {
+          "title": "How many revisions are included?",
+          "description": "Revision rounds are agreed before the project starts. New directions or extra applications can be quoted as additional work."
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Video Editing & Motion Graphics",
+      "slug": "video-editing-motion-graphics",
+      "description": "Turn your footage into clear, engaging videos with considered pacing, captions, sound and motion graphics tailored to the channel.",
+      "status": "published",
+      "seoTitle": "Video Editing & Motion Graphics Services",
+      "seoDescription": "Turn your footage into clear, engaging videos with considered pacing, captions, sound and motion graphics tailored to the channel.",
+      "content": "## Video Editing & Motion Graphics, with a clear purpose\n\nA useful edit makes the message easier to follow. We work from your footage, script or content brief to build a clear opening, a coherent story and an appropriate next step. The format and viewing context shape the edit: a short reel needs a different pace from a product walkthrough or a long-form conversation.\n\n## What we can help with\n\nProjects can include short-form reels, YouTube edits, product explainers, interviews and simple motion graphics. We agree the source material, final duration, aspect ratios, caption language and number of versions. Editing uses supplied footage; filming, complex animation and additional production need a separate scope.\n\n## How we check the work\n\nReview links make it easy to give time-based feedback. Final checks cover caption accuracy, audio balance, safe text placement and platform export settings. You approve the work before publication. Music and footage rights must cover the intended use, especially paid advertising.",
+      "publishedAt": "",
+      "short": "Purposeful edits for stories, reels and campaigns.",
+      "icon": "pen",
+      "points": [
+        "Story structure and edited master video",
+        "Captions and agreed motion graphics",
+        "Aspect-ratio variants for selected channels"
+      ],
+      "deliverables": [
+        "Story structure and edited master video",
+        "Captions and agreed motion graphics",
+        "Aspect-ratio variants for selected channels",
+        "Final exports and agreed project files"
+      ],
+      "timeline": "Scope and milestones agreed after discovery",
+      "bestFor": [
+        "Brands repurposing longer content into reels",
+        "Teams with footage that needs a polished edit",
+        "Businesses explaining a product or service"
+      ],
+      "preparation": [
+        "Original footage and audio in the best available quality",
+        "Brand files, key message and intended audience",
+        "Channels, duration and licensing information"
+      ],
+      "process": [
+        {
+          "title": "Brief",
+          "description": "Agree the audience, objective, content rights and delivery formats."
+        },
+        {
+          "title": "Assemble",
+          "description": "Build the first cut around the story and strongest material."
+        },
+        {
+          "title": "Polish",
+          "description": "Refine pacing, graphics, captions and sound using your feedback."
+        },
+        {
+          "title": "Deliver",
+          "description": "Check the final versions and export for the chosen platforms."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Can you make reels from an existing video?",
+          "description": "Yes. We identify useful moments and adapt the framing, captions and pacing for short-form viewing."
+        },
+        {
+          "title": "Do you film content too?",
+          "description": "This service covers editing supplied footage. Any filming or specialist production must be agreed separately."
+        },
+        {
+          "title": "Can you publish the videos for us?",
+          "description": "Publishing can be included in a separate social management scope with your approval and account access."
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Social Media Management",
+      "slug": "social-media-management",
+      "description": "Plan, create and manage social content with a clear purpose, consistent brand voice and a review process your team can keep up with.",
+      "status": "published",
+      "seoTitle": "Social Media Management Services",
+      "seoDescription": "Plan, create and manage social content with a clear purpose, consistent brand voice and a review process your team can keep up with.",
+      "content": "## Social Media Management, with a clear purpose\n\nSocial media works best when the content reflects the business behind it. We define useful themes around customer questions, your offer and the work you can demonstrate. A realistic publishing rhythm helps the team maintain quality instead of filling a calendar for its own sake.\n\n## What we can help with\n\nAn engagement can include channel planning, content calendars, captions, creative briefs, post scheduling and agreed community responses. We specify the channels, monthly volume, formats, approval deadlines and response boundaries before work starts. Sensitive customer issues and sales commitments remain with your authorised team.\n\n## How we check the work\n\nReporting distinguishes reach and engagement from meaningful business actions. We review which topics prompt useful conversations, website visits or enquiries and adjust the next calendar. Platform performance varies; bought followers and engagement manipulation are not part of the service.",
+      "publishedAt": "",
+      "short": "A consistent voice and a practical content rhythm.",
+      "icon": "megaphone",
+      "points": [
+        "Channel priorities and content themes",
+        "An agreed monthly calendar and creative assets",
+        "Approval and scheduling workflow"
+      ],
+      "deliverables": [
+        "Channel priorities and content themes",
+        "An agreed monthly calendar and creative assets",
+        "Approval and scheduling workflow",
+        "Performance review with next-step recommendations"
+      ],
+      "timeline": "Scope and milestones agreed after discovery",
+      "bestFor": [
+        "Businesses struggling to post consistently",
+        "Teams that need coordinated design and copy",
+        "Brands ready to improve their social content process"
+      ],
+      "preparation": [
+        "Your social accounts and existing brand guidelines",
+        "Current offer, audience and recurring customer questions",
+        "An approver and escalation contact"
+      ],
+      "process": [
+        {
+          "title": "Review",
+          "description": "Understand your accounts, audience, offer and current content."
+        },
+        {
+          "title": "Plan",
+          "description": "Agree themes, formats, frequency and approval deadlines."
+        },
+        {
+          "title": "Create",
+          "description": "Prepare content for review and schedule approved work."
+        },
+        {
+          "title": "Improve",
+          "description": "Read the results and use them to shape the next cycle."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Which platforms can you support?",
+          "description": "We scope the channels that suit your audience, including Instagram, Facebook, LinkedIn, YouTube, TikTok and X. Not every business needs all of them."
+        },
+        {
+          "title": "Can we approve posts before publication?",
+          "description": "Yes. The approval workflow and deadlines are agreed at the start."
+        },
+        {
+          "title": "Are paid ads included?",
+          "description": "Paid campaign management and media spend are separate from organic content unless explicitly included in the proposal."
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Paid Advertising & Campaigns",
+      "slug": "paid-advertising",
+      "description": "Build and improve paid campaigns around a clear offer, relevant audiences, considered creative and conversion measurement.",
+      "status": "published",
+      "seoTitle": "Paid Advertising & Campaigns Services",
+      "seoDescription": "Build and improve paid campaigns around a clear offer, relevant audiences, considered creative and conversion measurement.",
+      "content": "## Paid Advertising & Campaigns, with a clear purpose\n\nAn advertising account needs more than a budget. The offer, landing page, audience and tracking must work together. We begin with the action you want people to take and check whether the website can support it before scaling a campaign.\n\n## What we can help with\n\nCampaign work can cover Google Search, Meta and other agreed platforms, with account structure, audience planning, ad copy, creative testing and reporting. We define who owns the accounts, how spending is approved and what counts as a lead or conversion. The media budget is separate from management fees.\n\n## How we check the work\n\nWe monitor delivery, spend and conversion quality, then change one meaningful part of the campaign at a time. Reports explain limitations such as consent gaps, attribution windows and low data volume. Results depend on the offer, market and budget; no fixed return is promised.",
+      "publishedAt": "",
+      "short": "Focused campaigns connected to useful conversions.",
+      "icon": "megaphone",
+      "points": [
+        "Campaign structure and targeting plan",
+        "Agreed ad copy and creative variations",
+        "Conversion measurement checks"
+      ],
+      "deliverables": [
+        "Campaign structure and targeting plan",
+        "Agreed ad copy and creative variations",
+        "Conversion measurement checks",
+        "Optimisation notes and performance reporting"
+      ],
+      "timeline": "Scope and milestones agreed after discovery",
+      "bestFor": [
+        "Businesses with a clear offer and working landing page",
+        "Teams that need visibility into advertising spend",
+        "Companies testing a new audience or campaign"
+      ],
+      "preparation": [
+        "Advertising account access and spending limits",
+        "Offer, landing pages and approved brand assets",
+        "A definition of qualified leads and customer value"
+      ],
+      "process": [
+        {
+          "title": "Assess",
+          "description": "Review the offer, account, landing page and tracking."
+        },
+        {
+          "title": "Build",
+          "description": "Prepare audiences, keywords, ads and a controlled launch."
+        },
+        {
+          "title": "Test",
+          "description": "Monitor delivery and compare useful variations."
+        },
+        {
+          "title": "Refine",
+          "description": "Improve the campaign using conversion quality and spending data."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Is ad spend included in the fee?",
+          "description": "No. Platform spending and management fees are stated separately in the proposal."
+        },
+        {
+          "title": "Will you guarantee leads or return on spend?",
+          "description": "No. We agree measurable objectives and report the evidence, but market demand, competition and conversion quality affect results."
+        },
+        {
+          "title": "Who owns the ad account?",
+          "description": "Your business should retain ownership. We use the access needed for the agreed work."
+        }
+      ]
+    },
+    {
+      "order": 10,
+      "title": "E-commerce Development",
+      "slug": "ecommerce-development",
+      "description": "Create an online store around your catalogue, operations and customers, with usable product pages, checkout and practical management tools.",
+      "status": "published",
+      "seoTitle": "E-commerce Development Services",
+      "seoDescription": "Create an online store around your catalogue, operations and customers, with usable product pages, checkout and practical management tools.",
+      "content": "## E-commerce Development, with a clear purpose\n\nA store has to work for the person buying and the team fulfilling the order. We map product types, catalogue structure, shipping rules and payment requirements before choosing the implementation. The goal is a clear shopping journey and an operational setup your team can manage.\n\n## What we can help with\n\nWork can include WooCommerce or another agreed storefront, product templates, catalogue migration, cart and checkout configuration and integrations. We define the number of products, import quality, supported currencies, shipping regions and third-party dependencies. Tax and payment-provider eligibility remain business decisions to verify with the relevant providers.\n\n## How we check the work\n\nTesting follows realistic journeys: finding an item, selecting a variant, using the cart, completing a test payment and receiving an order notification. We also check responsive layouts, basic accessibility, content management and the agreed analytics events before handover.",
+      "publishedAt": "",
+      "short": "A clearer path from product discovery to checkout.",
+      "icon": "wordpress",
+      "points": [
+        "Storefront and product-page templates",
+        "Catalogue, cart and checkout configuration",
+        "Agreed payment and shipping integrations"
+      ],
+      "deliverables": [
+        "Storefront and product-page templates",
+        "Catalogue, cart and checkout configuration",
+        "Agreed payment and shipping integrations",
+        "Test scenarios, management guidance and handover"
+      ],
+      "timeline": "Scope and milestones agreed after discovery",
+      "bestFor": [
+        "Businesses launching their first online store",
+        "Stores replacing a confusing shopping journey",
+        "Teams that need catalogue and order workflows connected"
+      ],
+      "preparation": [
+        "Product catalogue, images and variants",
+        "Shipping regions, fulfilment rules and returns policy",
+        "Payment-provider account and store ownership details"
+      ],
+      "process": [
+        {
+          "title": "Map",
+          "description": "Define catalogue, customers, payments and fulfilment needs."
+        },
+        {
+          "title": "Design",
+          "description": "Create the product and checkout experience."
+        },
+        {
+          "title": "Build",
+          "description": "Configure the store and agreed operational connections."
+        },
+        {
+          "title": "Validate",
+          "description": "Test purchases, management tasks and launch readiness."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Can you migrate our existing catalogue?",
+          "description": "Yes, after checking the format, volume, image rights and data quality. Migration scope is agreed separately."
+        },
+        {
+          "title": "Which payment methods can we accept?",
+          "description": "That depends on your country, provider eligibility and store platform. We implement the approved methods in scope."
+        },
+        {
+          "title": "Do you provide ongoing maintenance?",
+          "description": "Yes, maintenance can be scoped separately around updates, backups and agreed support needs."
+        }
+      ]
+    },
+    {
+      "order": 11,
+      "title": "Technical SEO",
+      "slug": "technical-seo",
+      "description": "Find and resolve technical barriers to crawling, indexing and a usable website, with priorities tied to your important pages.",
+      "status": "published",
+      "seoTitle": "Technical SEO Services",
+      "seoDescription": "Find and resolve technical barriers to crawling, indexing and a usable website, with priorities tied to your important pages.",
+      "content": "## Technical SEO, with a clear purpose\n\nTechnical SEO starts by understanding what should be visible in search. We compare the intended page structure with what crawlers can access and what Search Console reports. A prioritised plan separates issues that affect discovery from cosmetic scores that do not change the customer experience.\n\n## What we can help with\n\nReviews can cover status codes, redirects, canonicals, robots directives, XML sitemaps, internal linking, rendered content, structured data and performance. Implementation depends on your platform and access. Large migrations, JavaScript rendering changes and infrastructure work receive a specific scope and rollback plan.\n\n## How we check the work\n\nWe record the original issue, the change and the validation method. Crawl tests, rendered HTML and Search Console help confirm technical behaviour. Search engines choose whether and when to index a page; fixing a technical problem does not guarantee a ranking change.",
+      "publishedAt": "",
+      "short": "Help search engines access the pages that matter.",
+      "icon": "search",
+      "points": [
+        "Prioritised technical findings",
+        "Agreed implementation and validation",
+        "Redirect, sitemap and canonical checks"
+      ],
+      "deliverables": [
+        "Prioritised technical findings",
+        "Agreed implementation and validation",
+        "Redirect, sitemap and canonical checks",
+        "A handover showing remaining issues and monitoring steps"
+      ],
+      "timeline": "Scope and milestones agreed after discovery",
+      "bestFor": [
+        "Sites with unexplained indexing problems",
+        "Businesses planning a website migration",
+        "Growing websites with duplicate or hard-to-find pages"
+      ],
+      "preparation": [
+        "Website, hosting and CMS access as needed",
+        "Search Console access and important page list",
+        "Migration history and known platform constraints"
+      ],
+      "process": [
+        {
+          "title": "Investigate",
+          "description": "Compare intended pages, crawl results and search reports."
+        },
+        {
+          "title": "Prioritise",
+          "description": "Rank issues by impact, confidence and effort."
+        },
+        {
+          "title": "Implement",
+          "description": "Make agreed changes with appropriate validation."
+        },
+        {
+          "title": "Monitor",
+          "description": "Check coverage and watch for regressions after release."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Will a sitemap guarantee indexing?",
+          "description": "No. A sitemap supports discovery; search engines still assess whether to index and rank each page."
+        },
+        {
+          "title": "Do you fix the issues or only audit?",
+          "description": "Either can be scoped. The proposal separates findings, implementation and any work needed from your hosting or development team."
+        },
+        {
+          "title": "Can you help with a migration?",
+          "description": "Yes. Redirect mapping, canonical checks, crawl comparisons and launch monitoring can be included in a migration plan."
+        }
+      ]
+    },
+    {
+      "order": 12,
+      "title": "Local SEO",
+      "slug": "local-seo",
+      "description": "Improve the information and pages people use to find, understand and contact your business in its real service areas.",
+      "status": "published",
+      "seoTitle": "Local SEO Services",
+      "seoDescription": "Improve the information and pages people use to find, understand and contact your business in its real service areas.",
+      "content": "## Local SEO, with a clear purpose\n\nLocal visibility depends on an accurate picture of the business: what it offers, where it serves customers and how people can contact it. We work on that foundation through your website, eligible business profiles and consistent public information.\n\n## What we can help with\n\nA local engagement can include Google Business Profile review, business details, service categories, useful location content, local landing pages and review-response guidance. Profile changes require authorised owner access and platform eligibility. We avoid artificial locations, duplicate profiles and repetitive doorway pages.\n\n## How we check the work\n\nWe review relevant search queries, profile interactions where available and useful website actions. A location page should answer genuine customer questions about service availability and next steps. Local rankings vary with proximity, competition and the person searching.",
+      "publishedAt": "",
+      "short": "Make your business easier to find locally.",
+      "icon": "search",
+      "points": [
+        "Business information and profile review",
+        "Prioritised local page recommendations",
+        "Agreed local content and on-page improvements"
+      ],
+      "deliverables": [
+        "Business information and profile review",
+        "Prioritised local page recommendations",
+        "Agreed local content and on-page improvements",
+        "Reporting on available search and inquiry signals"
+      ],
+      "timeline": "Scope and milestones agreed after discovery",
+      "bestFor": [
+        "Service businesses with a real operating area",
+        "Businesses with inconsistent public contact details",
+        "Teams that need a clearer local website journey"
+      ],
+      "preparation": [
+        "Verified business ownership and profile access",
+        "Accurate address or service-area information",
+        "Opening hours, services and existing location pages"
+      ],
+      "process": [
+        {
+          "title": "Verify",
+          "description": "Confirm business information, eligibility and account ownership."
+        },
+        {
+          "title": "Align",
+          "description": "Correct mismatches and clarify the service offer."
+        },
+        {
+          "title": "Improve",
+          "description": "Build useful pages and profile information around real locations."
+        },
+        {
+          "title": "Review",
+          "description": "Measure available discovery and contact signals."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Can you guarantee a place in the map pack?",
+          "description": "No. Map results depend on relevance, distance, competition and Google’s systems."
+        },
+        {
+          "title": "Do you create or buy reviews?",
+          "description": "No. We can help you request honest feedback and respond professionally to genuine reviews."
+        },
+        {
+          "title": "Can a service-area business use this?",
+          "description": "Yes, subject to Google Business Profile eligibility and accurate service-area information."
+        }
+      ]
+    },
+    {
+      "order": 13,
+      "title": "Website Maintenance & Support",
+      "slug": "website-maintenance",
+      "description": "Give your website a practical care plan for updates, backups, small improvements and the issues that interrupt everyday work.",
+      "status": "published",
+      "seoTitle": "Website Maintenance & Support Services",
+      "seoDescription": "Give your website a practical care plan for updates, backups, small improvements and the issues that interrupt everyday work.",
+      "content": "## Website Maintenance & Support, with a clear purpose\n\nA website continues to change after launch. Content grows, dependencies update and business processes evolve. We begin with the current setup and agree a support boundary so routine care does not depend on last-minute guesswork.\n\n## What we can help with\n\nSupport can include scheduled updates, backup checks, uptime review, small content changes and technical triage. We define included hours, response windows, access, supported systems and escalation contacts. New features, emergency recovery and third-party licence costs are listed separately where they fall outside the plan.\n\n## How we check the work\n\nA clear change log shows what was updated and checked. Riskier changes use a staging environment where available, with rollback planning and backup verification. Maintenance reduces avoidable problems but cannot remove every outage or security risk.",
+      "publishedAt": "",
+      "short": "Keep your website useful after launch.",
+      "icon": "code",
+      "points": [
+        "An agreed support scope and contact process",
+        "Scheduled care and change records",
+        "Backup and recovery checks in scope"
+      ],
+      "deliverables": [
+        "An agreed support scope and contact process",
+        "Scheduled care and change records",
+        "Backup and recovery checks in scope",
+        "Recommendations for larger improvements"
+      ],
+      "timeline": "Scope and milestones agreed after discovery",
+      "bestFor": [
+        "Teams without an internal website maintainer",
+        "Businesses needing dependable update routines",
+        "Sites that need steady improvements after launch"
+      ],
+      "preparation": [
+        "Website and hosting ownership details",
+        "Existing backup, deployment and access procedures",
+        "Your priority issues and preferred response windows"
+      ],
+      "process": [
+        {
+          "title": "Review",
+          "description": "Inspect the platform, access and existing maintenance setup."
+        },
+        {
+          "title": "Agree",
+          "description": "Define responsibilities, included work and response windows."
+        },
+        {
+          "title": "Maintain",
+          "description": "Perform scheduled care with appropriate checks."
+        },
+        {
+          "title": "Report",
+          "description": "Record changes and plan the next improvements."
+        }
+      ],
+      "faqs": [
+        {
+          "title": "Is support available around the clock?",
+          "description": "Response windows are defined in the agreement. Do not assume 24/7 coverage unless it is explicitly included."
+        },
+        {
+          "title": "Are new features covered?",
+          "description": "Small changes may fit the included hours. Larger features receive a separate estimate and scope."
+        },
+        {
+          "title": "Can you maintain a website built elsewhere?",
+          "description": "We first review its code, platform, licences and hosting access to confirm what we can support."
+        }
+      ]
     }
   ],
   "portfolio": [
-    {
-      "title": "growintek.com",
-      "category": "Agency Website",
-      "image": "/images/live-growintek.webp",
-      "description": "A full-service agency website introducing digital marketing, AI and web development services.",
-      "points": [
-        "Service discovery",
-        "Industry-focused navigation",
-        "Contact and project inquiries"
-      ],
-      "slug": "growintek",
-      "imageAlt": "Live growintek.com homepage captured on 31 October 2026",
-      "status": "published",
-      "concept": false,
-      "client": "",
-      "url": "https://growintek.com",
-      "seoTitle": "growintek.com | Growintek portfolio",
-      "seoDescription": "A full-service agency website introducing digital marketing, AI and web development services.",
-      "content": "## The website\nA full-service agency website introducing digital marketing, AI and web development services.\n\n## Explore the experience\n- Service discovery\n- Industry-focused navigation\n- Contact and project inquiries\n\n## Live preview\nThis screenshot was captured from the public website on 31 October 2026. Visit the website to explore its latest content and functionality.\n\n## Have a similar project?\nTell us about your audience and the experience you want to create. We can scope the design, development and integrations around your requirements.",
-      "order": 0
-    },
     {
       "title": "daroodi.com",
       "category": "E-commerce Platform",
@@ -225,22 +994,22 @@
     {
       "title": "pakexporters.com",
       "category": "B2B Marketplace",
-      "image": "/images/project-pakexporters.svg",
-      "description": "A business marketplace concept built around helping buyers discover suppliers and connect with new opportunities.",
+      "image": "/images/project-pak-exporters-live.webp",
+      "description": "A B2B marketplace connecting Pakistani exporters with global buyers.",
       "points": [
         "Business and product discovery",
         "Marketplace interface design",
         "Inquiry-focused user journeys"
       ],
       "slug": "pakexporters",
-      "imageAlt": "pakexporters.com concept presented in a detailed website mockup",
+      "imageAlt": "Live Pak Exporters B2B marketplace homepage",
       "status": "published",
-      "concept": true,
+      "concept": false,
       "client": "",
-      "url": "",
+      "url": "https://www.pak-exporters.com/",
       "seoTitle": "pakexporters.com — Design concept",
       "seoDescription": "A business marketplace concept built around helping buyers discover suppliers and connect with new opportunities.",
-      "content": "## The direction\nA business marketplace concept built around helping buyers discover suppliers and connect with new opportunities.\n\n## The experience\n- Business and product discovery\n- Marketplace interface design\n- Inquiry-focused user journeys\n\n## About this showcase\nThis is a design concept from the Growintek visual portfolio. It demonstrates an approach to the experience; it is not a verified client case study, live-site screenshot, or claim of measured business results.\n\n## Have a similar challenge?\nTell us about your audience, current website and the outcome you want. We can scope a solution around your requirements.",
+      "content": "## Project overview\n\nPak Exporters brings product categories, exporter discovery and buyer inquiries into one B2B marketplace.\n\n## Website preview\n\nThe project image is a screenshot of the live website captured on 31 October 2026. Explore the live website for its current content and features.",
       "order": 20
     },
     {
@@ -334,7 +1103,7 @@
       "title": "SEO foundations that help the right clients find you",
       "category": "SEO & Growth",
       "description": "A practical starting point for service businesses: search intent, useful pages, technical checks and meaningful measurement.",
-      "image": "/images/insight-seo.svg",
+      "image": "/images/blog-seo-foundations-for-service-businesses.webp",
       "keyword": "SEO for service businesses",
       "content": "A service website has a specific job: help someone decide whether your business can solve their problem. Search visibility works best when it supports that decision. Before adding more articles, check whether your core pages explain what you do, who you help and how to take the next step.\n\n## Start with the questions buyers ask\nWrite down the questions that appear in discovery calls. What does a project include? What affects the cost? How long can it take? What does your team need from the client? These questions are a useful starting point for research because they connect content to real purchase decisions.\n\nA keyword is not a complete content brief. Look at the search results, the type of pages shown and the problem behind the query. A person comparing providers needs different information from someone learning a basic definition. Give each important service its own useful page instead of forcing unrelated services into a single paragraph.\n\n## Make your service pages specific\nDescribe the deliverables, the working process and any constraints. Explain what a visitor can expect after contacting you. If you have permission to share a case study, document the starting point, work performed, measurement period and limitations. Avoid publishing outcome claims you cannot support.\n\nConnect related pages with descriptive internal links. For example, a technical SEO article can link to your SEO service, while the service page can link to an explanation of an audit. The links should help a reader continue a task, not simply repeat a keyword.\n\n## Check the technical basics\nOpen the site on a phone, test its forms and inspect important pages with Search Console. Confirm that public pages return useful HTML, have unique titles and can be discovered through navigation. Keep drafts and private business records out of search results.\n\nUse a sitemap to describe the public URLs you want discovered. A sitemap is a discovery signal, not an indexing guarantee. Check canonical links, redirects and response codes after a migration so old links continue to lead somewhere useful.\n\n## Measure inquiries as well as visits\nMore traffic is not automatically better traffic. Agree on what a qualified inquiry looks like and measure whether visitors reach the contact form, complete it and become relevant conversations. Compare changes across sensible time periods and account for seasonality and other marketing activity.\n\nSearch Console can show query impressions, clicks and average position. These measurements have limits: average position varies by query, country, device and date range. Treat the data as evidence to investigate, not a promise that everyone sees the same ranking.\n\n## A manageable first month\nBegin with a small audit, improve your most important service page and fix any broken conversion paths. Publish one genuinely useful supporting guide when you have something clear to explain. Review the results, collect new buyer questions and choose the next improvement from evidence.\n\nConsistent, useful maintenance is more defensible than a high publishing volume with little original value. Search optimization should make the website better for the people you want to serve.",
       "status": "published",
@@ -353,7 +1122,7 @@
       "title": "Before you automate, find the work worth fixing",
       "category": "AI & Automation",
       "description": "Choose a first automation project with a clear owner, a measurable outcome and a safe path back to a person.",
-      "image": "/images/insight-automation.svg",
+      "image": "/images/blog-where-business-automation-should-start.webp",
       "keyword": "business automation planning",
       "content": "Automation is most useful when the task is already understood. A workflow that saves a few minutes hundreds of times can be a better starting point than a complicated system that tries to handle every situation.\n\n## Map the current process\nChoose a repeated task and document its trigger, inputs, decisions and output. Ask the people who perform it where work waits, where information goes missing and which exceptions require judgment. A simple process map often exposes improvements that do not require AI at all.\n\nLead routing is one example. A new inquiry may need validation, a service category, an owner and a follow-up reminder. The first version can be based on explicit rules. If natural-language classification adds value later, it can be introduced at that decision point.\n\n## Choose a meaningful measure\nDefine the baseline before building. You might track response time, manual handling time or the number of records that require correction. Use a measure the team can observe consistently. Do not turn a model demonstration into a claim of financial savings without validating the real workflow.\n\nAgree on the boundaries. Which actions may run automatically? Which require approval? Which data should never be sent to an external service? These are product decisions, and they shape the architecture.\n\n## Design the exception path\nAn automation should not silently lose work. Log failures, retry temporary errors with limits and give the owner a way to inspect a failed job. Repeated actions need an idempotency strategy so a retry does not create duplicate invoices, messages or records.\n\nFor AI-assisted tasks, identify where uncertain output can cause harm. A draft summary may be low risk; an irreversible action based on that summary can be very different. Keep a person in the loop where judgment or approval matters.\n\n## Start with a small pilot\nTest with representative examples, including incomplete inputs and unusual cases. Compare the new process with the current one, collect feedback and adjust the scope. A pilot should produce enough evidence to decide whether to expand, change direction or stop.\n\nDocument who owns the workflow, how credentials are rotated and what happens when a connected service is unavailable. The person maintaining the system should not need to reverse-engineer its purpose.\n\n## Build for ongoing ownership\nA useful handover includes the process diagram, integration list, failure alerts, operating instructions and acceptance criteria. Review the workflow when business rules change. A working automation is a maintained business process, not a one-time installation.",
       "status": "published",
@@ -372,7 +1141,7 @@
       "title": "A better website starts with a clearer brief",
       "category": "Web & Design",
       "description": "The decisions to make before design begins, from audience and content ownership to accessibility and launch criteria.",
-      "image": "/images/insight-web.svg",
+      "image": "/images/blog-website-brief-that-saves-rework.webp",
       "keyword": "website project brief",
       "content": "A good website brief makes the important decisions visible. It does not need to prescribe every design detail. Its job is to give the team a shared understanding of the audience, the outcome and the constraints.\n\n## Describe the audience and their task\nStart with the person visiting the site. What are they trying to do? What do they already know? What might make them hesitate? A buyer evaluating a specialist agency has different needs from a returning customer looking for support.\n\nChoose the primary action for each important page. That might be requesting a proposal, exploring a service or reading a practical guide. The page structure should support that action with relevant information.\n\n## Make content ownership explicit\nIdentify who supplies service descriptions, project evidence, photography and legal information. Decide who reviews the material and what approval means. Content often determines the schedule more than the number of pages does.\n\nSeparate verified claims from ideas that still need evidence. If a portfolio item is a concept, label it clearly. If results are available, include the measurement period and enough context for the reader to assess them.\n\n## Agree on functional requirements\nList the forms, integrations and internal workflows the site must support. Explain what should happen after someone submits an inquiry. Specify which team member receives it, where it is stored and how the visitor knows the submission succeeded.\n\nFor editable content, identify which fields the team needs to control. A useful CMS provides clear publication states and sensible validation. Giving every user unrestricted access is rarely necessary.\n\n## Define quality and launch criteria\nInclude mobile usability, keyboard navigation, page speed, search metadata and browser support in acceptance criteria. Test real tasks on a small screen. Verify that contact forms work and that error messages explain the next step.\n\nIf an existing site is moving, prepare a URL map. Plan redirects for useful old pages, verify canonical links and check analytics after launch. Keep access to the previous content until the migration is confirmed.\n\n## Plan the handover\nDocument hosting, domain ownership, backups, content editing and integration credentials. Assign responsibility for updates and incident response. The strongest launch plan includes what happens the following week, when real visitors begin using the site.\n\nA clear brief reduces avoidable rework because it turns assumptions into decisions. Leave room for design exploration while making the business needs and quality expectations concrete.",
       "status": "published",
@@ -391,7 +1160,7 @@
     {
       "slug": "privacy-policy",
       "title": "Privacy Policy",
-      "content": "## Information you choose to share\nWhen you send an inquiry, we collect your name, email, company details if provided, service interests, budget range and message. We use this information to respond, assess project fit and manage the business relationship. Please do not send passwords, payment-card details or sensitive personal information through the contact form.\n\n## Website measurement\nOptional analytics are off until you accept them. When enabled, first-party measurement records page paths, event types and dates without a persistent visitor identifier. If Google Analytics is configured and you consent, Google processes analytics data according to its policies and your settings. You may change your choice using Cookie preferences in the footer.\n\n## Service providers and transfers\nHosting and configured business tools may process information on our behalf. Access is limited to what is needed for the service. Providers may operate in other countries. The operator must assess applicable transfer requirements before activating a provider. We do not sell inquiry information.\n\n## Retention and security\nWe retain inquiries while they are needed to respond, manage a relationship or meet legal obligations. Analytics events are deleted according to the configured retention period, which defaults to 90 days. Administrative access is protected and credentials are kept on the server. No internet service can promise absolute security.\n\n## Your choices\nYou can request access, correction or deletion of your inquiry information through our Contact page. Rights and exceptions depend on applicable law. Identify the email address used in your inquiry so we can verify the request.\n\n## Contact and changes\nGrowintek is the website operator. Use the Contact page for privacy questions. This policy was prepared on 31 October 2026 and should be reviewed whenever processing practices or operator details change.",
+      "content": "## Information you choose to share\nWhen you send an inquiry, we collect your name, email, company details if provided, service interests, budget range and message. We use this information to respond, assess project fit and manage the business relationship. Please do not send passwords, payment-card details or sensitive personal information through the contact form.\n\n## Website measurement\nOptional analytics are off until you accept them. When enabled, first-party measurement records page paths, event types and dates without a persistent visitor identifier. If Google Analytics is configured and you consent, Google processes analytics data according to its policies and your settings. You may change your choice using Cookie preferences in the footer.\n\n## Service providers and transfers\nHosting and configured business tools may process information on our behalf. Access is limited to what is needed for the service. Providers may operate in other countries. The operator must assess applicable transfer requirements before activating a provider. We do not sell inquiry information.\n\n## Retention and security\nWe retain inquiries while they are needed to respond, manage a relationship or meet legal obligations. Analytics events are deleted according to the configured retention period, which defaults to 90 days. Administrative access is protected and credentials are kept on the server. No internet service can promise absolute security.\n\n## Your choices\nYou can request access, correction or deletion of your inquiry information through our Contact page. Rights and exceptions depend on applicable law. Identify the email address used in your inquiry so we can verify the request.\n\n## Contact and changes\nGrowintek is the website operator. Use the Contact page for privacy questions. This policy was prepared on 31 October 2026 and should be reviewed whenever processing practices or operator details change.\n\n## Blog comments\n\nWhen you submit a comment, we store your name, email address, comment and confirmation that you follow our social profiles. Your name and comment become public only after approval. Your email is visible only to website administrators and is used to manage the comment. Social follows are self-confirmed, not verified through social-platform accounts. Opening a profile takes you to that platform, where its own privacy practices apply. Contact us to request removal of your comment or associated personal information.",
       "status": "published",
       "description": "Growintek privacy policy: how we operate and how to contact us.",
       "seoTitle": "Privacy Policy",
@@ -401,7 +1170,7 @@
     {
       "slug": "terms",
       "title": "Terms of Use",
-      "content": "## Using this website\nThis website describes Growintek services and provides general educational information. Content does not constitute a binding offer, legal advice or a guarantee of business results. Do not misuse the website, attempt unauthorized access or interfere with its operation.\n\n## Project agreements\nScope, delivery dates, fees, payment terms, intellectual property rights and support obligations are agreed in a separate written project agreement. Sending an inquiry does not create a client relationship or reserve delivery capacity.\n\n## Intellectual property\nWebsite copy, design and original materials belong to their respective rights holders. You may share links and use the site for legitimate evaluation. Reproduction or commercial reuse beyond applicable legal exceptions requires permission.\n\n## Portfolio and performance\nConcept work is labeled as such. Outcomes depend on project scope, market conditions, client participation and third-party platforms. We do not guarantee rankings, traffic, revenue, indexing or advertising performance.\n\n## External services\nLinked platforms and optional social embeds operate under their own terms and policies. Their availability is outside our control.\n\n## Availability and liability\nWe take reasonable steps to maintain accurate content and reliable access. The website may contain errors or become unavailable. Any limitation of liability applies only to the extent permitted by applicable law and does not exclude rights that cannot lawfully be excluded.\n\n## Questions\nContact Growintek through the Contact page. Specific governing-law and dispute-resolution terms should be set in the signed project agreement. Last updated 31 October 2026.",
+      "content": "## Using this website\nThis website describes Growintek services and provides general educational information. Content does not constitute a binding offer, legal advice or a guarantee of business results. Do not misuse the website, attempt unauthorized access or interfere with its operation.\n\n## Project agreements\nScope, delivery dates, fees, payment terms, intellectual property rights and support obligations are agreed in a separate written project agreement. Sending an inquiry does not create a client relationship or reserve delivery capacity.\n\n## Intellectual property\nWebsite copy, design and original materials belong to their respective rights holders. You may share links and use the site for legitimate evaluation. Reproduction or commercial reuse beyond applicable legal exceptions requires permission.\n\n## Portfolio and performance\nConcept work is labeled as such. Outcomes depend on project scope, market conditions, client participation and third-party platforms. We do not guarantee rankings, traffic, revenue, indexing or advertising performance.\n\n## External services\nLinked platforms and optional social embeds operate under their own terms and policies. Their availability is outside our control.\n\n## Availability and liability\nWe take reasonable steps to maintain accurate content and reliable access. The website may contain errors or become unavailable. Any limitation of liability applies only to the extent permitted by applicable law and does not exclude rights that cannot lawfully be excluded.\n\n## Questions\nContact Growintek through the Contact page. Specific governing-law and dispute-resolution terms should be set in the signed project agreement. Last updated 31 October 2026.\n\n## Comment guidelines\n\nComments should be relevant, respectful and useful. Links, web addresses, markup, promotional messages and abusive content are not allowed. Submitting requires your confirmation that you follow the listed Growintek profiles. Opening a link does not verify a follow. All comments are moderated; we may decline or remove comments that do not meet these guidelines. Do not include confidential information or someone else’s personal details.",
       "status": "published",
       "description": "Growintek terms of use: how we operate and how to contact us.",
       "seoTitle": "Terms of Use",
@@ -669,6 +1438,86 @@
       "group": "why",
       "icon": "globe",
       "order": 19,
+      "status": "published"
+    }
+  ],
+  "team": [
+    {
+      "title": "Shabnam Noreen",
+      "slug": "shabnam-noreen",
+      "role": "CEO",
+      "description": "",
+      "image": "/images/team-shabnam-noreen.webp",
+      "linkedin": "https://www.linkedin.com/in/dmaker288/",
+      "instagram": "",
+      "facebook": "",
+      "website": "",
+      "order": 0,
+      "status": "published"
+    },
+    {
+      "title": "Ishtiaq Rana",
+      "slug": "ishtiaq-rana",
+      "role": "Project Manager",
+      "description": "",
+      "image": "/images/team-ishtiaq-rana.webp",
+      "linkedin": "https://www.linkedin.com/in/ishtiaqrana79/",
+      "instagram": "",
+      "facebook": "",
+      "website": "",
+      "order": 1,
+      "status": "published"
+    },
+    {
+      "title": "Abdul Wajid Ali",
+      "slug": "abdul-wajid-ali",
+      "role": "Marketing Manager",
+      "description": "",
+      "image": "/images/team-abdul-wajid-ali.webp",
+      "linkedin": "",
+      "instagram": "",
+      "facebook": "",
+      "website": "",
+      "order": 2,
+      "status": "published"
+    },
+    {
+      "title": "Ijtiba Rana",
+      "slug": "ijtiba-rana",
+      "role": "Full Stack Web Developer · SEO Specialist · AI Engineer",
+      "description": "",
+      "image": "/images/team-ijtiba-rana.webp",
+      "linkedin": "https://www.linkedin.com/in/ijtibarana/",
+      "instagram": "",
+      "facebook": "",
+      "website": "",
+      "order": 3,
+      "status": "published"
+    },
+    {
+      "title": "Waqam Rana",
+      "slug": "waqam-rana",
+      "role": "Graphic Designer & Video Editor",
+      "description": "",
+      "image": "/images/team-waqam-rana.webp",
+      "linkedin": "",
+      "instagram": "https://www.instagram.com/waqamranaofficial/",
+      "facebook": "",
+      "website": "",
+      "order": 4,
+      "status": "published"
+    },
+    {
+      "title": "Aiman Rana",
+      "slug": "aiman-rana",
+      "role": "Social Media & Ads Manager",
+      "description": "",
+      "image": "/images/team-aiman-rana.webp",
+      "linkedin": "",
+      "instagram": "https://www.instagram.com/ranaaimen99/",
+      "facebook": "",
+      "website": "",
+      "order": 5,
       "status": "published"
     }
   ]

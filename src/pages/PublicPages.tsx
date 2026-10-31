@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import type { FormEvent } from "react";
 import type { SiteData, Content } from "../types";
 import Icon from "../components/Icon";
+import Team from "../components/Team";
+import Comments from "../components/Comments";
+import ServiceSections from "../components/ServiceSections";
 import Markdown, { articleHeadings } from "../components/Markdown";
 import {
   SectionLabel,
@@ -122,6 +125,8 @@ export function About({ data }: { data: SiteData }) {
           <div className="about-working"><div><SectionLabel>WHAT YOU CAN EXPECT</SectionLabel><h2>Close collaboration.<br/>Clear next steps.</h2><a href="/contact" className="text-link">Meet your next digital partner <Icon name="arrow"/></a></div><div className="about-commitments">{[["A plan you can understand", "Scope, priorities and delivery milestones agreed before the build begins."],["A voice in the process", "Regular reviews, shared decisions and feedback at the moments that matter."],["A useful handover", "Your accounts, editing access and practical guidance for running what we build."],["Room to keep improving", "A clear distinction between launch essentials and the improvements we can make next."]].map(([title,text])=><div key={title}><Icon name="check"/><div><h3>{title}</h3><p>{text}</p></div></div>)}</div></div>
         </div>
       </section>
+      <Team members={data.team || []} />
+      <section className="section-space about-principles"><div className="container"><span className="section-label">HOW WE THINK</span><h2>Good work starts<br/>with understanding.</h2><div>{[["Your business comes first","We connect the work to a real customer need: finding your service, understanding your offer, completing a purchase or getting an answer."],["One team, connected disciplines","Project management keeps the work moving. Design, development, SEO and marketing work together so the message and the experience stay consistent."],["A useful result, in your hands","You receive agreed deliverables, account access and a practical handover. Support, ongoing content and campaign management can be scoped around what comes next."]].map(([title,description])=><article key={title}><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>
       <Process sections={data.sections} />
       <Industries sections={data.sections} />
       <CTA />
@@ -199,7 +204,7 @@ export function ServiceDetail({
           </aside>
         </div>
       </section>
-      <FAQ sections={data.sections} />
+      <ServiceSections service={service} services={data.services} />
       <CTA />
     </>
   );
@@ -277,6 +282,7 @@ export function SEO({ data }: { data: SiteData }) {
           </div>
         </div>
       </section>
+      <section className="section-space seo-next"><div className="container"><span className="section-label">VISIBILITY WITH A PURPOSE</span><h2>From search questions<br/>to useful customer journeys.</h2><div className="seo-next-grid">{[["Technical SEO","Crawl access, indexing, canonicals, internal links and fast, usable pages.","technical-seo"],["Local SEO","Accurate business information, useful location pages and a well-maintained business profile.","local-seo"],["Content & on-page SEO","Clear service pages, distinct search intent, supporting evidence and sensible content updates.","seo-digital-strategy"]].map(([title,description,slug])=><a href={`/services/${slug}`} key={slug}><Icon name="search"/><h3>{title}</h3><p>{description}</p><span>Explore the approach <Icon name="arrow"/></span></a>)}</div><div className="seo-measure"><div><h3>Know what is changing.</h3><p>Search Console shows clicks, impressions and average position. Analytics connects visits to useful actions, such as an inquiry. We read these together and prioritise pages that serve a real business goal.</p></div><div><h3>Make expertise visible.</h3><p>Named contributors, clear service details, real project evidence, updated sources and transparent editorial practices help people assess your business. We build those foundations into the site.</p></div></div></div></section>
       <FAQ sections={data.sections} />
       <CTA />
     </>
@@ -581,6 +587,7 @@ export function BlogPost({ post, data }: { post: Content; data: SiteData }) {
           </div>
         </article>
       </div>
+      <Comments postId={post.id} settings={data.settings} />
       <section className="section-space related-posts">
         <div className="container">
           <SectionLabel>KEEP EXPLORING</SectionLabel>

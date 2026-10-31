@@ -5,6 +5,7 @@ import { createApp } from "./app.js";
 import { publicData, dataForPage } from "./db.js";
 import { safeJson, seoHead, routeInfo } from "./seo.js";
 import { tick } from "./jobs.js";
+import { startComposioStream } from "./composio-stream.js";
 process.umask(0o077);
 const production = process.env.NODE_ENV === "production";
 if (process.env.SITE_URL) {
@@ -74,6 +75,7 @@ const server = app.listen(port, "0.0.0.0", () =>
   console.log(`Growintek available on http://localhost:${port}`),
 );
 let busy = false;
+const stopSocialStream = startComposioStream(db);
 const timer = setInterval(async () => {
   if (busy) return;
   busy = true;
@@ -87,8 +89,9 @@ const timer = setInterval(async () => {
 }, 30000);
 timer.unref();
 for (const signal of ["SIGINT", "SIGTERM"])
-  process.on(signal, () => {
+  process.on(signal, async () => {
     clearInterval(timer);
+    await stopSocialStream();
     server.close(() => {
       db.close();
       process.exit(0);

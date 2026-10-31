@@ -54,7 +54,7 @@ export default function Home({ data, consent, onPreferences }: { data: SiteData;
             <p>From AI-powered solutions to stunning websites, we provide end-to-end services to help your business innovate, automate and grow.</p>
             <a className="button button-gold button-soft" href="/services">Explore All Services <Icon name="arrow" /></a>
           </div>
-          <ServicesGrid services={data.services} />
+          <ServicesGrid services={data.services.slice(0,6)} />
         </div>
       </section>
 

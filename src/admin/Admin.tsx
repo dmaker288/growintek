@@ -10,10 +10,12 @@ type Request = (path: string, method?: string, body?: unknown) => Promise<any>;
 const nav = [
   ["overview", "Overview", "globe"],
   ["posts", "Blog posts", "pen"],
+  ["comments", "Blog comments", "pen"],
   ["pages", "Pages", "code"],
   ["sections", "Homepage sections", "settings"],
   ["services", "Services", "settings"],
   ["portfolio", "Portfolio", "heart"],
+  ["team", "Our team", "team"],
   ["leads", "Leads", "megaphone"],
   ["clients", "Clients", "team"],
   ["invoices", "Invoices", "shield"],
@@ -482,11 +484,16 @@ function Collection({
     [query, setQuery] = useState(""),
     [status, setStatus] = useState("all"),
     [clients, setClients] = useState<RecordData[]>([]),
+    [posts, setPosts] = useState<RecordData[]>([]),
     [printInvoice, setPrintInvoice] = useState<RecordData | null>(null);
   useEffect(() => {
     if (kind === "invoices")
       request("content/clients")
         .then(setClients)
+        .catch((e) => setSaveError(e.message));
+    if (kind === "comments")
+      request("content/posts")
+        .then(setPosts)
         .catch((e) => setSaveError(e.message));
   }, [kind, request]);
   async function save(d: RecordData) {
@@ -531,6 +538,7 @@ function Collection({
         kind={kind}
         initial={editing}
         clients={clients}
+        posts={posts}
         onSave={save}
         onCancel={() => {
           setEditing(null);
@@ -549,7 +557,7 @@ function Collection({
   const rows = (data || []).filter(
     (d: RecordData) =>
       (status === "all" || d.status === status) &&
-      [d.title, d.name, d.email, d.company, d.number, d.keyword]
+      [d.title, d.name, d.email, d.company, d.number, d.keyword, d.body]
         .filter(Boolean)
         .join(" ")
         .toLowerCase()
@@ -562,6 +570,8 @@ function Collection({
         title={collectionNames[kind]}
         description={
           {
+            team: "Introduce your team on the About page. Edit photos, roles, social links and display order.",
+            comments: "Review reader comments before they appear. Follows are self-confirmed; links and markup are blocked.",
             posts:
               "Ideas, drafts and published insights. Make every article useful.",
             pages:
@@ -582,7 +592,7 @@ function Collection({
           }[kind] || ""
         }
       >
-        <button
+        {kind !== "comments" ? <button
           className="admin-btn primary"
           onClick={() => {
             setSaveError("");
@@ -590,14 +600,14 @@ function Collection({
           }}
         >
           + Create{" "}
-          {kind === "posts"
+          {kind === "team" ? "team member" : kind === "posts"
             ? "post"
             : kind === "keywords"
               ? "topic"
               : kind === "portfolio"
                 ? "project"
                 : kind.slice(0, -1)}
-        </button>
+        </button> : null}
       </PageTitle>
       <LoadState loading={loading} error={error} retry={reload} />
       {data ? (
@@ -694,6 +704,10 @@ function Collection({
                               {d.category} · {d.date}
                             </small>
                           </>
+                        ) : kind === "comments" ? (
+                          <><span>{String(d.body).slice(0,140)}</span><small>Follows self-confirmed{d.status === "pending" ? " · awaiting your review" : ""}</small></>
+                        ) : kind === "team" ? (
+                          <><span>{d.role}</span><small>Display order: {d.order}</small></>
                         ) : kind === "sections" ? (
                           <>
                             <span>{d.group}</span>
@@ -977,12 +991,12 @@ function Settings({
           </p>
           <h2>Public social profiles</h2>
           <div className="editor-grid">
-            {["facebook", "instagram", "youtube"].map((k) => (
+            {["facebook", "instagram", "youtube", "tiktok", "x"].map((k) => (
               <label key={k}>
                 {k[0].toUpperCase() + k.slice(1)} profile URL
                 <input
                   type="url"
-                  value={data.social[k]}
+                  value={data.social[k] || ""}
                   onChange={(e) =>
                     setData({
                       ...data,

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { hasCommentLink } from "../shared/comment-policy.js";
 const short = z.string().trim().max(240);
 const text = z.string().trim().max(100000);
 const slug = z
@@ -8,7 +9,13 @@ const slug = z
 const url = z
   .string()
   .url()
-  .refine((v) => new URL(v).protocol === "https:", "Use an HTTPS URL");
+  .refine((v) => {
+    try {
+      return new URL(v).protocol === "https:";
+    } catch {
+      return false;
+    }
+  }, "Use an HTTPS URL");
 const image = z
   .string()
   .refine(
@@ -40,6 +47,27 @@ const sources = z
   .max(12)
   .default([]);
 export const schemas = {
+  comments: z.object({
+    postId: z.string().uuid(),
+    name: z.string().trim().min(2).max(80).refine(v => !hasCommentLink(v), "Links and markup are not allowed in names."),
+    email: z.string().email().max(254),
+    body: z.string().trim().min(10).max(2000).refine(v => !hasCommentLink(v), "Please remove links, web addresses and markup from your comment."),
+    followsConfirmed: z.literal(true),
+    status: z.enum(["pending", "approved", "rejected"]).default("pending"),
+  }),
+  team: z.object({
+    title: short.min(2),
+    slug,
+    role: short.min(2),
+    description: z.string().trim().max(1000).default(""),
+    image: image.default(""),
+    linkedin: z.union([url, z.literal("")]).default(""),
+    instagram: z.union([url, z.literal("")]).default(""),
+    facebook: z.union([url, z.literal("")]).default(""),
+    website: z.union([url, z.literal("")]).default(""),
+    order: z.number().int().min(0).max(999).default(0),
+    status: z.enum(["draft", "published"]).default("draft"),
+  }),
   posts: z.object({
     topicId: z.string().uuid().optional(),
     ...base,
@@ -64,6 +92,10 @@ export const schemas = {
     points: z.array(short).max(12).default([]),
     deliverables: z.array(short).max(12).default([]),
     timeline: short.default("Scoped to your project"),
+    bestFor: z.array(short).max(8).default([]),
+    preparation: z.array(short).max(8).default([]),
+    process: z.array(z.object({title: short.min(2), description: z.string().max(1000)})).max(8).default([]),
+    faqs: z.array(z.object({title: short.min(2), description: z.string().max(1500)})).max(12).default([]),
   }),
   portfolio: z.object({
     order: z.number().int().min(0).max(999).default(0),
@@ -189,6 +221,8 @@ export const settingsSchema = z.object({
     facebook: z.union([url, z.literal("")]),
     instagram: z.union([url, z.literal("")]),
     youtube: z.union([url, z.literal("")]),
+    tiktok: z.union([url, z.literal("")]).default(""),
+    x: z.union([url, z.literal("")]).default(""),
   }),
   aiEnabled: z.boolean(),
   aiApproval: z.boolean(),

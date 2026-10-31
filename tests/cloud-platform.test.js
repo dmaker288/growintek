@@ -223,6 +223,7 @@ test("Composio adapter filters private and visitor content and distinguishes ree
   const fetchOriginal = globalThis.fetch,
     env = { ...process.env };
   process.env.COMPOSIO_API_KEY = "private-test-key";
+  process.env.COMPOSIO_USER_ID = "test-user";
   process.env.COMPOSIO_INSTAGRAM_ACCOUNT_ID = "test-account";
   globalThis.fetch = async (url, options) => {
     assert.equal(
@@ -231,6 +232,7 @@ test("Composio adapter filters private and visitor content and distinguishes ree
     );
     assert.equal(options.headers["x-api-key"], "private-test-key");
     assert.equal(JSON.parse(options.body).connected_account_id, "test-account");
+    assert.equal(JSON.parse(options.body).user_id, "test-user");
     return Response.json({
       successful: true,
       data: {

@@ -105,12 +105,17 @@ export function seoHead(path, data) {
     base = (data.settings.siteUrl || "").replace(/\/$/, "");
   const title = `${info.title} | Growintek`,
     canonical = base + path;
+  const image = base
+    ? new URL(info.doc?.image || "/images/hero-background.webp", base + "/")
+        .href
+    : "";
   const noindex = info.noindex || !info.exists || !base;
   const schema = base
     ? [
         {
           "@context": "https://schema.org",
           "@type": "Organization",
+          "@id": `${base}/#organization`,
           name: "Growintek",
           url: base,
           logo: `${base}/images/growintek-flat.png`,
@@ -130,7 +135,30 @@ export function seoHead(path, data) {
       author: { "@type": "Organization", name: info.doc.author },
       publisher: { "@type": "Organization", name: "Growintek" },
       mainEntityOfPage: canonical,
-      image: `${base}${info.doc.image}`,
+      image,
+    });
+  if (base && path === "/about")
+    schema.push({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      url: canonical,
+      name: info.title,
+      about: { "@id": `${base}/#organization` },
+      mainEntity: (data.team || []).map((person) => ({
+        "@type": "Person",
+        name: person.title,
+        jobTitle: person.role,
+        ...(person.image
+          ? { image: new URL(person.image, base + "/").href }
+          : {}),
+        sameAs: [
+          person.linkedin,
+          person.instagram,
+          person.facebook,
+          person.website,
+        ].filter(Boolean),
+        worksFor: { "@id": `${base}/#organization` },
+      })),
     });
   if (base && info.doc && info.kind === "services")
     schema.push({
@@ -147,10 +175,32 @@ export function seoHead(path, data) {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: base },
-        { "@type": "ListItem", position: 2, name: info.title, item: canonical },
+        ...(info.doc && ["posts", "services", "portfolio"].includes(info.kind)
+          ? [
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: {
+                  posts: "Blog",
+                  services: "Services",
+                  portfolio: "Our Work",
+                }[info.kind],
+                item: `${base}/${info.kind === "posts" ? "blog" : info.kind}`,
+              },
+            ]
+          : []),
+        {
+          "@type": "ListItem",
+          position:
+            info.doc && ["posts", "services", "portfolio"].includes(info.kind)
+              ? 3
+              : 2,
+          name: info.title,
+          item: canonical,
+        },
       ],
     });
-  return `<title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(info.description)}"><meta name="robots" content="${noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"}">${base ? `<link rel="canonical" href="${escapeHtml(canonical)}">` : ""}<meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(info.description)}"><meta property="og:type" content="${info.kind === "posts" ? "article" : "website"}">${base ? `<meta property="og:url" content="${escapeHtml(canonical)}"><meta property="og:image" content="${base}${info.doc?.image || "/images/hero-background.webp"}">` : ""}<meta name="twitter:card" content="summary_large_image">${schema.length ? `<script type="application/ld+json">${safeJson(schema)}</script>` : ""}${process.env.GOOGLE_SITE_VERIFICATION ? `<meta name="google-site-verification" content="${escapeHtml(process.env.GOOGLE_SITE_VERIFICATION)}">` : ""}`;
+  return `<title>${escapeHtml(title)}</title><meta name="description" content="${escapeHtml(info.description)}"><meta name="robots" content="${noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large"}">${base ? `<link rel="canonical" href="${escapeHtml(canonical)}">` : ""}<meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(info.description)}"><meta property="og:type" content="${info.kind === "posts" ? "article" : "website"}">${base ? `<meta property="og:url" content="${escapeHtml(canonical)}"><meta property="og:image" content="${escapeHtml(image)}">` : ""}<meta name="twitter:card" content="summary_large_image">${schema.length ? `<script type="application/ld+json">${safeJson(schema)}</script>` : ""}${process.env.GOOGLE_SITE_VERIFICATION ? `<meta name="google-site-verification" content="${escapeHtml(process.env.GOOGLE_SITE_VERIFICATION)}">` : ""}`;
 }
 export function sitemap(data) {
   const base = (data.settings.siteUrl || "").replace(/\/$/, "");

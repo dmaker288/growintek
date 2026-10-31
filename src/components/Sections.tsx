@@ -1,3 +1,4 @@
+import SocialIcon from "./SocialIcon";
 import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import type { Content, PublicSettings } from "../types";
@@ -376,7 +377,6 @@ const socialNames = {
   facebook: "Facebook",
   youtube: "YouTube",
 };
-const socialMarks = { instagram: "◎", facebook: "f", youtube: "▷" };
 function SocialCard({
   post,
   channel,
@@ -393,7 +393,7 @@ function SocialCard({
   return (
     <article className={`social-card social-channel-${channel} social-card-${post.kind || "post"}`}>
       <div className="social-card-top">
-        <span className="social-avatar">{socialMarks[channel]}</span>
+        <span className="social-avatar">{<SocialIcon name={channel} />}</span>
         <div>
           <strong>Growintek Solutions</strong>
           <span>{socialNames[channel]}</span>
@@ -419,7 +419,7 @@ function SocialCard({
               />
             ) : (
               <div className="social-art-placeholder">
-                <span>{socialMarks[channel]}</span>
+                <span>{<SocialIcon name={channel} />}</span>
                 <strong>{post.text.split("\n")[0].slice(0, 90)}</strong>
                 <small>GROWINTEK / IDEAS IN MOTION</small>
               </div>
@@ -491,12 +491,24 @@ export function Social({
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
     const abort = new AbortController();
-    fetch("/api/social", { signal: abort.signal })
-      .then((r) => r.json())
-      .then(setFeeds)
-      .catch(() => {})
-      .finally(() => setLoaded(true));
-    return () => abort.abort();
+    let pending = false;
+    const refresh = async () => {
+      if (pending || document.hidden || abort.signal.aborted) return;
+      pending = true;
+      try {
+        const response = await fetch("/api/social", { signal: abort.signal, cache: "no-store" });
+        if (response.ok) setFeeds(await response.json());
+      } catch { /* Preserve the last feed during a connection interruption. */ }
+      finally { pending = false; if (!abort.signal.aborted) setLoaded(true); }
+    };
+    void refresh();
+    const timer = window.setInterval(refresh, 60000);
+    document.addEventListener("visibilitychange", refresh);
+    return () => {
+      abort.abort();
+      clearInterval(timer);
+      document.removeEventListener("visibilitychange", refresh);
+    };
   }, []);
   const feed = feeds[active],
     profile = settings.social[active];
@@ -533,7 +545,7 @@ export function Social({
                     setKind("all");
                   }}
                 >
-                  <span>{socialMarks[name]}</span>
+                  <span>{<SocialIcon name={name} />}</span>
                   {socialNames[name]}
                 </button>
               ),
@@ -572,7 +584,7 @@ export function Social({
             </div>
           ) : (
             <div className="social-empty">
-              <span className="social-monogram">{socialMarks[active]}</span>
+              <span className="social-monogram">{<SocialIcon name={active} />}</span>
               <div>
                 <h3>
                   {!loaded

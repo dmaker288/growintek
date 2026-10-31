@@ -619,3 +619,80 @@
 .faq-answer-grid {
   align-items: stretch;
 }
+
+/* Home navigation becomes the inner-page treatment after the hero. */
+.header-home-past.smart-header {position:fixed;left:0;right:0;}
+.header-home .brand.flat-brand img {width:128px;height:50px;}
+.social-logo {flex-shrink:0;vertical-align:middle;}
+.team-links a .social-logo {width:16px;height:16px;transform:none;}
+.footer-social-icons .social-logo {width:18px;height:18px;}
+.services-submenu {max-height:calc(100vh - 125px);overflow-y:auto;}
+.service-fit {background:#f2eddc;}
+.service-fit-grid {display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center;}
+.service-fit h2,.service-delivery h2,.service-related h2,.seo-next h2,.about-principles h2 {font-size:clamp(32px,3.5vw,50px);line-height:1.12;margin:17px 0 32px;}
+.service-fit ul {list-style:none;padding:0;margin:22px 0;display:grid;gap:16px;}
+.service-fit li {display:flex;gap:14px;align-items:flex-start;line-height:1.65;}
+.service-fit li svg {width:19px;height:19px;margin-top:4px;flex-shrink:0;color:#568273;}
+.service-preparation {padding:36px;background:#fff;border:1px solid #e0d5b6;border-radius:20px;}
+.service-preparation h3 {font-size:27px;margin:17px 0;line-height:1.25;}
+.service-preparation li {padding-left:18px;position:relative;font-size:14px;}
+.service-preparation li:before {content:'•';position:absolute;left:0;color:#9d7c26;}
+.service-preparation > p {font-size:13px;color:#687777;border-top:1px solid #ebe5d7;padding-top:18px;}
+.service-steps {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;}
+.service-steps article {border-top:2px solid #ddc581;padding-top:22px;}
+.service-steps article > span {font-family:'Outfit Variable',sans-serif;font-size:38px;color:#a88b43;}
+.service-steps h3 {font-size:22px;margin:18px 0 10px;}
+.service-steps p,.service-related p,.seo-next p,.about-principles p {font-size:15px;line-height:1.8;color:#566d70;}
+.service-questions {background:#fff;}
+.service-questions .container {display:grid;grid-template-columns:.8fr 1.2fr;gap:8%;}
+.service-questions h2 {font-size:38px;line-height:1.2;}
+.service-questions details {border-bottom:1px solid #e4dfd1;padding:22px 0;}
+.service-questions summary {display:flex;justify-content:space-between;gap:20px;font-weight:600;cursor:pointer;list-style:none;}
+.service-questions summary span {font-size:24px;color:#8b7132;}
+.service-questions details p {line-height:1.8;color:#526a6c;margin-bottom:0;}
+.service-related .container > div,.seo-next-grid,.about-principles .container > div {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+.service-related a,.seo-next-grid > a {display:block;padding:30px;background:#fff;border:1px solid #e4d8b4;border-radius:18px;}
+.service-related h3,.seo-next-grid h3 {font-size:25px;margin:20px 0 12px;}
+.service-related a > span,.seo-next-grid a > span {display:flex;align-items:center;gap:12px;font-size:13px;font-weight:600;margin-top:22px;}
+.service-related a > span svg,.seo-next-grid a > span svg {width:17px;}
+.seo-next {background:#f5f0df;}
+.seo-measure {display:grid;grid-template-columns:1fr 1fr;gap:7%;margin-top:48px;padding-top:35px;border-top:1px solid #dacba5;}
+.seo-measure h3,.about-principles h3 {font-size:24px;line-height:1.25;}
+.about-principles article {padding:26px 0;border-top:1px solid #ceb775;}
+.comments-section {background:linear-gradient(120deg,#f5efda,#fffdf6);border-block:1px solid #e8ddc1;}
+.comments-layout {display:grid;grid-template-columns:.85fr 1.15fr;gap:7%;align-items:start;}
+.comments-intro h2 {font-size:clamp(34px,3.5vw,52px);line-height:1.12;margin:20px 0;}
+.comments-intro > p {line-height:1.8;color:#53696b;max-width:460px;}
+.comment-guidelines {display:flex;align-items:flex-start;gap:16px;margin:28px 0;color:#53696b;font-size:14px;line-height:1.7;}
+.comment-guidelines > svg {width:23px;flex-shrink:0;margin-top:4px;}
+.comment-guidelines p {margin:0;}
+.comment-panel {background:white;border:1px solid #dfd1a7;padding:32px;border-radius:22px;box-shadow:0 16px 35px -25px #70623f;}
+.comment-step {display:flex;gap:16px;align-items:flex-start;margin-bottom:20px;}
+.comment-step > span {display:grid;place-items:center;flex:0 0 34px;height:34px;border-radius:50%;background:#f3e4b7;font-size:12px;font-weight:700;}
+.comment-step h3 {font-size:21px;margin:3px 0 7px;}
+.comment-step p {font-size:13px;color:#627275;line-height:1.65;margin:0;}
+.comment-follow-links {display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0;}
+.comment-follow-links a {display:flex;align-items:center;gap:9px;border:1px solid #dfded1;border-radius:10px;padding:12px;font-size:13px;font-weight:600;}
+.comment-follow-links a:hover {background:#fbf6e6;border-color:#cbb06a;}
+.comment-follow-links a > svg:last-child {width:16px;margin-left:auto;}
+.comment-follow-links a > small {margin-left:auto;font-size:10px;color:#416856;}
+.comment-confirm {display:flex!important;align-items:flex-start;gap:10px;font-size:13px;line-height:1.6;}
+.comment-confirm input {width:17px!important;min-height:17px!important;margin-top:3px;}
+.comment-hint {font-size:11px;color:#647475;line-height:1.7;margin:12px 0 28px;}
+.comment-hint a {text-decoration:underline;}
+.comment-fields {display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.comment-panel form label {display:grid;gap:8px;font-size:13px;font-weight:500;margin-bottom:17px;}
+.comment-panel form input,.comment-panel textarea {width:100%;padding:12px;border:1px solid #d7dfd9;border-radius:9px;background:#fcfcf8;color:#052c3b;}
+.comment-panel form label.honey {display:none;}
+.comment-panel textarea {resize:vertical;}
+.comment-panel button:disabled {opacity:.5;cursor:not-allowed;}
+.published-comments {margin-top:40px;}
+.published-comments > h3 {font-size:23px;}
+.published-comments > p {font-size:14px;color:#5b7072;}
+.published-comments article {display:flex;gap:15px;padding:22px 0;border-top:1px solid #ded4b6;}
+.comment-avatar {flex:0 0 37px;height:37px;display:grid;place-items:center;background:#e5d4a0;border-radius:50%;font-weight:700;}
+.published-comments h4 {margin:0 0 4px;}.published-comments time {font-size:11px;color:#687777;}
+.published-comments article p {font-size:14px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;}
+.comment-success > svg {width:44px;height:44px;padding:10px;background:#e3f1e8;border-radius:50%;}
+@media(max-width:900px){.service-steps{grid-template-columns:1fr 1fr}.comments-layout{gap:30px;grid-template-columns:1fr}.comments-intro>p{max-width:none}.comment-panel{max-width:none}.service-related .container>div,.seo-next-grid,.about-principles .container>div{grid-template-columns:1fr}.service-questions .container{grid-template-columns:1fr}.service-fit-grid{gap:32px;}}
+@media(max-width:600px){.header-home .brand.flat-brand img{width:112px;height:44px}.service-fit-grid,.seo-measure{grid-template-columns:1fr}.service-preparation,.comment-panel{padding:24px 20px}.comment-fields{grid-template-columns:1fr}.service-steps{gap:24px 18px}.service-steps h3{font-size:20px}.comment-follow-links a{font-size:12px;gap:7px;padding:11px 9px}.comment-follow-links .social-logo{width:16px;height:16px}}

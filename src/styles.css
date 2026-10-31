@@ -1,5 +1,6 @@
 @import "@fontsource-variable/outfit";
 @import "@fontsource-variable/dm-sans";
+@import "./components/team.css";
 
 :root {
   font-family: "DM Sans Variable", sans-serif;

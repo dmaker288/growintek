@@ -308,8 +308,23 @@ export async function tick(db, options = {}) {
     } else if (job.kind === "indexnow")
       data.result = await notifyIndexNow(data.paths);
     else if (job.kind === "sitemap") data.result = await submitSitemap();
-    else if (job.kind === "social") data.result = await refreshSocial(db);
-    else throw new Error(data.message || "Unsupported job type.");
+    else if (job.kind === "social") {
+      const cache = await (options.refreshSocial || refreshSocial)(db);
+      if (Object.values(cache).some((channel) => channel.status === "error"))
+        throw new Error(
+          "A social connection needs attention. The previous feed has been preserved.",
+        );
+      data.result = Object.fromEntries(
+        Object.entries(cache).map(([name, channel]) => [
+          name,
+          {
+            status: channel.status,
+            count: channel.posts?.length || 0,
+            updatedAt: channel.updatedAt,
+          },
+        ]),
+      );
+    } else throw new Error(data.message || "Unsupported job type.");
     await db
       .prepare(
         "UPDATE jobs SET status='complete',data=?,error=NULL,lease_until=NULL,updated_at=? WHERE id=?",

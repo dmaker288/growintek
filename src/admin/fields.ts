@@ -38,6 +38,42 @@ const contentFields: Field[] = [
   },
 ];
 export const fields: Record<string, Field[]> = {
+  comments: [
+    {key:"postId",label:"Article",type:"post",required:true},
+    {key:"name",label:"Commenter name",required:true},
+    {key:"email",label:"Private email",type:"email",required:true},
+    {key:"body",label:"Comment",type:"textarea",required:true},
+    {key:"followsConfirmed",label:"Visitor self-confirmed follows (not verified by platforms)",type:"checkbox"},
+    {key:"status",label:"Moderation",type:"select",options:["pending","approved","rejected"]},
+  ],
+  team: [
+    { key: "title", label: "Full name", required: true },
+    {
+      key: "slug",
+      label: "Profile reference",
+      required: true,
+      help: "A unique lowercase name separated by hyphens.",
+    },
+    { key: "role", label: "Role", required: true },
+    { key: "description", label: "Short biography", type: "textarea" },
+    { key: "image", label: "Profile photo", type: "image" },
+    { key: "linkedin", label: "LinkedIn profile", type: "url" },
+    { key: "instagram", label: "Instagram profile", type: "url" },
+    { key: "facebook", label: "Facebook profile", type: "url" },
+    { key: "website", label: "Personal website", type: "url" },
+    {
+      key: "order",
+      label: "Display order",
+      type: "number",
+      help: "Lower numbers appear first.",
+    },
+    {
+      key: "status",
+      label: "Visibility",
+      type: "select",
+      options: ["draft", "published"],
+    },
+  ],
   transactions: [
     { key: "title", label: "Description", required: true },
     {
@@ -143,6 +179,10 @@ export const fields: Record<string, Field[]> = {
     { key: "points", label: "Highlights", type: "lines" },
     { key: "deliverables", label: "Deliverables", type: "lines" },
     { key: "timeline", label: "Delivery approach" },
+    { key: "bestFor", label: "Who this is for", type: "lines" },
+    { key: "preparation", label: "What to prepare", type: "lines" },
+    { key: "process", label: "Delivery steps", type: "pairs" },
+    { key: "faqs", label: "Service questions", type: "pairs" },
   ],
   portfolio: [
     {
@@ -249,6 +289,8 @@ export const fields: Record<string, Field[]> = {
   ],
 };
 export const collectionNames: Record<string, string> = {
+  team: "Our team",
+  comments: "Blog comments",
   sections: "Homepage sections",
   transactions: "Funds ledger",
   posts: "Blog posts",
@@ -262,6 +304,7 @@ export const collectionNames: Record<string, string> = {
 };
 export const emptyRecord = (kind: string): RecordData => ({
   order: 0,
+  bestFor: [], preparation: [], process: [], faqs: [],
   group: "faq",
   type: "expense",
   amount: 0,
@@ -293,10 +336,17 @@ export const emptyRecord = (kind: string): RecordData => ({
   aiGenerated: false,
   featured: false,
   image:
-    kind === "portfolio"
-      ? "/images/project-growintek.svg"
-      : "/images/insight-seo.svg",
+    kind === "team"
+      ? ""
+      : kind === "portfolio"
+        ? "/images/project-growintek.svg"
+        : "/images/insight-seo.svg",
   imageAlt: "",
+  role: "",
+  linkedin: "",
+  instagram: "",
+  facebook: "",
+  website: "",
   points: [],
   deliverables: [],
   icon: "code",

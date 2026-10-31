@@ -4,7 +4,7 @@ A server-rendered agency website and authenticated business CMS built with React
 
 ## Start locally
 
-Requires Node 22 or newer.
+Requires Node 22.22.3 or newer within Node 22 (see `.nvmrc`).
 
 ```sh
 npm ci
@@ -44,22 +44,23 @@ Deploy to Vercel with Prisma Postgres and S3 by following [the launch guide](doc
 
 ## Included
 
-- Home, About, Services, six service detail pages, dedicated SEO page, Portfolio and project pages, Blog and article pages, Contact, Privacy, Terms, Cookie Policy, Accessibility and Editorial Policy.
+- Home, About, Services, 14 service detail pages, dedicated SEO page, Portfolio and project pages, Blog and article pages, Contact, Privacy, Terms, Cookie Policy, Accessibility and Editorial Policy.
 - Responsive layout, keyboard navigation, cookie preferences, FAQ, industries, delivery process, social channel feeds, clear CTAs and optimized local artwork.
-- Persistent blogs, pages, services, portfolio, editable FAQ/industries/process/why sections, leads, clients, USD/PKR funds, invoices and keyword research.
+- Persistent blogs, pages, services, portfolio, team profiles and social links, editable FAQ/industries/process/why sections, leads, clients, USD/PKR funds, invoices and keyword research.
+- Moderated blog comments with explicit social-profile links, self-confirmed follows, link blocking and private commenter emails. CMS approval is required before comments appear.
 - Draft, review, scheduled and published content states; Markdown previews; optimized image uploads; optimistic edit conflict detection.
 - Validated lead capture, lead stages, client records, itemized invoice calculations, and a printable invoice/PDF view. Invoice status is bookkeeping; it does not send mail or process payments.
 - Password hashing, HTTP-only expiring sessions, CSRF checks, origin checks, rate limits, security headers, validated input and an administrative audit trail.
-- Server-rendered page HTML, per-page SEO metadata, canonical URLs, Organization/Service/BlogPosting/Breadcrumb schema, dynamic sitemap, robots.txt, RSS, llms.txt and llm.txt.
+- Server-rendered page HTML, per-page SEO metadata, canonical URLs, Organization/Service/BlogPosting/AboutPage/Breadcrumb schema, dynamic sitemap, robots.txt, RSS, llms.txt and llm.txt.
 - Consent-based first-party events and optional GA4 tracking. Analytics views show real recorded data, never sample traffic.
 - Server-side Search Console query/position reports, sitemap submission, GA4 reports, IndexNow, Composio Facebook, Instagram and YouTube adapters with separate posts/reels/videos views.
 - DashScope topic ideas and researched article generation, automatic publishing after checks with disclosure, optional editorial approval, source allowlists, local duplicate detection, daily scheduling, durable job leases and retry history.
 
 ## Live integrations and launch requirements
 
-The runtime connectors need **your credentials and account permissions**. The public social section includes a verified Composio snapshot; automatic refresh still needs a server-side Composio key. Set the variables in `.env.example` on the server and use Admin → Integrations to inspect configuration. A configured badge means settings are present; a successful report or refresh verifies the connection.
+The runtime connectors need **your credentials and account permissions**. The current workspace has three verified Composio accounts, an active local YouTube trigger listener and hourly public-feed refreshes. Hosted delivery starts after Vercel deployment. Set the variables in `.env.example` on the server and use Admin → Integrations to inspect configuration. A configured badge means settings are present; a successful report or refresh verifies the connection.
 
-Before launch, confirm the production domain, legal entity/country/contact details, social URLs, provider credentials, editorial ownership and actual portfolio evidence. Policy text is an editable starting point and must reflect your real processing and contracts. The portfolio includes verified live-site screenshots; the unavailable Pak Exporters site retains a labeled concept image. Screenshots do not establish measured client outcomes.
+Before launch, confirm the production domain, legal entity/country/contact details, social URLs, provider credentials, editorial ownership and actual portfolio evidence. Policy text is an editable starting point and must reflect your real processing and contracts. The portfolio includes verified live-site screenshots; Pak Exporters uses the corrected live URL; Growintek’s own portfolio entry is unpublished. Screenshots do not establish measured client outcomes.
 
 Daily AI generation starts only when enabled in Site settings, DashScope is configured, and the keyword queue has a ready topic with two verified source notes. Publishing volume does not substitute for useful information. No software can guarantee worldwide originality, E-E-A-T, indexing or rankings.
 

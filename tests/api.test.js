@@ -456,7 +456,7 @@ test("scheduled content publishes through the worker", async () => {
   );
 });
 test("AI draft uses approved sources, remains in review, consumes topic once and rejects fabricated citations", async () => {
-  await saveSettings(db,{...(await settings(db)),aiApproval:true});
+  await saveSettings(db, { ...(await settings(db)), aiApproval: true });
   const sources = [
     {
       title: "Approved source one",
@@ -558,6 +558,62 @@ test("daily jobs are idempotent and failures retain diagnostics", async () => {
     /ready keyword/,
   );
 });
+
+test("team profiles support authenticated edits, hide drafts and validate social links", async () => {
+  assert.equal((await request("/api/admin/content/team")).status, 401);
+  const profile = {
+    title: "Test Person",
+    slug: "test-person",
+    role: "Developer",
+    status: "draft",
+    website: "",
+    linkedin: "https://www.linkedin.com/in/test-profile/",
+    order: 5,
+  };
+  const created = await request("/api/admin/content/team", {
+    method: "POST",
+    body: profile,
+    authorized: true,
+  });
+  assert.equal(created.status, 201);
+  assert.ok(!(await publicData(db)).team.some((p) => p.id === created.data.id));
+  const endpoint = "/api/admin/content/team/" + created.data.id;
+  assert.equal(
+    (
+      await request(endpoint, {
+        method: "PUT",
+        body: { ...created.data, linkedin: "javascript:alert(1)" },
+        authorized: true,
+      })
+    ).status,
+    400,
+  );
+  const published = await request(endpoint, {
+    method: "PUT",
+    body: {
+      ...created.data,
+      status: "published",
+      linkedin: "https://www.linkedin.com/in/updated/",
+    },
+    authorized: true,
+  });
+  assert.equal(published.status, 200);
+  assert.equal(
+    (await publicData(db)).team.find((p) => p.id === created.data.id).linkedin,
+    "https://www.linkedin.com/in/updated/",
+  );
+  assert.equal(
+    (
+      await request(endpoint, {
+        method: "PUT",
+        body: { ...created.data, status: "published" },
+        authorized: true,
+      })
+    ).status,
+    409,
+  );
+});
+
 test("logout revokes the server-side session", async () => {
   assert.equal(
     (

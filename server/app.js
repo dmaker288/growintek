@@ -10,6 +10,7 @@ import compression from "compression";
 import multer from "multer";
 import sharp from "sharp";
 import { composioWebhook } from "./composio-webhook.js";
+import { registerComments } from "./comments.js";
 import { businessProfileReport } from "./google-business.js";
 import { storeImage, listImages, serveImage } from "./storage.js";
 
@@ -131,6 +132,7 @@ export async function createApp({
           message: { error: "Too many attempts. Please try again later." },
         })
       : (_req, _res, next) => next();
+  registerComments(app, db, limiter);
   app.get("/api/cron", async (req, res) => {
     const expected = process.env.CRON_SECRET;
     const supplied = req.headers.authorization || "";
@@ -155,7 +157,9 @@ export async function createApp({
     ),
   );
   app.get("/api/social", async (_req, res) =>
-    res.json((await settings(db)).socialCache || {}),
+    res
+      .set("Cache-Control", "no-store")
+      .json((await settings(db)).socialCache || {}),
   );
   app.post("/api/leads", limiter(6, 60 * 60 * 1000), async (req, res) => {
     if (req.body.website)
@@ -432,6 +436,8 @@ export async function createApp({
     "contact",
   ];
   async function validateRelations(kind, data, id) {
+    if (kind === "comments" && !(await get(db, "posts", data.postId)))
+      throw Object.assign(new Error("Choose an existing article."), {status:400});
     if (kind === "pages") {
       const current = id ? await get(db, kind, id) : null;
       if (

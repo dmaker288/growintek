@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
+import SocialIcon from "./SocialIcon";
 import type { Content, PublicSettings } from "../types";
 const links = [["Home", "/"], ["Services", "/services"], ["Our Work", "/portfolio"], ["About", "/about"], ["Blog", "/blog"], ["Contact", "/contact"]];
 export function Header({ path, home = false, services }: { path: string; home?: boolean; services: Content[] }) {
@@ -7,18 +8,22 @@ export function Header({ path, home = false, services }: { path: string; home?: 
   const header = useRef<HTMLElement>(null);
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
   useEffect(() => {
     let previous = window.scrollY;
     const update = () => {
       const current = Math.max(0, window.scrollY);
+      setPastHero(home && (document.getElementById("home")?.getBoundingClientRect().bottom || 0) <= 90);
       setScrolled(current > 40);
       if (current < 80 || current < previous || header.current?.contains(document.activeElement)) setHidden(false);
       else if (current > previous && !open && !servicesOpen) setHidden(true);
       previous = current;
     };
     window.addEventListener("scroll", update, { passive: true });
-    return () => window.removeEventListener("scroll", update);
-  }, [open, servicesOpen]);
+    window.addEventListener("resize", update);
+    update();
+    return () => { window.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+  }, [open, servicesOpen, home]);
   const submenuToggle = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     if (!open && !servicesOpen) return;
@@ -32,7 +37,7 @@ export function Header({ path, home = false, services }: { path: string; home?: 
     document.addEventListener("pointerdown", outside);
     return () => { document.removeEventListener("keydown", key); document.removeEventListener("pointerdown", outside); };
   }, [open, servicesOpen]);
-  return <div onFocusCapture={() => setHidden(false)} className={`${home ? "header-home" : "header-shell"} smart-header ${hidden ? "header-hidden" : ""} ${scrolled ? "header-scrolled" : ""}`}>
+  return <div onFocusCapture={() => setHidden(false)} className={`${home && !pastHero ? "header-home" : "header-shell"} smart-header ${home && pastHero ? "header-home-past" : ""} ${hidden ? "header-hidden" : ""} ${scrolled ? "header-scrolled" : ""}`}>
     <header ref={header} className="site-header container">
       <a className="brand flat-brand" href="/" aria-label="Growintek home"><img src="/images/growintek-flat.png" width="240" height="120" alt="Growintek Solutions" /></a>
       <nav id="main-navigation" className={`main-nav ${open ? "is-open" : ""}`} aria-label="Main navigation">
@@ -70,10 +75,10 @@ export function Footer({ settings, services, onCookies }: { settings: PublicSett
           <a href="/" className="flat-brand"><img src="/images/growintek-flat.png" alt="Growintek Solutions" width="240" height="120" loading="lazy" /></a>
           <p className="footer-motto">Innovate <span>•</span> Automate <span>•</span> Grow</p>
           <p>Turning ideas into intelligent solutions with AI, automation and cutting-edge digital technologies.</p>
-          <div className="footer-social-icons">{Object.entries(settings.social).filter(([,url]) => url).map(([name,url]) => <a key={name} href={url} aria-label={`Growintek on ${name}`} target="_blank" rel="noreferrer"><span aria-hidden="true">{name === "facebook" ? "f" : name === "instagram" ? "◎" : "▶"}</span></a>)}</div>
+          <div className="footer-social-icons">{Object.entries(settings.social).filter(([,url]) => url).map(([name,url]) => <a key={name} href={url} aria-label={`Growintek on ${name}`} target="_blank" rel="noreferrer"><SocialIcon name={name} /></a>)}</div>
         </div>
         <nav aria-label="Footer navigation"><h3>Quick Links</h3>{links.map(([label,href]) => <a key={href} href={href}><span aria-hidden="true">›</span>{label}</a>)}</nav>
-        <nav aria-label="Footer services"><h3>Our Services</h3>{services.map(s => <a key={s.id} href={`/services/${s.slug}`}><span aria-hidden="true">›</span>{s.title}</a>)}</nav>
+        <nav aria-label="Footer services"><h3>Our Services</h3>{services.slice(0,6).map(s => <a key={s.id} href={`/services/${s.slug}`}><span aria-hidden="true">›</span>{s.title}</a>)}<a href="/services"><span aria-hidden="true">›</span>Explore all services</a></nav>
         <div className="footer-connect"><h3>Contact Us</h3>
           <a href={settings.email ? `mailto:${settings.email}` : "/contact"}><span className="contact-orb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span><span>{settings.email || "Tell us about your project"}</span></a>
           <div><span className="contact-orb"><Icon name="globe" /></span><span>{settings.country || "Working with clients worldwide"}</span></div>

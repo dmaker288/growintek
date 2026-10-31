@@ -4,10 +4,9 @@ import { fields, collectionNames, totals, money, slugify } from "./fields";
 import type { RecordData, Field } from "./fields";
 import Markdown from "../components/Markdown";
 const images = [
-  "insight-seo.svg",
-  "insight-automation.svg",
-  "insight-web.svg",
-  "project-growintek.svg",
+  "blog-seo-foundations-for-service-businesses.webp",
+  "blog-where-business-automation-should-start.webp",
+  "blog-website-brief-that-saves-rework.webp",
   "project-daroodi.svg",
   "project-kish.svg",
   "project-pakexporters.svg",
@@ -27,6 +26,7 @@ export default function Editor({
   kind,
   initial,
   clients,
+  posts = [],
   onSave,
   onCancel,
   saving,
@@ -36,6 +36,7 @@ export default function Editor({
   kind: string;
   initial: RecordData;
   clients: RecordData[];
+  posts?: RecordData[];
   onSave: (v: RecordData) => void;
   onCancel: () => void;
   saving: boolean;
@@ -90,6 +91,15 @@ export default function Editor({
   function field(f: Field) {
     const value = draft[f.key];
     const id = `field-${f.key}`;
+    if (f.type === "pairs") return <fieldset className="editor-wide source-editor" key={f.key}>
+      <legend>{f.label}</legend>
+      {(value || []).map((item: RecordData, i: number) => <div className="source-row" key={i}>
+        <label>Heading or question<input required value={item.title} onChange={e => set(f.key, value.map((x:RecordData,j:number)=>j===i?{...x,title:e.target.value}:x))}/></label>
+        <label>Description or answer<textarea required rows={3} value={item.description} onChange={e=>set(f.key,value.map((x:RecordData,j:number)=>j===i?{...x,description:e.target.value}:x))}/></label>
+        <button type="button" className="admin-link danger" onClick={()=>set(f.key,value.filter((_:unknown,j:number)=>j!==i))}>Remove item</button>
+      </div>)}
+      <button type="button" className="admin-btn secondary" onClick={()=>set(f.key,[...(value||[]),{title:"",description:""}])}>+ Add item</button>
+    </fieldset>;
     if (f.type === "checkbox")
       return (
         <label className="admin-check" key={f.key}>
@@ -309,6 +319,11 @@ export default function Editor({
             {f.options?.map((o) => (
               <option key={o}>{o}</option>
             ))}
+          </select>
+        ) : f.type === "post" ? (
+          <select {...common}>
+            <option value="">Choose an article</option>
+            {posts.map(post => <option key={post.id} value={post.id}>{post.title}</option>)}
           </select>
         ) : f.type === "client" ? (
           <select {...common}>

@@ -35,6 +35,15 @@ export type Content = {
   eyebrow?: string;
   group?: string;
   order?: number;
+  role?: string;
+  linkedin?: string;
+  instagram?: string;
+  facebook?: string;
+  website?: string;
+  bestFor?: string[];
+  preparation?: string[];
+  process?: {title: string; description: string}[];
+  faqs?: {title: string; description: string}[];
 };
 export type PublicSettings = {
   brand: string;
@@ -43,7 +52,7 @@ export type PublicSettings = {
   country: string;
   siteUrl: string;
   gaId: string;
-  social: { facebook: string; instagram: string; youtube: string };
+  social: { facebook: string; instagram: string; youtube: string; tiktok?: string; x?: string };
 };
 export type SiteData = {
   services: Content[];
@@ -51,5 +60,6 @@ export type SiteData = {
   posts: Content[];
   pages: Content[];
   sections: Content[];
+  team?: Content[];
   settings: PublicSettings;
 };

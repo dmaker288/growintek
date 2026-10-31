@@ -1,7 +1,11 @@
 // Read-only Composio tools. Connected account IDs belong to the deployment's project.
 const channelKey = (name) => `COMPOSIO_${name.toUpperCase()}_ACCOUNT_ID`;
 export const composioConfigured = (name) =>
-  Boolean(process.env.COMPOSIO_API_KEY && process.env[channelKey(name)]);
+  Boolean(
+    process.env.COMPOSIO_API_KEY &&
+    process.env.COMPOSIO_USER_ID &&
+    process.env[channelKey(name)],
+  );
 export async function executeComposio(name, slug, args) {
   if (!composioConfigured(name))
     throw new Error(`Configure Composio for ${name} first.`);
@@ -15,6 +19,7 @@ export async function executeComposio(name, slug, args) {
       },
       body: JSON.stringify({
         connected_account_id: process.env[channelKey(name)],
+        user_id: process.env.COMPOSIO_USER_ID,
         version: process.env.COMPOSIO_TOOL_VERSION || "latest",
         arguments: args,
       }),

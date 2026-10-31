@@ -47,6 +47,15 @@ export async function integrationStatus(db) {
       required: "Google service account, GA4_PROPERTY_ID, measurement ID",
     },
     {
+      id: "social-updates",
+      name: "Automatic social updates",
+      configured: ["facebook", "instagram", "youtube"].some(composioConfigured),
+      detail: process.env.VERCEL
+        ? "Daily at 09:00 Pakistan time through the deployed cron. Signed webhooks refresh supported events sooner."
+        : "Feeds refresh hourly while the server runs. YouTube trigger notifications queue an earlier refresh when the listener is enabled.",
+      required: "Connected social accounts and a running worker or deployed cron",
+    },
+    {
       id: "composio-webhook",
       name: "Composio webhook",
       configured: configured("COMPOSIO_WEBHOOK_SECRET"),
@@ -84,7 +93,7 @@ export async function integrationStatus(db) {
         composioConfigured("facebook") ||
         configured("META_PAGE_ID", "META_ACCESS_TOKEN"),
       detail: "Recent public page posts",
-      required: "Composio API key, Facebook account ID, META_PAGE_ID",
+      required: "Composio API key, user ID, Facebook account ID, META_PAGE_ID",
     },
     {
       id: "instagram",
@@ -93,7 +102,7 @@ export async function integrationStatus(db) {
         composioConfigured("instagram") ||
         configured("INSTAGRAM_ACCOUNT_ID", "META_ACCESS_TOKEN"),
       detail: "Recent professional-account media",
-      required: "Composio API key, Instagram account ID",
+      required: "Composio API key, user ID, Instagram account ID",
     },
     {
       id: "youtube",
@@ -102,7 +111,8 @@ export async function integrationStatus(db) {
         composioConfigured("youtube") ||
         configured("YOUTUBE_API_KEY", "YOUTUBE_CHANNEL_ID"),
       detail: "Recent channel videos",
-      required: "Composio API key, YouTube account ID, YOUTUBE_CHANNEL_ID",
+      required:
+        "Composio API key, user ID, YouTube account ID, YOUTUBE_CHANNEL_ID",
     },
   ];
 }
