@@ -1,0 +1,675 @@
+{
+  "settings": {
+    "brand": "Growintek",
+    "email": "hello@growintek.com",
+    "legalName": "Growintek",
+    "country": "",
+    "gaId": "G-WDKS0F788Z",
+    "social": {
+      "facebook": "https://www.facebook.com/105529598487551",
+      "instagram": "https://www.instagram.com/growintek_sol/",
+      "youtube": "https://www.youtube.com/channel/UCEMgRH5lMO107i2e5KoO8ug"
+    },
+    "aiEnabled": false,
+    "aiApproval": false,
+    "aiHour": 9,
+    "aiTimezone": "Asia/Karachi",
+    "aiAuthor": "Growintek Editorial",
+    "aiTopics": "Practical SEO, business automation, accessible websites, conversion strategy for international businesses",
+    "retentionDays": 90
+  },
+  "services": [
+    {
+      "title": "AI Agents & Automation",
+      "short": "Custom AI agents, chatbots, workflows & more.",
+      "description": "Make room for the work that matters. Connect your tools, simplify repetitive tasks, and give your customers helpful answers around the clock.",
+      "icon": "robot",
+      "points": [
+        "AI assistants trained around your business",
+        "Customer support and lead qualification chatbots",
+        "Connected workflows across your existing tools"
+      ],
+      "slug": "ai-agents-automation",
+      "status": "published",
+      "seoTitle": "AI Agents & Automation",
+      "seoDescription": "Make room for the work that matters. Connect your tools, simplify repetitive tasks, and give your customers helpful answers around the clock.",
+      "content": "## Built around your business\nMake room for the work that matters. Connect your tools, simplify repetitive tasks, and give your customers helpful answers around the clock.\n\n## What our work includes\n- AI assistants trained around your business\n- Customer support and lead qualification chatbots\n- Connected workflows across your existing tools\n\n## A clear path from idea to launch\nWe begin with your goals, audience, current tools and constraints. Together, we agree on the scope, deliverables and measures of success before production begins. You see progress through shared milestones and get the documentation you need to own the result.\n\n## Designed for the next step\nYour project should remain useful after launch. We plan for maintainability, accessibility and practical handover, and can scope ongoing support separately. Contact us for an initial conversation and a written proposal.",
+      "deliverables": [
+        "AI assistants trained around your business",
+        "Customer support and lead qualification chatbots",
+        "Connected workflows across your existing tools"
+      ],
+      "timeline": "Discovery, pilot, integration and handover",
+      "order": 0
+    },
+    {
+      "title": "Web Development",
+      "short": "Modern, fast & scalable web apps and websites.",
+      "description": "Your next chapter starts with a website that works beautifully. We bring thoughtful design and reliable development together, from a first landing page to a custom platform.",
+      "icon": "code",
+      "points": [
+        "Responsive websites for every screen",
+        "Custom web applications and integrations",
+        "Performance, accessibility, and search foundations"
+      ],
+      "slug": "web-development",
+      "status": "published",
+      "seoTitle": "Web Development",
+      "seoDescription": "Your next chapter starts with a website that works beautifully. We bring thoughtful design and reliable development together, from a first landing page to ",
+      "content": "## Built around your business\nYour next chapter starts with a website that works beautifully. We bring thoughtful design and reliable development together, from a first landing page to a custom platform.\n\n## What our work includes\n- Responsive websites for every screen\n- Custom web applications and integrations\n- Performance, accessibility, and search foundations\n\n## A clear path from idea to launch\nWe begin with your goals, audience, current tools and constraints. Together, we agree on the scope, deliverables and measures of success before production begins. You see progress through shared milestones and get the documentation you need to own the result.\n\n## Designed for the next step\nYour project should remain useful after launch. We plan for maintainability, accessibility and practical handover, and can scope ongoing support separately. Contact us for an initial conversation and a written proposal.",
+      "deliverables": [
+        "Responsive websites for every screen",
+        "Custom web applications and integrations",
+        "Performance, accessibility, and search foundations"
+      ],
+      "timeline": "Discovery, design, development and launch",
+      "order": 1
+    },
+    {
+      "title": "WordPress & WooCommerce",
+      "short": "Powerful stores and websites that sell.",
+      "description": "A website your team can manage. An online store your customers enjoy. We build flexible WordPress and WooCommerce experiences around your business.",
+      "icon": "wordpress",
+      "points": [
+        "Custom WordPress websites and themes",
+        "WooCommerce storefronts and checkout experiences",
+        "Content migration, maintenance, and ongoing support"
+      ],
+      "slug": "wordpress-woocommerce",
+      "status": "published",
+      "seoTitle": "WordPress & WooCommerce",
+      "seoDescription": "A website your team can manage. An online store your customers enjoy. We build flexible WordPress and WooCommerce experiences around your business.",
+      "content": "## Built around your business\nA website your team can manage. An online store your customers enjoy. We build flexible WordPress and WooCommerce experiences around your business.\n\n## What our work includes\n- Custom WordPress websites and themes\n- WooCommerce storefronts and checkout experiences\n- Content migration, maintenance, and ongoing support\n\n## A clear path from idea to launch\nWe begin with your goals, audience, current tools and constraints. Together, we agree on the scope, deliverables and measures of success before production begins. You see progress through shared milestones and get the documentation you need to own the result.\n\n## Designed for the next step\nYour project should remain useful after launch. We plan for maintainability, accessibility and practical handover, and can scope ongoing support separately. Contact us for an initial conversation and a written proposal.",
+      "deliverables": [
+        "Custom WordPress websites and themes",
+        "WooCommerce storefronts and checkout experiences",
+        "Content migration, maintenance, and ongoing support"
+      ],
+      "timeline": "Discovery, design, development and launch",
+      "order": 2
+    },
+    {
+      "title": "SEO & Digital Strategy",
+      "short": "Rank higher. Get more traffic. Grow faster.",
+      "description": "Get found by the people who need you. We connect technical improvements, useful content, and a clear strategy to support long-term organic growth.",
+      "icon": "search",
+      "points": [
+        "Technical SEO and website audits",
+        "Search intent and content planning",
+        "Clear reporting and practical growth recommendations"
+      ],
+      "slug": "seo-digital-strategy",
+      "status": "published",
+      "seoTitle": "SEO & Digital Strategy",
+      "seoDescription": "Get found by the people who need you. We connect technical improvements, useful content, and a clear strategy to support long-term organic growth.",
+      "content": "## Built around your business\nGet found by the people who need you. We connect technical improvements, useful content, and a clear strategy to support long-term organic growth.\n\n## What our work includes\n- Technical SEO and website audits\n- Search intent and content planning\n- Clear reporting and practical growth recommendations\n\n## A clear path from idea to launch\nWe begin with your goals, audience, current tools and constraints. Together, we agree on the scope, deliverables and measures of success before production begins. You see progress through shared milestones and get the documentation you need to own the result.\n\n## Designed for the next step\nYour project should remain useful after launch. We plan for maintainability, accessibility and practical handover, and can scope ongoing support separately. Contact us for an initial conversation and a written proposal.",
+      "deliverables": [
+        "Technical SEO and website audits",
+        "Search intent and content planning",
+        "Clear reporting and practical growth recommendations"
+      ],
+      "timeline": "Discovery, design, development and launch",
+      "order": 3
+    },
+    {
+      "title": "Social Media & Ads",
+      "short": "Meta, Google, TikTok & more. Results that matter.",
+      "description": "Reach your next customer with the right message. We create focused campaigns that connect your brand, your audience, and your business goals.",
+      "icon": "megaphone",
+      "points": [
+        "Social content and creative direction",
+        "Paid campaigns across Meta, Google, and TikTok",
+        "Campaign tracking, testing, and optimization"
+      ],
+      "slug": "social-media-ads",
+      "status": "published",
+      "seoTitle": "Social Media & Ads",
+      "seoDescription": "Reach your next customer with the right message. We create focused campaigns that connect your brand, your audience, and your business goals.",
+      "content": "## Built around your business\nReach your next customer with the right message. We create focused campaigns that connect your brand, your audience, and your business goals.\n\n## What our work includes\n- Social content and creative direction\n- Paid campaigns across Meta, Google, and TikTok\n- Campaign tracking, testing, and optimization\n\n## A clear path from idea to launch\nWe begin with your goals, audience, current tools and constraints. Together, we agree on the scope, deliverables and measures of success before production begins. You see progress through shared milestones and get the documentation you need to own the result.\n\n## Designed for the next step\nYour project should remain useful after launch. We plan for maintainability, accessibility and practical handover, and can scope ongoing support separately. Contact us for an initial conversation and a written proposal.",
+      "deliverables": [
+        "Social content and creative direction",
+        "Paid campaigns across Meta, Google, and TikTok",
+        "Campaign tracking, testing, and optimization"
+      ],
+      "timeline": "Discovery, design, development and launch",
+      "order": 4
+    },
+    {
+      "title": "UI/UX Design",
+      "short": "Beautiful, user-focused experiences.",
+      "description": "Make every interaction feel natural. We turn complex ideas into clear, useful digital experiences that help people get where they need to go.",
+      "icon": "pen",
+      "points": [
+        "User journeys and experience planning",
+        "Wireframes and interactive prototypes",
+        "Distinctive interface design and design systems"
+      ],
+      "slug": "ui-ux-design",
+      "status": "published",
+      "seoTitle": "UI/UX Design",
+      "seoDescription": "Make every interaction feel natural. We turn complex ideas into clear, useful digital experiences that help people get where they need to go.",
+      "content": "## Built around your business\nMake every interaction feel natural. We turn complex ideas into clear, useful digital experiences that help people get where they need to go.\n\n## What our work includes\n- User journeys and experience planning\n- Wireframes and interactive prototypes\n- Distinctive interface design and design systems\n\n## A clear path from idea to launch\nWe begin with your goals, audience, current tools and constraints. Together, we agree on the scope, deliverables and measures of success before production begins. You see progress through shared milestones and get the documentation you need to own the result.\n\n## Designed for the next step\nYour project should remain useful after launch. We plan for maintainability, accessibility and practical handover, and can scope ongoing support separately. Contact us for an initial conversation and a written proposal.",
+      "deliverables": [
+        "User journeys and experience planning",
+        "Wireframes and interactive prototypes",
+        "Distinctive interface design and design systems"
+      ],
+      "timeline": "Discovery, design, development and launch",
+      "order": 5
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "growintek.com",
+      "category": "Agency Website",
+      "image": "/images/live-growintek.webp",
+      "description": "A full-service agency website introducing digital marketing, AI and web development services.",
+      "points": [
+        "Service discovery",
+        "Industry-focused navigation",
+        "Contact and project inquiries"
+      ],
+      "slug": "growintek",
+      "imageAlt": "Live growintek.com homepage captured on 31 October 2026",
+      "status": "published",
+      "concept": false,
+      "client": "",
+      "url": "https://growintek.com",
+      "seoTitle": "growintek.com | Growintek portfolio",
+      "seoDescription": "A full-service agency website introducing digital marketing, AI and web development services.",
+      "content": "## The website\nA full-service agency website introducing digital marketing, AI and web development services.\n\n## Explore the experience\n- Service discovery\n- Industry-focused navigation\n- Contact and project inquiries\n\n## Live preview\nThis screenshot was captured from the public website on 31 October 2026. Visit the website to explore its latest content and functionality.\n\n## Have a similar project?\nTell us about your audience and the experience you want to create. We can scope the design, development and integrations around your requirements.",
+      "order": 0
+    },
+    {
+      "title": "daroodi.com",
+      "category": "E-commerce Platform",
+      "image": "/images/live-daroodi.webp",
+      "description": "A bespoke fashion storefront showcasing embroidered coats, tailored collections and made-to-order services.",
+      "points": [
+        "Collection and product discovery",
+        "Bespoke order journey",
+        "Luxury brand presentation"
+      ],
+      "slug": "daroodi",
+      "imageAlt": "Live daroodi.com homepage captured on 31 October 2026",
+      "status": "published",
+      "concept": false,
+      "client": "",
+      "url": "https://www.daroodi.com",
+      "seoTitle": "daroodi.com | Growintek portfolio",
+      "seoDescription": "A bespoke fashion storefront showcasing embroidered coats, tailored collections and made-to-order services.",
+      "content": "## The website\nA bespoke fashion storefront showcasing embroidered coats, tailored collections and made-to-order services.\n\n## Explore the experience\n- Collection and product discovery\n- Bespoke order journey\n- Luxury brand presentation\n\n## Live preview\nThis screenshot was captured from the public website on 31 October 2026. Visit the website to explore its latest content and functionality.\n\n## Have a similar project?\nTell us about your audience and the experience you want to create. We can scope the design, development and integrations around your requirements.",
+      "order": 1
+    },
+    {
+      "title": "kishaainternational.com",
+      "category": "Visa & Consultancy",
+      "image": "/images/live-kishinternational.webp",
+      "description": "A consultancy website bringing career counselling, immigration guidance and Cambridge training into one clear experience.",
+      "points": [
+        "Career and immigration services",
+        "Destination information",
+        "Consultation inquiries"
+      ],
+      "slug": "kishinternational",
+      "imageAlt": "Live kishaainternational.com homepage captured on 31 October 2026",
+      "status": "published",
+      "concept": false,
+      "client": "",
+      "url": "https://www.kishaainternational.com",
+      "seoTitle": "kishaainternational.com | Growintek portfolio",
+      "seoDescription": "A consultancy website bringing career counselling, immigration guidance and Cambridge training into one clear experience.",
+      "content": "## The website\nA consultancy website bringing career counselling, immigration guidance and Cambridge training into one clear experience.\n\n## Explore the experience\n- Career and immigration services\n- Destination information\n- Consultation inquiries\n\n## Live preview\nThis screenshot was captured from the public website on 31 October 2026. Visit the website to explore its latest content and functionality.\n\n## Have a similar project?\nTell us about your audience and the experience you want to create. We can scope the design, development and integrations around your requirements.",
+      "order": 2
+    },
+    {
+      "title": "pakexporters.com",
+      "category": "B2B Marketplace",
+      "image": "/images/project-pakexporters.svg",
+      "description": "A business marketplace concept built around helping buyers discover suppliers and connect with new opportunities.",
+      "points": [
+        "Business and product discovery",
+        "Marketplace interface design",
+        "Inquiry-focused user journeys"
+      ],
+      "slug": "pakexporters",
+      "imageAlt": "pakexporters.com concept presented in a detailed website mockup",
+      "status": "published",
+      "concept": true,
+      "client": "",
+      "url": "",
+      "seoTitle": "pakexporters.com — Design concept",
+      "seoDescription": "A business marketplace concept built around helping buyers discover suppliers and connect with new opportunities.",
+      "content": "## The direction\nA business marketplace concept built around helping buyers discover suppliers and connect with new opportunities.\n\n## The experience\n- Business and product discovery\n- Marketplace interface design\n- Inquiry-focused user journeys\n\n## About this showcase\nThis is a design concept from the Growintek visual portfolio. It demonstrates an approach to the experience; it is not a verified client case study, live-site screenshot, or claim of measured business results.\n\n## Have a similar challenge?\nTell us about your audience, current website and the outcome you want. We can scope a solution around your requirements.",
+      "order": 20
+    },
+    {
+      "title": "zamanalytics.com",
+      "category": "Analytics Platform",
+      "image": "/images/live-zamanalytics.webp",
+      "description": "A business intelligence website presenting analytics, automation and digital services.",
+      "points": [
+        "Business intelligence services",
+        "Solutions overview",
+        "Consultation journey"
+      ],
+      "slug": "zamanalytics",
+      "imageAlt": "Live zamanalytics.com homepage captured on 31 October 2026",
+      "status": "published",
+      "concept": false,
+      "client": "",
+      "url": "https://www.zamanalytics.com",
+      "seoTitle": "zamanalytics.com | Growintek portfolio",
+      "seoDescription": "A business intelligence website presenting analytics, automation and digital services.",
+      "content": "## The website\nA business intelligence website presenting analytics, automation and digital services.\n\n## Explore the experience\n- Business intelligence services\n- Solutions overview\n- Consultation journey\n\n## Live preview\nThis screenshot was captured from the public website on 31 October 2026. Visit the website to explore its latest content and functionality.\n\n## Have a similar project?\nTell us about your audience and the experience you want to create. We can scope the design, development and integrations around your requirements.",
+      "order": 4
+    },
+    {
+      "slug": "studyin-aus",
+      "status": "published",
+      "client": "",
+      "order": 5,
+      "title": "studyin-aus.com",
+      "category": "Education & Consulting",
+      "url": "https://studyin-aus.com",
+      "description": "A study-abroad consultancy website helping students explore destinations, university guidance and application support.",
+      "points": [
+        "Destination guidance",
+        "Student counselling",
+        "Application support"
+      ],
+      "concept": false,
+      "image": "/images/live-studyin-aus.webp",
+      "imageAlt": "Live studyin-aus.com homepage captured on 31 October 2026",
+      "seoTitle": "studyin-aus.com | Growintek portfolio",
+      "seoDescription": "A study-abroad consultancy website helping students explore destinations, university guidance and application support.",
+      "content": "## The website\nA study-abroad consultancy website helping students explore destinations, university guidance and application support.\n\n## Explore the experience\n- Destination guidance\n- Student counselling\n- Application support\n\n## Live preview\nThis screenshot was captured from the public website on 31 October 2026. Visit the website to explore its latest content and functionality.\n\n## Have a similar project?\nTell us about your audience and the experience you want to create. We can scope the design, development and integrations around your requirements."
+    },
+    {
+      "slug": "mdkat",
+      "status": "published",
+      "client": "",
+      "order": 6,
+      "title": "mdkat.com",
+      "category": "Learning Platform",
+      "url": "https://mdkat.com",
+      "description": "An MDCAT preparation platform with practice questions, test tools and university information.",
+      "points": [
+        "Practice question discovery",
+        "Mock test navigation",
+        "Student resources"
+      ],
+      "concept": false,
+      "image": "/images/live-mdkat.webp",
+      "imageAlt": "Live mdkat.com homepage captured on 31 October 2026",
+      "seoTitle": "mdkat.com | Growintek portfolio",
+      "seoDescription": "An MDCAT preparation platform with practice questions, test tools and university information.",
+      "content": "## The website\nAn MDCAT preparation platform with practice questions, test tools and university information.\n\n## Explore the experience\n- Practice question discovery\n- Mock test navigation\n- Student resources\n\n## Live preview\nThis screenshot was captured from the public website on 31 October 2026. Visit the website to explore its latest content and functionality.\n\n## Have a similar project?\nTell us about your audience and the experience you want to create. We can scope the design, development and integrations around your requirements."
+    },
+    {
+      "slug": "cas-studyin-aus",
+      "status": "published",
+      "client": "",
+      "order": 7,
+      "title": "cas.studyin-aus.com",
+      "category": "AI Interview Platform",
+      "url": "https://cas.studyin-aus.com",
+      "description": "An interview preparation platform introducing AI practice conversations and feedback for prospective international students.",
+      "points": [
+        "AI interview practice",
+        "Personal preparation journey",
+        "Bilingual interface"
+      ],
+      "concept": false,
+      "image": "/images/live-cas-studyin-aus.webp",
+      "imageAlt": "Live cas.studyin-aus.com homepage captured on 31 October 2026",
+      "seoTitle": "cas.studyin-aus.com | Growintek portfolio",
+      "seoDescription": "An interview preparation platform introducing AI practice conversations and feedback for prospective international students.",
+      "content": "## The website\nAn interview preparation platform introducing AI practice conversations and feedback for prospective international students.\n\n## Explore the experience\n- AI interview practice\n- Personal preparation journey\n- Bilingual interface\n\n## Live preview\nThis screenshot was captured from the public website on 31 October 2026. Visit the website to explore its latest content and functionality.\n\n## Have a similar project?\nTell us about your audience and the experience you want to create. We can scope the design, development and integrations around your requirements."
+    }
+  ],
+  "posts": [
+    {
+      "slug": "seo-foundations-for-service-businesses",
+      "title": "SEO foundations that help the right clients find you",
+      "category": "SEO & Growth",
+      "description": "A practical starting point for service businesses: search intent, useful pages, technical checks and meaningful measurement.",
+      "image": "/images/insight-seo.svg",
+      "keyword": "SEO for service businesses",
+      "content": "A service website has a specific job: help someone decide whether your business can solve their problem. Search visibility works best when it supports that decision. Before adding more articles, check whether your core pages explain what you do, who you help and how to take the next step.\n\n## Start with the questions buyers ask\nWrite down the questions that appear in discovery calls. What does a project include? What affects the cost? How long can it take? What does your team need from the client? These questions are a useful starting point for research because they connect content to real purchase decisions.\n\nA keyword is not a complete content brief. Look at the search results, the type of pages shown and the problem behind the query. A person comparing providers needs different information from someone learning a basic definition. Give each important service its own useful page instead of forcing unrelated services into a single paragraph.\n\n## Make your service pages specific\nDescribe the deliverables, the working process and any constraints. Explain what a visitor can expect after contacting you. If you have permission to share a case study, document the starting point, work performed, measurement period and limitations. Avoid publishing outcome claims you cannot support.\n\nConnect related pages with descriptive internal links. For example, a technical SEO article can link to your SEO service, while the service page can link to an explanation of an audit. The links should help a reader continue a task, not simply repeat a keyword.\n\n## Check the technical basics\nOpen the site on a phone, test its forms and inspect important pages with Search Console. Confirm that public pages return useful HTML, have unique titles and can be discovered through navigation. Keep drafts and private business records out of search results.\n\nUse a sitemap to describe the public URLs you want discovered. A sitemap is a discovery signal, not an indexing guarantee. Check canonical links, redirects and response codes after a migration so old links continue to lead somewhere useful.\n\n## Measure inquiries as well as visits\nMore traffic is not automatically better traffic. Agree on what a qualified inquiry looks like and measure whether visitors reach the contact form, complete it and become relevant conversations. Compare changes across sensible time periods and account for seasonality and other marketing activity.\n\nSearch Console can show query impressions, clicks and average position. These measurements have limits: average position varies by query, country, device and date range. Treat the data as evidence to investigate, not a promise that everyone sees the same ranking.\n\n## A manageable first month\nBegin with a small audit, improve your most important service page and fix any broken conversion paths. Publish one genuinely useful supporting guide when you have something clear to explain. Review the results, collect new buyer questions and choose the next improvement from evidence.\n\nConsistent, useful maintenance is more defensible than a high publishing volume with little original value. Search optimization should make the website better for the people you want to serve.",
+      "status": "published",
+      "author": "Growintek Editorial",
+      "reviewer": "",
+      "aiGenerated": false,
+      "reviewed": false,
+      "sources": [],
+      "publishedAt": "2026-10-28T09:00:00.000Z",
+      "seoTitle": "SEO foundations that help the right clients find you",
+      "seoDescription": "A practical starting point for service businesses: search intent, useful pages, technical checks and meaningful measurement.",
+      "featured": true
+    },
+    {
+      "slug": "where-business-automation-should-start",
+      "title": "Before you automate, find the work worth fixing",
+      "category": "AI & Automation",
+      "description": "Choose a first automation project with a clear owner, a measurable outcome and a safe path back to a person.",
+      "image": "/images/insight-automation.svg",
+      "keyword": "business automation planning",
+      "content": "Automation is most useful when the task is already understood. A workflow that saves a few minutes hundreds of times can be a better starting point than a complicated system that tries to handle every situation.\n\n## Map the current process\nChoose a repeated task and document its trigger, inputs, decisions and output. Ask the people who perform it where work waits, where information goes missing and which exceptions require judgment. A simple process map often exposes improvements that do not require AI at all.\n\nLead routing is one example. A new inquiry may need validation, a service category, an owner and a follow-up reminder. The first version can be based on explicit rules. If natural-language classification adds value later, it can be introduced at that decision point.\n\n## Choose a meaningful measure\nDefine the baseline before building. You might track response time, manual handling time or the number of records that require correction. Use a measure the team can observe consistently. Do not turn a model demonstration into a claim of financial savings without validating the real workflow.\n\nAgree on the boundaries. Which actions may run automatically? Which require approval? Which data should never be sent to an external service? These are product decisions, and they shape the architecture.\n\n## Design the exception path\nAn automation should not silently lose work. Log failures, retry temporary errors with limits and give the owner a way to inspect a failed job. Repeated actions need an idempotency strategy so a retry does not create duplicate invoices, messages or records.\n\nFor AI-assisted tasks, identify where uncertain output can cause harm. A draft summary may be low risk; an irreversible action based on that summary can be very different. Keep a person in the loop where judgment or approval matters.\n\n## Start with a small pilot\nTest with representative examples, including incomplete inputs and unusual cases. Compare the new process with the current one, collect feedback and adjust the scope. A pilot should produce enough evidence to decide whether to expand, change direction or stop.\n\nDocument who owns the workflow, how credentials are rotated and what happens when a connected service is unavailable. The person maintaining the system should not need to reverse-engineer its purpose.\n\n## Build for ongoing ownership\nA useful handover includes the process diagram, integration list, failure alerts, operating instructions and acceptance criteria. Review the workflow when business rules change. A working automation is a maintained business process, not a one-time installation.",
+      "status": "published",
+      "author": "Growintek Editorial",
+      "reviewer": "",
+      "aiGenerated": false,
+      "reviewed": false,
+      "sources": [],
+      "publishedAt": "2026-10-24T09:00:00.000Z",
+      "seoTitle": "Before you automate, find the work worth fixing",
+      "seoDescription": "Choose a first automation project with a clear owner, a measurable outcome and a safe path back to a person.",
+      "featured": false
+    },
+    {
+      "slug": "website-brief-that-saves-rework",
+      "title": "A better website starts with a clearer brief",
+      "category": "Web & Design",
+      "description": "The decisions to make before design begins, from audience and content ownership to accessibility and launch criteria.",
+      "image": "/images/insight-web.svg",
+      "keyword": "website project brief",
+      "content": "A good website brief makes the important decisions visible. It does not need to prescribe every design detail. Its job is to give the team a shared understanding of the audience, the outcome and the constraints.\n\n## Describe the audience and their task\nStart with the person visiting the site. What are they trying to do? What do they already know? What might make them hesitate? A buyer evaluating a specialist agency has different needs from a returning customer looking for support.\n\nChoose the primary action for each important page. That might be requesting a proposal, exploring a service or reading a practical guide. The page structure should support that action with relevant information.\n\n## Make content ownership explicit\nIdentify who supplies service descriptions, project evidence, photography and legal information. Decide who reviews the material and what approval means. Content often determines the schedule more than the number of pages does.\n\nSeparate verified claims from ideas that still need evidence. If a portfolio item is a concept, label it clearly. If results are available, include the measurement period and enough context for the reader to assess them.\n\n## Agree on functional requirements\nList the forms, integrations and internal workflows the site must support. Explain what should happen after someone submits an inquiry. Specify which team member receives it, where it is stored and how the visitor knows the submission succeeded.\n\nFor editable content, identify which fields the team needs to control. A useful CMS provides clear publication states and sensible validation. Giving every user unrestricted access is rarely necessary.\n\n## Define quality and launch criteria\nInclude mobile usability, keyboard navigation, page speed, search metadata and browser support in acceptance criteria. Test real tasks on a small screen. Verify that contact forms work and that error messages explain the next step.\n\nIf an existing site is moving, prepare a URL map. Plan redirects for useful old pages, verify canonical links and check analytics after launch. Keep access to the previous content until the migration is confirmed.\n\n## Plan the handover\nDocument hosting, domain ownership, backups, content editing and integration credentials. Assign responsibility for updates and incident response. The strongest launch plan includes what happens the following week, when real visitors begin using the site.\n\nA clear brief reduces avoidable rework because it turns assumptions into decisions. Leave room for design exploration while making the business needs and quality expectations concrete.",
+      "status": "published",
+      "author": "Growintek Editorial",
+      "reviewer": "",
+      "aiGenerated": false,
+      "reviewed": false,
+      "sources": [],
+      "publishedAt": "2026-10-20T09:00:00.000Z",
+      "seoTitle": "A better website starts with a clearer brief",
+      "seoDescription": "The decisions to make before design begins, from audience and content ownership to accessibility and launch criteria.",
+      "featured": false
+    }
+  ],
+  "pages": [
+    {
+      "slug": "privacy-policy",
+      "title": "Privacy Policy",
+      "content": "## Information you choose to share\nWhen you send an inquiry, we collect your name, email, company details if provided, service interests, budget range and message. We use this information to respond, assess project fit and manage the business relationship. Please do not send passwords, payment-card details or sensitive personal information through the contact form.\n\n## Website measurement\nOptional analytics are off until you accept them. When enabled, first-party measurement records page paths, event types and dates without a persistent visitor identifier. If Google Analytics is configured and you consent, Google processes analytics data according to its policies and your settings. You may change your choice using Cookie preferences in the footer.\n\n## Service providers and transfers\nHosting and configured business tools may process information on our behalf. Access is limited to what is needed for the service. Providers may operate in other countries. The operator must assess applicable transfer requirements before activating a provider. We do not sell inquiry information.\n\n## Retention and security\nWe retain inquiries while they are needed to respond, manage a relationship or meet legal obligations. Analytics events are deleted according to the configured retention period, which defaults to 90 days. Administrative access is protected and credentials are kept on the server. No internet service can promise absolute security.\n\n## Your choices\nYou can request access, correction or deletion of your inquiry information through our Contact page. Rights and exceptions depend on applicable law. Identify the email address used in your inquiry so we can verify the request.\n\n## Contact and changes\nGrowintek is the website operator. Use the Contact page for privacy questions. This policy was prepared on 31 October 2026 and should be reviewed whenever processing practices or operator details change.",
+      "status": "published",
+      "description": "Growintek privacy policy: how we operate and how to contact us.",
+      "seoTitle": "Privacy Policy",
+      "seoDescription": "Read Growintek's privacy policy.",
+      "eyebrow": "Clear principles. Better relationships."
+    },
+    {
+      "slug": "terms",
+      "title": "Terms of Use",
+      "content": "## Using this website\nThis website describes Growintek services and provides general educational information. Content does not constitute a binding offer, legal advice or a guarantee of business results. Do not misuse the website, attempt unauthorized access or interfere with its operation.\n\n## Project agreements\nScope, delivery dates, fees, payment terms, intellectual property rights and support obligations are agreed in a separate written project agreement. Sending an inquiry does not create a client relationship or reserve delivery capacity.\n\n## Intellectual property\nWebsite copy, design and original materials belong to their respective rights holders. You may share links and use the site for legitimate evaluation. Reproduction or commercial reuse beyond applicable legal exceptions requires permission.\n\n## Portfolio and performance\nConcept work is labeled as such. Outcomes depend on project scope, market conditions, client participation and third-party platforms. We do not guarantee rankings, traffic, revenue, indexing or advertising performance.\n\n## External services\nLinked platforms and optional social embeds operate under their own terms and policies. Their availability is outside our control.\n\n## Availability and liability\nWe take reasonable steps to maintain accurate content and reliable access. The website may contain errors or become unavailable. Any limitation of liability applies only to the extent permitted by applicable law and does not exclude rights that cannot lawfully be excluded.\n\n## Questions\nContact Growintek through the Contact page. Specific governing-law and dispute-resolution terms should be set in the signed project agreement. Last updated 31 October 2026.",
+      "status": "published",
+      "description": "Growintek terms of use: how we operate and how to contact us.",
+      "seoTitle": "Terms of Use",
+      "seoDescription": "Read Growintek's terms of use.",
+      "eyebrow": "Clear principles. Better relationships."
+    },
+    {
+      "slug": "cookie-policy",
+      "title": "Cookie Policy",
+      "content": "## Essential storage\nThe public site stores your cookie preferences in your browser. The admin area uses an essential, HTTP-only session cookie named grow_session to keep authorized administrators signed in. That cookie expires after eight hours.\n\n## Optional analytics\nAnalytics remain disabled until you choose Accept analytics. If configured, Google Analytics may set cookies for measurement. First-party events record page paths and dates without a persistent visitor identifier. Choosing Reject optional keeps these features off.\n\n## Social content\nSocial video players and external embeds are loaded only after a separate action to enable external media. They may transmit your IP address and browser information to the provider and may use their own storage. Links to social platforms do not load embedded feeds by themselves.\n\n## Changing your choice\nOpen Cookie preferences in the footer at any time. Withdrawing consent disables future analytics collection and removes accessible Google Analytics cookies; the page reloads to stop loaded third-party scripts. Your browser also lets you delete stored information.\n\n## Contact\nUse our Contact page for questions about cookies or tracking. Last updated 31 October 2026.",
+      "status": "published",
+      "description": "Growintek cookie policy: how we operate and how to contact us.",
+      "seoTitle": "Cookie Policy",
+      "seoDescription": "Read Growintek's cookie policy.",
+      "eyebrow": "Clear principles. Better relationships."
+    },
+    {
+      "slug": "accessibility",
+      "title": "Accessibility Statement",
+      "content": "## Our approach\nWe aim to make Growintek usable across devices and input methods. The site includes keyboard-accessible navigation, visible focus indicators, labeled form controls, reduced-motion support and descriptive page structure.\n\n## Ongoing improvement\nAccessibility is a continuing process. New content and third-party services can introduce issues. We review important journeys, including service discovery and contact, as the site changes.\n\n## Report a barrier\nIf you have difficulty using the site, please contact us with the page, the task you were trying to complete and any relevant assistive technology details. Avoid including sensitive information. We will use the report to investigate and improve the experience.",
+      "status": "published",
+      "description": "Growintek accessibility statement: how we operate and how to contact us.",
+      "seoTitle": "Accessibility Statement",
+      "seoDescription": "Read Growintek's accessibility statement.",
+      "eyebrow": "Clear principles. Better relationships."
+    },
+    {
+      "slug": "editorial-policy",
+      "title": "Editorial & AI Policy",
+      "content": "## Useful, accountable content\nOur editorial goal is to answer real business questions with clear, practical information. We distinguish general guidance, design concepts and verified project evidence. We do not fabricate experience, credentials, sources or performance results.\n\n## AI assistance\nAI may help develop outlines or drafts. AI-assisted posts are identified on their article pages. Articles may publish after automated source, format and duplication checks under our selected publishing settings. These articles disclose when no human review has taken place. An editor can also review and correct an article before or after publication. Automated checks cannot replace professional judgment.\n\n## Sources and corrections\nSources are listed where they support a technical or factual claim. Editors should verify references and remove unsupported claims. If you notice an error, contact us with the article URL and the correction you believe is needed.\n\n## Search practices\nWe use descriptive content, technical improvements and accessible design to support discovery. We do not use cloaking, link schemes, keyword stuffing, fake reviews or mass publication designed only to manipulate rankings. Search engines decide what to index and rank.",
+      "status": "published",
+      "description": "Growintek editorial & ai policy: how we operate and how to contact us.",
+      "seoTitle": "Editorial & AI Policy",
+      "seoDescription": "Read Growintek's editorial & ai policy.",
+      "eyebrow": "Clear principles. Better relationships."
+    },
+    {
+      "slug": "home",
+      "title": "Build Smarter.\nGrow Faster.",
+      "description": "Thoughtful websites. Smarter automation. Digital strategies that connect your business with its next opportunity.",
+      "content": "",
+      "status": "published",
+      "seoTitle": "AI Automation, Web Development & Digital Growth",
+      "seoDescription": "Thoughtful websites. Smarter automation. Digital strategies that connect your business with its next opportunity.",
+      "eyebrow": "Home"
+    },
+    {
+      "slug": "about",
+      "title": "Big-picture thinking.\nPersonal commitment.",
+      "description": "We bring strategy, design and technology together to help ambitious businesses take their next step.",
+      "content": "",
+      "status": "published",
+      "seoTitle": "Big-picture thinking. Personal commitment.",
+      "seoDescription": "We bring strategy, design and technology together to help ambitious businesses take their next step.",
+      "eyebrow": "About"
+    },
+    {
+      "slug": "services",
+      "title": "The right expertise.\nOne connected approach.",
+      "description": "From your first website to the workflows behind your business, we build the pieces that help you move forward.",
+      "content": "",
+      "status": "published",
+      "seoTitle": "The right expertise. One connected approach.",
+      "seoDescription": "From your first website to the workflows behind your business, we build the pieces that help you move forward.",
+      "eyebrow": "Services"
+    },
+    {
+      "slug": "seo",
+      "title": "Get found for the\nright reasons.",
+      "description": "Build visibility around useful content, a technically sound website and the questions your next customer is asking.",
+      "content": "",
+      "status": "published",
+      "seoTitle": "Get found for the right reasons.",
+      "seoDescription": "Build visibility around useful content, a technically sound website and the questions your next customer is asking.",
+      "eyebrow": "Seo"
+    },
+    {
+      "slug": "portfolio",
+      "title": "A window into\nwhat’s possible.",
+      "description": "Explore our approach to brands, websites and digital products. Concept projects are labeled so you can see exactly what is being showcased.",
+      "content": "",
+      "status": "published",
+      "seoTitle": "A window into what’s possible.",
+      "seoDescription": "Explore our approach to brands, websites and digital products. Concept projects are labeled so you can see exactly what is being showcased.",
+      "eyebrow": "Portfolio"
+    },
+    {
+      "slug": "blog",
+      "title": "A little knowledge.\nA better next move.",
+      "description": "Practical perspectives on websites, automation and sustainable digital growth. Written to help you make clearer decisions.",
+      "content": "",
+      "status": "published",
+      "seoTitle": "A little knowledge. A better next move.",
+      "seoDescription": "Practical perspectives on websites, automation and sustainable digital growth. Written to help you make clearer decisions.",
+      "eyebrow": "Blog"
+    },
+    {
+      "slug": "contact",
+      "title": "Your next big idea\nstarts with hello.",
+      "description": "Tell us what you’re working on, where you want to go and what’s getting in the way. We’ll help you find a useful next step.",
+      "content": "",
+      "status": "published",
+      "seoTitle": "Your next big idea starts with hello.",
+      "seoDescription": "Tell us what you’re working on, where you want to go and what’s getting in the way. We’ll help you find a useful next step.",
+      "eyebrow": "Contact"
+    }
+  ],
+  "keywords": [],
+  "sections": [
+    {
+      "title": "E-commerce & Retail",
+      "description": "Better product discovery, smoother shopping and connected operations.",
+      "group": "industries",
+      "icon": "wordpress",
+      "order": 0,
+      "status": "published"
+    },
+    {
+      "title": "SaaS & Technology",
+      "description": "Clear product stories and useful digital experiences that scale.",
+      "group": "industries",
+      "icon": "code",
+      "order": 1,
+      "status": "published"
+    },
+    {
+      "title": "Professional Services",
+      "description": "Turn your expertise into a credible presence and qualified inquiries.",
+      "group": "industries",
+      "icon": "team",
+      "order": 2,
+      "status": "published"
+    },
+    {
+      "title": "Trade & Manufacturing",
+      "description": "Connect products, capabilities and buyers across international markets.",
+      "group": "industries",
+      "icon": "globe",
+      "order": 3,
+      "status": "published"
+    },
+    {
+      "title": "Health & Wellness",
+      "description": "Accessible experiences that put clarity and trust first.",
+      "group": "industries",
+      "icon": "heart",
+      "order": 4,
+      "status": "published"
+    },
+    {
+      "title": "Education & Consulting",
+      "description": "Make complex information useful, approachable and easy to act on.",
+      "group": "industries",
+      "icon": "pen",
+      "order": 5,
+      "status": "published"
+    },
+    {
+      "title": "Discover",
+      "description": "We listen first. Your goals, audience and challenges shape a focused plan.",
+      "group": "process",
+      "icon": "globe",
+      "order": 6,
+      "status": "published"
+    },
+    {
+      "title": "Design",
+      "description": "We turn the plan into a clear experience, with room for your feedback.",
+      "group": "process",
+      "icon": "globe",
+      "order": 7,
+      "status": "published"
+    },
+    {
+      "title": "Build",
+      "description": "We develop, integrate and test the details that make everything work.",
+      "group": "process",
+      "icon": "globe",
+      "order": 8,
+      "status": "published"
+    },
+    {
+      "title": "Grow",
+      "description": "We launch carefully, measure what matters and plan the next improvement.",
+      "group": "process",
+      "icon": "globe",
+      "order": 9,
+      "status": "published"
+    },
+    {
+      "title": "What can Growintek help us with?",
+      "description": "We help with AI agents and automation, websites and web applications, WordPress and WooCommerce, SEO, social campaigns and UI/UX design. We can start with a focused project or scope several services around one business goal.",
+      "group": "faq",
+      "icon": "globe",
+      "order": 10,
+      "status": "published"
+    },
+    {
+      "title": "Do you work with international clients?",
+      "description": "Yes. Our workflow is designed for remote collaboration, with agreed communication windows, shared milestones and written decisions. We plan around your team’s location and project requirements.",
+      "group": "faq",
+      "icon": "globe",
+      "order": 11,
+      "status": "published"
+    },
+    {
+      "title": "How much does a project cost?",
+      "description": "Pricing depends on the scope, integrations, content and support you need. After an initial conversation, we provide a written proposal with deliverables, assumptions and payment milestones.",
+      "group": "faq",
+      "icon": "globe",
+      "order": 12,
+      "status": "published"
+    },
+    {
+      "title": "How long will my project take?",
+      "description": "We agree on a timeline after discovery. A focused website and a custom platform have very different requirements. Your proposal sets out milestones, review periods and any dependencies on content or third-party access.",
+      "group": "faq",
+      "icon": "globe",
+      "order": 13,
+      "status": "published"
+    },
+    {
+      "title": "Can you guarantee first-page Google rankings?",
+      "description": "No responsible agency can guarantee rankings or indexing. We improve technical foundations, content quality and relevance, then use measured data to guide the work. We do not use link schemes, cloaking or other manipulative tactics.",
+      "group": "faq",
+      "icon": "globe",
+      "order": 14,
+      "status": "published"
+    },
+    {
+      "title": "Will we be able to manage the website ourselves?",
+      "description": "Yes. We plan content ownership and editing needs from the start, provide a CMS where required and include a practical handover. Ongoing maintenance and support can be scoped separately.",
+      "group": "faq",
+      "icon": "globe",
+      "order": 15,
+      "status": "published"
+    },
+    {
+      "title": "Expert Team",
+      "description": "Skilled & passionate professionals",
+      "group": "why",
+      "icon": "team",
+      "order": 16,
+      "status": "published"
+    },
+    {
+      "title": "Custom Solutions",
+      "description": "Tailored to your business needs",
+      "group": "why",
+      "icon": "settings",
+      "order": 17,
+      "status": "published"
+    },
+    {
+      "title": "On-Time Delivery",
+      "description": "Your goals, our priority",
+      "group": "why",
+      "icon": "shield",
+      "order": 18,
+      "status": "published"
+    },
+    {
+      "title": "Global Support",
+      "description": "We’re with you, from anywhere",
+      "group": "why",
+      "icon": "globe",
+      "order": 19,
+      "status": "published"
+    }
+  ]
+}

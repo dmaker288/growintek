@@ -1,0 +1,18 @@
+services:
+  website:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - growintek-data:/app/data
+      - growintek-backups:/app/backups
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  growintek-data:
+  growintek-backups:

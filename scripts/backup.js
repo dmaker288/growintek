@@ -1,0 +1,10 @@
+import "dotenv/config";
+import { mkdirSync } from "node:fs";
+import { openDatabase } from "../server/db.js";
+mkdirSync("backups", { recursive: true, mode: 0o700 });
+const target = `backups/growintek-${new Date().toISOString().replace(/[:.]/g, "-")}.sqlite`;
+const db = openDatabase();
+if(db.provider !== "sqlite")throw new Error("Use Supabase database backups or pg_dump for the cloud database. This command backs up local SQLite only.");
+await db.backup(target);
+await db.close();
+console.log(`Consistent backup saved: ${target}`);
