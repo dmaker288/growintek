@@ -14,4 +14,4 @@
 - [x] Add database media storage and read-only Google Business Profile support; exercise these using isolated fixtures.
 - [x] Build, run backend tests and browser flow checks, visually inspect desktop and mobile, and restart preview.
 - [x] Prepare a private Vercel environment, document remaining provider errors and scan Git contents for credentials.
-- [ ] Push a review branch preserving existing repository history.
+- [x] Push `growintek-platform-refresh` to `dmaker288/growintek`, preserving existing repository history.
